@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdopPet - Directorio de Recursos</title>
+    <!-- Aquí iría tu enlace al archivo CSS -->
+</head>
+<body>
+
+    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo-placeholder.png" alt="Logotipo de AdopPet">
+            <span>AdopPet</span>
+        </div>
+        
+        <nav class="primary-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exploracion.html">Exploración</a></li>
+                <li><a href="contenido.html">Contenido</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <button class="btn-icon" aria-label="Notificaciones">
+                <span class="icon-bell"></span> Notificación
+            </button>
+            <button class="btn-icon" aria-label="Mi Cuenta">
+                <span class="icon-user"></span> Mi Cuenta
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= MENÚ SECUNDARIO (FILTROS) ================= -->
+    <nav class="secondary-nav" aria-label="Menú de secciones">
+        <ul>
+            <li><a href="#recomendaciones"><span class="icon-search"></span> Recomendaciones</a></li>
+            <li><a href="#emergencias">Emergencias</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main>
+
+        <!-- SECCIÓN: DIRECTORIO DE RECURSOS -->
+        <section id="recomendaciones" class="section-recursos">
+            <header class="section-header">
+                <h1>DIRECTORIO DE RECURSOS</h1>
+                <p>RECOMENDACIONES</p>
+            </header>
+
+            <div class="recursos-grid">
+                <article class="recurso-card">
+                    <div class="icon-food" aria-hidden="true"></div>
+                    <h3>Alimentación</h3>
+                    <p>Proveedores locales de dieta BARF.</p>
+                    <a href="#" class="link-more">Ver más <span aria-hidden="true">&rarr;</span></a>
+                </article>
+
+                <article class="recurso-card">
+                    <div class="icon-security" aria-hidden="true"></div>
+                    <h3>Seguridad</h3>
+                    <p>Clínicas de vacunación y prevención contra pulgas y garrapatas.</p>
+                    <a href="#" class="link-more">Ver más <span aria-hidden="true">&rarr;</span></a>
+                </article>
+
+                <article class="recurso-card">
+                    <div class="icon-education" aria-hidden="true"></div>
+                    <h3>Metodología</h3>
+                    <p>Educadores en positivo para corregir conductas.</p>
+                    <a href="#" class="link-more">Ver más <span aria-hidden="true">&rarr;</span></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CASOS DE EMERGENCIAS -->
+        <section id="emergencias" class="section-emergencias">
+            <div class="emergencias-content">
+                <h2>CASOS DE EMERGENCIAS</h2>
+                <ol class="steps-list">
+                    <li>
+                        <h3>AISLAMIENTO</h3>
+                        <p>Asegura al animal en una zona controlada y segura.</p>
+                    </li>
+                    <li>
+                        <h3>REVISIÓN</h3>
+                        <p>Revisa visualmente si tiene heridas o cojeras.</p>
+                    </li>
+                    <li>
+                        <h3>LLAMADA</h3>
+                        <p>Contacta a las autoridades o redes de apoyo.</p>
+                    </li>
+                    <li>
+                        <h3>PROVEE</h3>
+                        <p>Ofrece agua fresca, nunca comida de inmediato.</p>
+                    </li>
+                </ol>
+            </div>
+            
+            <figure class="emergencias-media">
+                <!-- Placeholder para el video interactivo -->
+                <div class="video-placeholder">
+                    <button class="btn-play" aria-label="Reproducir video"></button>
+                </div>
+            </figure>
+        </section>
+
+        <!-- SECCIÓN: CLÍNICAS ALIADAS E INFORMACIÓN -->
+        <section id="informacion" class="section-clinicas-info">
+            
+            <div class="clinicas-aliadas">
+                <h2>CLÍNICAS ALIADAS</h2>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Veterinaria</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Servicios</th>
+                            <th scope="col">Soporte</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Veterinaria 1</td>
+                            <td>Cali, Sur</td>
+                            <td>RX, Ecografía, Laboratorio</td>
+                            <td>24/7</td>
+                        </tr>
+                        <tr>
+                            <td>Veterinaria 2</td>
+                            <td>Jamundí</td>
+                            <td>Vacunación, Cirugía</td>
+                            <td>8:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Veterinaria 3</td>
+                            <td>Yumbo</td>
+                            <td>Peluquería, Guardería</td>
+                            <td>Lunes a Sábado</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <nav class="pagination" aria-label="Paginación de clínicas">
+                    <a href="#">&lt; Previous</a>
+                    <a href="#" aria-current="page" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <span>...</span>
+                    <a href="#">11</a>
+                    <a href="#">Next &gt;</a>
+                </nav>
+
+                <figure class="mapa-placeholder">
+                    <!-- Placeholder para mapa o imagen adicional -->
+                </figure>
+            </div>
+
+            <!-- Panel Lateral de Información -->
+            <aside class="informacion-descargas">
+                <h2>Información</h2>
+                <ol class="download-list">
+                    <li>
+                        <h3><a href="cirugias.pdf" download>CIRUGÍAS PDF - DESCARGAR</a></h3>
+                        <p>Información sobre los procesos y la realización de las operaciones, e higiene postoperatoria, cuidados, cirugías oncológicas, exámenes cardiológicos, etc...</p>
+                    </li>
+                    <li>
+                        <h3><a href="vacunacion.pdf" download>VACUNACIÓN PDF - DESCARGAR</a></h3>
+                        <p>Guía de vacunación central para tu mascota, que es la herramienta preventiva de la salud más importante para asegurar su bienestar y prolongar su vida.</p>
+                    </li>
+                    <li>
+                        <h3><a href="nutricion.pdf" download>NUTRICIÓN PDF - DESCARGAR</a></h3>
+                        <p>Guía completa para la nutrición de tu mascota que es fundamental ya que impacta directamente en su salud, longevidad y calidad de vida. Al igual que los humanos, los animales necesitan un equilibrio óptimo de nutrientes para que su cuerpo funcione correctamente.</p>
+                    </li>
+                </ol>
+            </aside>
+            
+        </section>
+
+        <!-- SECCIÓN: BENEFICIOS -->
+        <section id="beneficios" class="section-beneficios">
+            <header>
+                <h2>Beneficios de estar al día con tu veterinaria</h2>
+            </header>
+
+            <div class="beneficios-grid">
+                
+                <article class="beneficio-card">
+                    <h3>Beneficios generales de salud</h3>
+                    <ul>
+                        <li><strong>Detectar a tiempo las enfermedades:</strong> Permite identificar problemas de salud antes de que se vuelvan graves o crónicos.</li>
+                        <li><strong>Control de vacunación:</strong> Mantiene a tu mascota protegida contra virus y enfermedades mortales.</li>
+                        <li><strong>Prevención de parásitos:</strong> Facilita el tratamiento continuo contra pulgas, garrapatas y gusanos internos.</li>
+                        <li><strong>Monitoreo del peso:</strong> Ayuda a prevenir la obesidad o detectar pérdidas de peso asociadas a problemas médicos.</li>
+                        <li><strong>Cuidado dental integral:</strong> Evita infecciones en la boca que pueden afectar a órganos vitales como el corazón o los riñones.</li>
+                    </ul>
+                    <figure class="image-placeholder"></figure>
+                </article>
+
+                <article class="beneficio-card">
+                    <h3>Pasos clave en el impacto a largo plazo</h3>
+                    <ol>
+                        <li><strong>Prolongación de la esperanza de vida:</strong> Las revisiones constantes aumentan los años que tu mascota pasará a tu lado.</li>
+                        <li><strong>Ahorro económico a futuro:</strong> Prevenir una enfermedad siempre es menos costoso que financiar un tratamiento de emergencia complejo.</li>
+                        <li><strong>Paz mental para la familia:</strong> Te da la tranquilidad de saber que estás haciendo lo correcto por el bienestar de tu compañero.</li>
+                        <li><strong>Historial médico sólido:</strong> Facilita diagnósticos más rápidos y precisos en el futuro al tener un registro completo de su salud.</li>
+                        <li><strong>Asesoría personalizada:</strong> Recibes consejos actualizados sobre nutrición y comportamiento adaptados a la edad exacta de tu mascota.</li>
+                    </ol>
+                    <figure class="image-placeholder"></figure>
+                </article>
+
+            </div>
+
+            <div class="call-to-action">
+                <a href="#" class="btn-primary">Información personalizada aquí</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <nav class="footer-nav" aria-label="Navegación del pie de página">
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Términos</a></li>
+                    <li><a href="#">Más</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-logo">
+                <img src="logo-footer.png" alt="Logotipo AdopPet">
+                <span>AdopPet</span>
+            </div>
+            
+            <ul class="social-links" aria-label="Redes sociales">
+                <li><a href="#" aria-label="YouTube"><span class="icon-youtube"></span></a></li>
+                <li><a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a></li>
+                <li><a href="#" aria-label="Twitter"><span class="icon-twitter"></span></a></li>
+                <li><a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+                <li><a href="#" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>&copy; Copyright 2026, All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

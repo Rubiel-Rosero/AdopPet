@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdopPet - Nutrición y Salud</title>
+    <!-- Aquí iría tu enlace al archivo CSS -->
+</head>
+
+<body>
+
+    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo-placeholder.png" alt="Logotipo de AdopPet">
+            <span>AdopPet</span>
+        </div>
+
+        <nav class="primary-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exploracion.html">Exploración</a></li>
+                <li><a href="contenido.html">Contenido</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <button class="btn-icon" aria-label="Notificaciones">
+                <span class="icon-bell"></span> Notificación
+            </button>
+            <button class="btn-icon" aria-label="Mi Cuenta">
+                <span class="icon-user"></span> Mi Cuenta
+            </button>
+        </div>
+    </header>
+
+    <!-- ================= MIGAS DE PAN (BREADCRUMBS) ================= -->
+    <nav class="breadcrumbs" aria-label="Ruta de navegación">
+        <ol>
+            <li><a href="#">La guía del cachorro para...</a></li>
+            <li><a href="#">Directorio de Recursos</a></li>
+            <li aria-current="page">Página Clínicas Aliadas</li>
+        </ol>
+    </nav>
+
+    <!-- ================= CONTENEDOR DE LAYOUT (2 COLUMNAS) ================= -->
+    <!-- Este div te permitirá usar Grid o Flexbox para separar el main del aside -->
+    <div class="page-layout-container">
+
+        <!-- ===== COLUMNA IZQUIERDA: CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content">
+
+            <!-- ARTÍCULO 1: Nutrición -->
+            <article id="nutricion" class="content-section">
+                <header>
+                    <h1>Nutrición y Rendimiento Físico</h1>
+                    <p class="subtitle">Dieta BARF vs. Alimento Concentrado</p>
+                </header>
+
+                <figure class="main-image-placeholder">
+                    <!-- Imagen destacada del artículo -->
+                </figure>
+
+                <div class="article-body">
+                    <p>La nutrición es un pilar fundamental en la salud de nuestras mascotas. Una buena alimentación no
+                        solo fortalece su sistema inmunológico sino que previene enfermedades crónicas. Según Christian
+                        Ocampo, director médico de Nutripet, una dieta equilibrada es la base del bienestar animal a
+                        largo plazo, impactando directamente en su longevidad y calidad de vida.</p>
+
+                    <ul>
+                        <li><strong>Beneficios de la dieta BARF:</strong> Entre los beneficios de la dieta BARF se
+                            destacan la mejora en la digestión y el aumento de energía en el animal. Sin embargo,
+                            también existen riesgos si no se formula correctamente por un profesional, lo que podría
+                            derivar en deficiencias nutricionales que afecten su desarrollo óptimo y su salud.</li>
+                        <li><strong>Alimento Concentrado:</strong> Ofrece una nutrición balanceada y conveniente,
+                            reduciendo riesgos de contaminación bacteriana, siendo una opción segura y avalada por
+                            veterinarios.</li>
+                    </ul>
+
+                    <p>En conclusión, el alimento más apropiado dependerá de la etapa de vida, su estado de salud, y el
+                        estilo de vida del animal. Mientras que la dieta BARF puede ofrecer beneficios de frescura, los
+                        alimentos concentrados de alta gama garantizan que los requerimientos nutricionales se cumplan
+                        adecuadamente sin la necesidad de preparación exhaustiva.</p>
+
+                    <ul>
+                        <li><strong>Ingredientes de alta calidad:</strong> Es vital revisar la etiqueta nutricional, ya
+                            que los primeros ingredientes deben ser proteínas animales de alta calidad para asegurar un
+                            óptimo desarrollo.</li>
+                        <li><strong>Consultar con un veterinario:</strong> Algunos veterinarios recomiendan dietas
+                            mixtas para obtener beneficios de ambos métodos alimenticios, previniendo así carencias y
+                            problemas gastrointestinales.</li>
+                    </ul>
+
+                    <p>Para conocer cómo mejorar la calidad de vida a través de la nutrición, comunícate con un
+                        especialista veterinario.</p>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 2: Inmunización -->
+            <article id="inmunizacion" class="content-section">
+                <header>
+                    <h2>Inmunización Preventiva</h2>
+                    <p class="subtitle">Esquema de Vacunación</p>
+                </header>
+
+                <figure class="main-image-placeholder"></figure>
+
+                <div class="article-body">
+                    <p>El esquema de vacunación es una de las responsabilidades más grandes al tener una mascota. Las
+                        vacunas actúan estimulando el sistema inmunológico, las cuales preparan al cuerpo para
+                        defenderse de la infección de enfermedades graves o mortales. Los cachorros recién nacidos
+                        dependen completamente de la protección que les brinda la leche materna, sin embargo, esa
+                        inmunidad desaparece paulatinamente a medida que crecen, haciendo vital iniciar el esquema de
+                        vacunación a tiempo para asegurar su protección contra los virus más comunes y peligrosos en su
+                        entorno.</p>
+
+                    <p>¿Qué debes saber de las vacunas en cachorros?</p>
+
+                    <!-- Subsección: Tabla de Seguimiento -->
+                    <section class="vaccine-tracking">
+                        <h3>Seguimiento de Vacunas</h3>
+
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Edad (Semanas)</th>
+                                        <th scope="col">Vacuna</th>
+                                        <th scope="col">Refuerzo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>6 - 8 semanas</td>
+                                        <td>Moquillo, Parvovirus, Hepatitis, Leptospirosis, Parainfluenza</td>
+                                        <td>Depende del fabricante, se recomienda la primera dosis (polivalente) a las 6
+                                            u 8 semanas según el estado del cachorro y su salud.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9 - 11 semanas</td>
+                                        <td>Segunda dosis de polivalente</td>
+                                        <td>Refuerzo a las 3 semanas de la primera aplicación, fortaleciendo la
+                                            inmunidad en etapas de crecimiento y exploración.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12 - 16 semanas</td>
+                                        <td>Tercera dosis y Rabia</td>
+                                        <td>Refuerzo anual. La vacuna contra la rabia es obligatoria y fundamental.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 3: Especialidades -->
+            <article id="especialidades" class="content-section">
+                <header>
+                    <h2>Especialidades médicas</h2>
+                    <p class="subtitle">Salud rigurosa</p>
+                </header>
+
+                <figure class="main-image-placeholder"></figure>
+
+                <div class="article-body">
+                    <p>La prevención en la medicina veterinaria va más allá de las vacunas y revisiones de rutina. Las
+                        especialidades médicas veterinarias permiten un diagnóstico profundo para tratar afecciones
+                        complejas y sistémicas. Así como los órganos o tipos de animales requieren diferentes niveles de
+                        cuidado, su plan de tratamiento debe ser adaptado.</p>
+
+                    <!-- Subsección: Lista de Servicios -->
+                    <section class="services-list">
+                        <h3>Tratamientos y Servicios</h3>
+                        <p class="sub-text">Especialidades</p>
+
+                        <!-- Tarjeta de servicio 1 -->
+                        <div class="service-card">
+                            <div class="service-icon-placeholder"></div>
+                            <div class="service-info">
+                                <h4>Dermatología</h4>
+                                <p>Diagnóstico de alergias, infecciones y pérdida de pelo, para mantener su pelaje y
+                                    piel sanos.</p>
+                                <button class="btn-outline">Ver opciones</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de servicio 2 -->
+                        <div class="service-card">
+                            <div class="service-icon-placeholder"></div>
+                            <div class="service-info">
+                                <h4>Cardiología</h4>
+                                <p>Diagnóstico y manejo de enfermedades cardíacas y de hipertensión.</p>
+                                <button class="btn-outline">Ver opciones</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de servicio 3 -->
+                        <div class="service-card">
+                            <div class="service-icon-placeholder"></div>
+                            <div class="service-info">
+                                <h4>Oftalmología</h4>
+                                <p>Prevención de cataratas, úlceras, glaucoma y problemas oculares.</p>
+                                <button class="btn-outline">Ver opciones</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!-- CALL TO ACTION FINAL -->
+            <section class="bottom-cta">
+                <figure class="video-placeholder">
+                    <button class="btn-play" aria-label="Reproducir video"></button>
+                </figure>
+                <div class="cta-content">
+                    <p>Emergencias médicas o asignar citas, con una revisión de rigor te ayudaremos a identificar y
+                        tratar a tiempo. Los diagnósticos oportunos permiten abordar el problema para detener la
+                        enfermedad o evitar sus secuelas. La prioridad debe ser el bienestar de tu compañero animal.
+                        Asegura su futuro con el cuidado que merece.</p>
+                    <button class="btn-primary">Ver especialistas</button>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== COLUMNA DERECHA: BARRA LATERAL (ASIDE) ===== -->
+        <!-- Esta etiqueta aside es perfecta para tu "menú de actualización" -->
+        <aside class="sidebar">
+
+            <!-- Menú de navegación anclado -->
+            <nav class="sticky-menu" aria-label="Índice de la página">
+                <p class="menu-title">Navegación de sitio</p>
+                <ul>
+                    <!-- Los href se conectan con los id de los articles correspondientes -->
+                    <li>
+                        <a href="#nutricion" class="active">
+                            <span class="icon-nutrition"></span> Nutrición
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#inmunizacion">
+                            <span class="icon-vaccine"></span> Inmunización BARF
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#especialidades">
+                            <span class="icon-stethoscope"></span> Especialidades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#glosario">
+                            <span class="icon-question"></span> Glosario: Qué debes saber?
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Espacio para publicidad o contenido relacionado -->
+            <figure class="sidebar-ad-placeholder">
+                <!-- Imagen o widget lateral -->
+            </figure>
+
+        </aside>
+
+    </div> <!-- Fin del contenedor de layout -->
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <nav class="footer-nav" aria-label="Navegación del pie de página">
+                <ul>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Términos</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-logo">
+                <img src="logo-footer.png" alt="Logotipo AdopPet">
+                <span>AdopPet</span>
+            </div>
+
+            <ul class="social-links" aria-label="Redes sociales">
+                <li><a href="#" aria-label="YouTube"><span class="icon-youtube"></span></a></li>
+                <li><a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a></li>
+                <li><a href="#" aria-label="Twitter"><span class="icon-twitter"></span></a></li>
+                <li><a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+                <li><a href="#" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; AdopPet 2026. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
