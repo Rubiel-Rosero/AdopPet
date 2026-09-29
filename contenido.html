@@ -11,30 +11,35 @@
 <body>
 
     <!-- ================= ENCABEZADO PRINCIPAL ================= -->
-    <header class="encabezado-principal">
-        <div class="logotipo">
-            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" width="48px">
-            <span>AdopPet</span>
+    <header id="encabezado-principal-multimedia" class="encabezado-principal-multimedia">
+        <!--Contenedor logo-->
+        <div id="contenedor-logo" class="contenedor-logo">
+            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
+                width="48px">
+            <strong class="nombre-marca">AdopPet</strong>
         </div>
-
-        <nav class="navegacion-principal" aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="exploracion.html">Exploración</a></li>
-                <li><a href="contenido.html">Contenido</a></li>
-                <li><a href="recursos.html">Recursos</a></li>
-                <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+        <!--Navegacion de las paginas-->
+        <nav id="navegacion-principal" class="navegacion-principal">
+            <ul class="lista-nav">
+                <li class="item-nav"><a href="index.html">Home</a></li>
+                <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
+                <li class="item-nav"><a href="contenido.html">Contenido</a></li>
+                <li class="item-nav"><a href="recursos.html">Recursos</a></li>
+                <li class="item-nav"><a href="multimedia.html">Multimedia</a></li>
+                <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-
-        <div class="acciones-usuario">
-            <button class="boton-icono" aria-label="Notificaciones">
-                <span class="icono-campana"></span> Notificación
-            </button>
-            <button class="boton-icono" aria-label="Mi Cuenta">
-                <span class="icono-usuario"></span> Mi Cuenta
-            </button>
+        <!--Contenedor Notificaines y cuenta-->
+        <div id="acciones-usuario" class="acciones-usuario">
+            <a href="notificaciones.html" id="btn-notificaciones">
+                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion"
+                    width="24">
+                Notificación
+            </a>
+            <a href="cuenta.html" id="btn-cuenta">
+                <img src="image/icono perfil.png" alt="Icono de mi cuenta" id="icono-cuenta" width="24">
+                Mi cuenta
+            </a>
         </div>
     </header>
 
@@ -241,7 +246,9 @@
                 <div class="contenedor-video">
                     <!-- Marcador para el video -->
                     <div class="caja-reproductor">
-                        <button class="boton-reproducir" aria-label="Reproducir video">▶</button>
+                        <figure>
+                            <video src="Video/videoSedes.mp4" width="450" controls type="Video/mp4"></video>
+                        </figure>
                     </div>
                 </div>
                 <div class="contenido-cta">
@@ -288,7 +295,7 @@
 
             <!-- Marcador publicitario o imagen lateral -->
             <div class="marcador-anuncio-lateral">
-                <img src="anuncio-placeholder.png" alt="Publicidad o imagen lateral">
+                <img src="image/Evento san valentin.jpg" alt="Publicidad o imagen lateral" width="400px">
             </div>
 
         </aside>
@@ -307,22 +314,22 @@
             </nav>
 
             <div class="logo-pie">
-                <img src="logo-blanco.png" alt="Logo">
+                <img src="image/AdopPet Logo.png" alt="Logo" width="60px">
                 <a href="index.html">AdopPet</a>
             </div>
 
             <div class="redes-sociales">
                 <ul>
-                    <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img src="yutu.png"
-                                alt="Youtube"></a></li>
-                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="face.png"
-                                alt="Facebook"></a></li>
-                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="tw.png"
-                                alt="Twitter"></a></li>
-                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="insta.png"
-                                alt="Instagram"></a></li>
-                    <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img src="linkedin.png"
-                                alt="Linkedin"></a></li>
+                    <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img
+                                src="image/youtube logo.png" alt="Youtube" width="24px"></a></li>
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
+                                src="image/icono facebook.png" alt="Facebook" width="24px"></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png"
+                                alt="Twitter" width="24px"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
+                                src="image/logo instagram.png" alt="Instagram" width="24px"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img
+                                src="image/linkedin.png" alt="Linkedin" width="24px"></a></li>
                 </ul>
             </div>
         </div>
