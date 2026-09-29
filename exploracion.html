@@ -4,39 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AdopPet Exploración</title>
 </head>
 
 <body>
-    
-    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
-    <header class="main-header">
+    <header>
         <div class="logo">
-            <img src="logo-placeholder.png" alt="Logotipo de AdopPet">
-            <span>AdopPet</span>
+            <img src="images/logo.jpg" alt="Logo" width="40" height="40">
+            <a href="index.html">AdopPet</a>
         </div>
-        
-        <nav class="primary-nav" aria-label="Navegación principal">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="exploracion.html">Exploración</a></li>
+                <li><a href="exploracion.html">Exploracion</a></li>
                 <li><a href="contenido.html">Contenido</a></li>
                 <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="multimedia.html">Multimedia</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-
-        <div class="user-actions">
-            <button class="btn-icon" aria-label="Notificaciones">
-                <span class="icon-bell"></span> Notificación
-            </button>
-            <button class="btn-icon" aria-label="Mi Cuenta">
-                <span class="icon-user"></span> Mi Cuenta
-            </button>
+        <div class="usuario">
+            <a href="#notificaciones" class="noti">Notificación</a>
+            <a href="#cuenta" class="usuario">Mi cuenta</a>
         </div>
     </header>
-
     <main>
         <nav class="segundoNav">
             <ul>
@@ -50,7 +41,7 @@
         <br>
         <section id="adopcion" class="adop">
             <div class="adop-img">
-                <img src="img.png" alt="img de la adopcion">
+                <img src="images/programa.jpg" alt="img de la adopcion">
             </div>
             <div class="adopcion-cont">
                 <h1>Nuestros Programas de Bienestar Animal</h1>
@@ -72,7 +63,7 @@
                 <p>El refugio cubre el 100% de los gastos
                     veterinarios y alimentacion.</p>
                 <div class="img-hogar">
-                    <img src="img-png" alt="imagen de hogares">
+                    <img src="images/hogar.jpg" alt="imagen de hogares">
                 </div>
                 <br>
                 <div class="hogar-boton">
@@ -84,7 +75,7 @@
         </section>
         <section id="voluntarios" class="volunt">
             <div class="volunt-img">
-                <img src="img.png" alt="Imagen de Voluntariado">
+                <img src="images/voluntarios.jpg" alt="Imagen de Voluntariado">
             </div>
             <div class="volunt-cont">
                 <h2>Voluntariado</h2>
@@ -95,19 +86,19 @@
             </div>
             <div class="requisitos-cont">
                 <div class="img-req1">
-                    <img src="icon-re" alt="icono de requisito">
+                    <img src="images/persona.jpg" alt="icono de requisito" width="60" height="60">
                     <p>Ser mayor de edad</p>
                 </div>
                 <div class="img-req2">
-                    <img src="icon-re" alt="icono de requisito">
+                    <img src="images/grupo.jpg" alt="icono de requisito" width="60" height="60">
                     <p>Asistir a inducción técnica</p>
                 </div>
                 <div class="img-req3">
-                    <img src="icon-re" alt="icono de requisito">
+                    <img src="images/calendario.jpg" alt="icono de requisito" width="60" height="60">
                     <p>Disponibilidad minima de 4 horas mensuales.</p>
                 </div>
                 <div class="img-req4">
-                    <img src="icon-re" alt="icono de requisito">
+                    <img src="images/transporte.jpg" alt="icono de requisito" width="60" height="60">
                     <p>Elegir donde quieres ir a nuestros servicios de voluntariado
                         a lo largo de la ciudad.</p>
                 </div>
@@ -119,7 +110,7 @@
             <br>
         </section>
         <section id="bienestar" class="bienestar">
-            <div class="bienestar-t">
+            <div class="bienestar-contenido">
                 <h2>Bienestar e higiene</h2>
                 <div class="info-lista">
                     <details>
@@ -128,7 +119,7 @@
                         <br>
                         <div class="bienestar-despliegue">
                             <div class="img-cont">
-                                <img src="img-png" alt="imagen de info">
+                                <img src="images/limpieza-dental.jpg" alt="imagen de info">
                             </div>
                             <br>
                             <div class="contexto">
@@ -167,10 +158,67 @@
                     <br>
                     <details>
                         <summary><strong>Cortes de pelo, baños medicados y arreglo general.</strong></summary>
+                        <br>
+                        <div class="bienestar-despliegue">
+                            <div class="img-cont">
+                                <img src="images/pelaje.jpg" alt="imagen de info">
+                            </div>
+                            <br>
+                            <div class="contexto">
+                                <h3>Cortes de pelo, baños medicados y arreglo general.</h3>
+                                <br>
+                                <ul>
+                                    <li>Iniciamos con una evaluación detallada de la piel y pelaje de la mascota para
+                                        elegir el champú y acondicionador medicado o hipoalergénico idóneo. Este
+                                        servicio busca aliviar
+                                        afecciones dermatológicas frecuentes como resequedad, descamación, pulgas o
+                                        sensibilidad cutánea.</li>
+                                    <br>
+                                    <li>Realizamos un corte higiénico estratégico en zonas sensibles, vaciado controlado
+                                        de glándulas anales,
+                                        desinfectado de oídos para prevenir otitis y un corte de uñas adecuado
+                                        que evite problemas en la pisada y postura del animal.</li>
+                                    <br>
+                                    <li>Finalizamos con un secado a temperatura regulada y un cepillado profundo
+                                        para remover todo el pelo muerto, garantizando que el proceso sea relajante,
+                                        seguro y libre de estrés para la mascota.</li>
+                                    <br>
+                                </ul>
+                            </div>
+                        </div>
                     </details>
                     <br>
                     <details>
                         <summary><strong> Terapias de rehabilitación física.</strong></summary>
+                        <br>
+                        <div class="bienestar-despliegue">
+                            <div class="img-cont">
+                                <img src="images/Terapia.jpg" alt="imagen de info">
+                            </div>
+                            <br>
+                            <div class="contexto">
+                                <h3>Terapias de rehabilitación física.</h3>
+                                <br>
+                                <ul>
+                                    <li>Diseñamos planes terapéuticos personalizados para mascotas que han sufrido
+                                        cirugías ortopédicas, accidentes
+                                        o que padecen patologías crónicas como displasia de cadera o artrosis.
+                                        El objetivo principal es reducir el dolor y restaurar la movilidad articular.
+                                    </li>
+                                    <br>
+                                    <li>Aplicamos técnicas de masajes descontracturantes,
+                                        estiramientos pasivos y termoterapia (aplicación de frío/calor) para estimular
+                                        la
+                                        circulación sanguínea y acelerar la regeneración muscular en áreas debilitadas.
+                                    </li>
+                                    <br>
+                                    <li>Acompañamos a la mascota en ejercicios de bajo impacto para recuperar el
+                                        equilibrio y la fuerza, garantizando que conserve su autonomía y
+                                        mejore su calidad de vida día a día.</li>
+                                    <br>
+                                </ul>
+                            </div>
+                        </div>
                     </details>
                     <br>
                 </div>
@@ -184,11 +232,13 @@
             <div class="event">
                 <h2>Evento de Peluditos</h2>
             </div>
-            <div class="img-eventos">
-                <img src="img.png" alt="Imagen de evento">
+            <div class="video-evento">
+                <video src="videos/evento.mp4" controls width="400">
+                    Tu navegador no soporta el elemento de video.
+                </video>
                 <br>
             </div>
-            <div class="info-evento">
+            <article class="info-evento">
                 <h3>¡Pet Party!</h3>
                 <p>Realizamos eventos para que nuestros peluditos tenga una buena vida, darles esa oportunidad de
                     encuentras su familia especial. Nuestro equipo trabaja continuamente para ofrecer el mejor de
@@ -201,13 +251,13 @@
                     diferentes puntos: El Diamante, Granada, Calipso.</p>
 
                 <div class="icon-evento">
-                    <img src="img.png" alt="icono de evento">
+                    <img src="images/ubicacion.jpg" alt="icono de evento" width="60" height="60">
                 </div>
                 <br>
                 <div class="evento-boton">
                     <button>¡Encuentranos Aqui!</button>
                 </div>
-            </div>
+            </article>
             <br>
         </section>
     </main>
@@ -215,13 +265,13 @@
         <div class="pie-cont">
             <div class="pie-enlaces">
                 <ul>
-                    <li><a href="#Contac">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#mas">Más</a></li>
                 </ul>
             </div>
             <div class="pie-logo">
-                <img src="img.png" alt="Logo">
+                <img src="images/logo.jpg" alt="Logo" width="40" height="40">
                 <a href="index.html">AdopPet</a>
             </div>
             <div class="pie-redes-sociales">
