@@ -8,25 +8,34 @@
 </head>
 
 <body>
-    <header>
+    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
+    <header class="main-header">
         <div class="logo">
-            <a href="index.html">AdopPet</a>
+            <img src="logo-placeholder.png" alt="Logotipo de AdopPet">
+            <span>AdopPet</span>
         </div>
-        <nav>
+        
+        <nav class="primary-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="exploracion.html">Exploracion</a></li>
+                <li><a href="exploracion.html">Exploración</a></li>
                 <li><a href="contenido.html">Contenido</a></li>
                 <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="multimedia.html">Multimedia</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <div class="usuario">
-            <a href="#notificaciones" class="noti">Notificación</a>
-            <a href="#cuenta" class="usuario">Mi cuenta</a>
+
+        <div class="user-actions">
+            <button class="btn-icon" aria-label="Notificaciones">
+                <span class="icon-bell"></span> Notificación
+            </button>
+            <button class="btn-icon" aria-label="Mi Cuenta">
+                <span class="icon-user"></span> Mi Cuenta
+            </button>
         </div>
     </header>
+
     <main>
         <nav class="segundoNav">
             <ul>
