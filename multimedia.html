@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>multimedia</title>
+    <title>AdopPet - Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
         <!--Contenedor logo-->
         <div id="contenedor-logo" class="contenedor-logo">
             <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
-                width="48px">
+                width="48">
             <strong class="nombre-marca">AdopPet</strong>
         </div>
         <!--Navegacion de las paginas-->
@@ -22,7 +23,7 @@
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
                 <li class="item-nav"><a href="contenido.html">Contenido</a></li>
                 <li class="item-nav"><a href="recursos.html">Recursos</a></li>
-                <li class="item-nav"><a href="multimedia.html">Multimedia</a></li>
+                <li class="item-nav"><a href="multimedia.html" class="activo" aria-current="page">Multimedia</a></li>
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -67,19 +68,22 @@
         <section id="experiencias" class="seccion-galeria">
             <h2 class="titulo-secundario">Experiencias unidas</h2>
             <article id="carrusel-experiencias" class="contenedor-carrusel">
-                <a href="" id="btn-anterior" class="control-carrucel-flecha-izquierda" aria-label="Imagen anterior"><</a>
+                <a href="#anterior" id="btn-anterior" class="control-carrusel control-carrusel-izquierda"
+                    aria-label="Imagen anterior">&lt;</a>
 
-                    <figure class="item-galeria">
-                        <img class="img-galeria" src="image/familia feliz.jpg"
-                            alt="Familia feliz con su nueva mascota adoptada" width="800">
-                    </figure>
+                <figure class="item-galeria">
+                    <span class="etiqueta-destacado">Destacado</span>
+                    <img class="img-galeria" src="image/familia feliz.jpg"
+                        alt="Familia feliz con su nueva mascota adoptada" width="800">
+                </figure>
 
-                    <figure class="item-galeria">
-                        <img class="img-galeria" src="image/mascota en el parque.jpg"
-                            alt="Mascota rescatada jugando en el parque" width="800">
-                    </figure>
+                <figure class="item-galeria">
+                    <img class="img-galeria" src="image/mascota en el parque.jpg"
+                        alt="Mascota rescatada jugando en el parque" width="800">
+                </figure>
 
-                        <a href="#siguiente" id="btn-siguiente" class="control-carrusel flecha-derecha"aria-label="Siguiente imagen">></a>
+                <a href="#siguiente" id="btn-siguiente" class="control-carrusel control-carrusel-derecha"
+                    aria-label="Siguiente imagen">&gt;</a>
             </article>
         </section>
         <!--Seccion de contenido complementario-->
@@ -99,26 +103,30 @@
             </div>
             <!--Contenido de la columna-->
             <aside class="columna-contenido-complementario">
-                <h2 class="titulo-secundario">Juntos como familia peruana</h2>
+                <h2 class="titulo-secundario">Juntos como familia</h2>
                 <p class="texto-descriptivo">Nuestra mayor alegría es ayudar a quienes lo necesiten de la mejor manera
                     posible y poder convivir espectacularmente con nuestros peluditos.</p>
                 <!--Ubicacion-->
                 <figure class="recurso-ubicacion">
                     <figcaption>Encuentra nuestra sede en cali</figcaption>
-                    <iframe
+                    <iframe class="mapa-ubicacion"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127415.75619176166!2d-76.60492828359374!3d3.3950619000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
-                        width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="450" height="300" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </figure>
-                <figure>
+                <figure class="recurso-instalaciones">
                     <figcaption>Nuestras instalaciones</figcaption>
-                    <video src="Video/videoSedes.mp4" width="450" controls type="Video/mp4"></video>
+                    <video width="450" controls>
+                        <source src="Video/videoSedes.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                 </figure>
                 <!--Audio-->
                 <figure class="recurso-audio">
                     <audio controls>
                         <source src="Audio/Audio Perro.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
                     </audio>
                 </figure>
             </aside>
@@ -180,29 +188,29 @@
         <div class="contenedor-pie">
             <nav class="enlaces-pie">
                 <ul>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#mas">Más</a></li>
                 </ul>
             </nav>
 
             <div class="logo-pie">
-                <img src="image/AdopPet Logo.png" alt="Logo" width="60px">
+                <img src="image/AdopPet Logo.png" alt="Logo" width="60">
                 <a href="index.html">AdopPet</a>
             </div>
 
             <div class="redes-sociales">
                 <ul>
                     <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img
-                                src="image/youtube logo.png" alt="Youtube" width="24px"></a></li>
+                                src="image/youtube logo.png" alt="Youtube" width="24"></a></li>
                     <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
-                                src="image/icono facebook.png" alt="Facebook" width="24px"></a></li>
+                                src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
                     <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png"
-                                alt="Twitter" width="24px"></a></li>
+                                alt="Twitter" width="24"></a></li>
                     <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
-                                src="image/logo instagram.png" alt="Instagram" width="24px"></a></li>
+                                src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
                     <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img
-                                src="image/linkedin.png" alt="Linkedin" width="24px"></a></li>
+                                src="image/linkedin.png" alt="Linkedin" width="24"></a></li>
                 </ul>
             </div>
         </div>
@@ -211,6 +219,10 @@
             <p>AdopPet &copy; 2026. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Enlace fijo para volver arriba -->
+    <a href="#encabezado-principal-multimedia" id="volver-arriba" class="btn-volver-arriba"
+        aria-label="Volver arriba">&uarr;</a>
 </body>
 
 </html>
