@@ -5,7 +5,7 @@
 
    Aqui va SOLO lo especifico de esta pagina:
    4. Maquetacion de la pagina (hero, galeria, familia, celebraciones)
-   5. Componentes propios (carrusel, recursos multimedia)
+   5. Componentes propios (galeria, recursos multimedia, tarjetas de evento)
    6. Estados propios (hover de la galeria con transform: scale)
    ====================================================================== */
 
@@ -14,18 +14,241 @@
    4. MAQUETACION DE LA PAGINA
    ====================================================================== */
 
-/* (pendiente) seccion-hero, seccion-galeria, seccion-familia, seccion-celebraciones */
+/* ---- Hero / presentacion ---- */
+.seccion-hero {
+    text-align: center;
+    background-color: var(--color-rosa-suave);
+    border-radius: var(--radio);
+}
+
+.descripcion-hero {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: var(--color-texto-suave);
+}
+
+/* ---- Seccion familia: dos columnas con Flexbox ---- */
+.seccion-familia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--esp-lg);
+}
+
+/* Columna del video: crece para ocupar el espacio disponible */
+.contenedor-video {
+    flex: 1 1 460px;
+}
+
+/* Columna de contenido complementario: apilada en columna */
+.columna-contenido-complementario {
+    flex: 1 1 360px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-md);
+}
+
+/* Primera letra destacada del parrafo introductorio (pseudoelemento) */
+.texto-descriptivo::first-letter {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    line-height: 1;
+}
 
 
 /* ======================================================================
    5. COMPONENTES PROPIOS
    ====================================================================== */
 
-/* (pendiente) carrusel de experiencias, recursos de video/audio/mapa, tarjetas de eventos */
+/* ---- Galeria de experiencias (flex-wrap + gap) ---- */
+.contenedor-carrusel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--esp-md);
+}
+
+/* Flechas decorativas (sin JavaScript) */
+.control-carrusel {
+    flex: 0 0 auto;
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+}
+
+/* Cada imagen de la galeria: contenedor con recorte y esquinas redondeadas */
+.item-galeria {
+    position: relative;
+    flex: 1 1 360px;
+    max-width: 520px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.img-galeria {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Leyenda que aparece al pasar el cursor (visibility) */
+.leyenda-galeria {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: var(--esp-sm);
+    color: #ffffff;
+    background-color: rgba(52, 12, 22, 0.75);
+    font-size: 0.9rem;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* ---- Recursos multimedia: no desbordan su caja ---- */
+.recurso-video iframe,
+.mapa-ubicacion {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
+    border: 0;
+    border-radius: var(--radio);
+}
+
+.recurso-instalaciones video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radio);
+}
+
+.recurso-audio audio {
+    width: 100%;
+}
+
+/* Texto descriptivo de cada recurso (figcaption estilizado) */
+.recurso-video figcaption,
+.recurso-ubicacion figcaption,
+.recurso-instalaciones figcaption {
+    margin-bottom: var(--esp-xs);
+    font-weight: 500;
+    color: var(--color-primario);
+}
+
+/* ---- Seccion celebraciones: tarjetas en fila que se reacomodan ---- */
+.lista-eventos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--esp-lg);
+}
+
+.item-eventos {
+    flex: 1 1 300px;
+    max-width: 360px;
+    display: flex;
+}
+
+/* La tarjeta se apila en columna (imagen arriba, detalle abajo) */
+.targeta-contenido {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.imagen-evento {
+    margin: 0;
+    overflow: hidden;
+}
+
+.imagen-evento img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* El detalle crece para empujar el boton al fondo */
+.detalles-evento {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-xs);
+    padding: var(--esp-md);
+}
+
+.btn-ver-mas {
+    align-self: flex-start;
+    margin-top: var(--esp-xs);
+}
+
+/* Subrayado decorativo bajo los titulos de seccion (pseudoelemento) */
+.titulo-secundario {
+    position: relative;
+    padding-bottom: var(--esp-xs);
+}
+
+.titulo-secundario::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 64px;
+    height: 4px;
+    background-color: var(--color-acento);
+    border-radius: 999px;
+}
 
 
 /* ======================================================================
    6. ESTADOS PROPIOS
    ====================================================================== */
 
-/* (pendiente) hover de imagenes de la galeria (transform: scale + overflow: hidden) */
+/* Zoom suave de la imagen de la galeria al pasar el cursor */
+.item-galeria .img-galeria {
+    transition: transform 0.35s ease;
+}
+
+.item-galeria:hover .img-galeria,
+.item-galeria:focus-within .img-galeria {
+    transform: scale(1.08);
+}
+
+/* Mostrar la leyenda al pasar el cursor */
+.item-galeria:hover .leyenda-galeria,
+.item-galeria:focus-within .leyenda-galeria {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Elevacion y zoom de las tarjetas de evento al pasar el cursor */
+.imagen-evento img {
+    transition: transform 0.35s ease;
+}
+
+.targeta-contenido:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(52, 12, 22, 0.18);
+}
+
+.targeta-contenido:hover .imagen-evento img {
+    transform: scale(1.08);
+}
