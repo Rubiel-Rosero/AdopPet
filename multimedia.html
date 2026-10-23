@@ -69,23 +69,25 @@
         <section id="experiencias" class="seccion-galeria">
             <h2 class="titulo-secundario">Experiencias unidas</h2>
             <article id="carrusel-experiencias" class="contenedor-carrusel">
-                <a href="#anterior" id="btn-anterior" class="control-carrusel control-carrusel-izquierda"
+                <a href="#slide-1" class="control-carrusel control-carrusel-izquierda"
                     aria-label="Imagen anterior">&lt;</a>
 
-                <figure class="item-galeria">
-                    <span class="etiqueta-destacado">Destacado</span>
-                    <img class="img-galeria" src="image/familia feliz.jpg"
-                        alt="Familia feliz con su nueva mascota adoptada" width="800">
-                    <figcaption class="leyenda-galeria">Una familia feliz con su nueva mascota adoptada</figcaption>
-                </figure>
+                <div class="pista-carrusel">
+                    <figure id="slide-1" class="item-galeria">
+                        <span class="etiqueta-destacado">Destacado</span>
+                        <img class="img-galeria" src="image/familia feliz.jpg"
+                            alt="Familia feliz con su nueva mascota adoptada" width="800">
+                        <figcaption class="leyenda-galeria">Una familia feliz con su nueva mascota adoptada</figcaption>
+                    </figure>
 
-                <figure class="item-galeria">
-                    <img class="img-galeria" src="image/mascota en el parque.jpg"
-                        alt="Mascota rescatada jugando en el parque" width="800">
-                    <figcaption class="leyenda-galeria">Mascota rescatada disfrutando del parque</figcaption>
-                </figure>
+                    <figure id="slide-2" class="item-galeria">
+                        <img class="img-galeria" src="image/mascota en el parque.jpg"
+                            alt="Mascota rescatada jugando en el parque" width="800">
+                        <figcaption class="leyenda-galeria">Mascota rescatada disfrutando del parque</figcaption>
+                    </figure>
+                </div>
 
-                <a href="#siguiente" id="btn-siguiente" class="control-carrusel control-carrusel-derecha"
+                <a href="#slide-2" class="control-carrusel control-carrusel-derecha"
                     aria-label="Siguiente imagen">&gt;</a>
             </article>
         </section>
@@ -147,12 +149,13 @@
                         <figure class="imagen-evento">
                             <img src="image/Inicio Año.jpg" alt="Celebración de inicio de año con mascotas" width="250">
                         </figure>
-                        <div class="detalles-evento">
+                        <div class="info-evento">
+                            <span class="numero-evento">01</span>
                             <h3 class="titulo-evento">Inicio de año!</h3>
                             <p class="texto-evento">Experiencias con nuestras veterinarias asociadas, compartiendo
                                 experiencias en nuestro evento único de inicio de año.</p>
-                            <button class="btn-ver-mas">Ver mas</button>
                         </div>
+                        <button class="btn-ver-mas">Ver más <span class="flecha-btn">&rarr;</span></button>
                     </article>
                 </li>
                 <!--Evento 2 San valetin-->
@@ -161,12 +164,13 @@
                         <figure class="imagen-evento">
                             <img src="image/Evento san valentin.jpg" alt="Mascotas celebrando San Valentín" width="250">
                         </figure>
-                        <div class="detalles-evento">
+                        <div class="info-evento">
+                            <span class="numero-evento">02</span>
                             <h3 class="titulo-evento">San Valentín!</h3>
                             <p class="texto-evento">No hay mejor amor que el de nuestros peluditos. Acompañados de las
                                 mejores personas y repartiendo nuestro amor en grande.</p>
-                            <button class="btn-ver-mas">Ver mas</button>
                         </div>
+                        <button class="btn-ver-mas">Ver más <span class="flecha-btn">&rarr;</span></button>
                     </article>
                 </li>
                 <!--Evento 3 Diciembre-->
@@ -175,12 +179,13 @@
                         <figure class="imagen-evento">
                             <img src="image/evento diciembre.jpg" alt="Familias y mascotas en Navidad" width="250">
                         </figure>
-                        <div class="detalles-evento">
+                        <div class="info-evento">
+                            <span class="numero-evento">03</span>
                             <h3 class="titulo-evento">Diciembre unidos!</h3>
                             <p class="texto-evento">Que estas navidades sean las mejores unidos en familia y acompañados
                                 de nuestro peludito. Vamos a celebrar un nuevo comienzo.</p>
-                            <button class="btn-ver-mas">Ver mas</button>
                         </div>
+                        <button class="btn-ver-mas">Ver más <span class="flecha-btn">&rarr;</span></button>
                     </article>
                 </li>
             </ul>
