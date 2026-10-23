@@ -1,0 +1,577 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+/* ======================================================================
+   AdopPet - Hoja de estilos COMPARTIDA (estilos.css)
+   Contiene los estilos comunes a las 6 paginas del sitio.
+   La maquetacion propia de cada pagina vive en su archivo:
+   css/multimedia.css, css/contacto.css, css/index.css, etc.
+
+   Organizacion (seccion 5.1):
+   1. Reset y estilos base
+   2. Tipografia
+   3. Estructura comun: header, nav y footer
+   4. Maquetacion comun (contenedores y espaciado base)
+   5. Componentes: tarjetas, botones, tablas y formularios
+   6. Estados e interacciones
+   7. Animaciones
+   ====================================================================== */
+
+
+/* ======================================================================
+   1. RESET Y ESTILOS BASE
+   ====================================================================== */
+
+/* Tokens de identidad visual (paleta y tipografia del mockup) */
+:root {
+    /* Paleta (nicho: adopcion de mascotas) */
+    --color-primario: #651f31;
+    --color-primario-oscuro: #340c16;
+    --color-primario-claro: #e48699;
+    --color-acento: #d54b6e;
+    --color-rosa-suave: #faeef0;
+
+    /* Neutros */
+    --color-texto: #1d1a1a;
+    --color-texto-suave: #605759;
+    --color-fondo: #ffffff;
+    --color-fondo-alt: #f1f0f1;
+    --color-borde: #ccc8c8;
+
+    /* Tipografia */
+    --fuente-titulos: "Inter", sans-serif;
+    --fuente-texto: "Roboto", sans-serif;
+
+    /* Sistema de espaciado (multiplos de 8px) */
+    --esp-xs: 8px;
+    --esp-sm: 16px;
+    --esp-md: 24px;
+    --esp-lg: 32px;
+    --esp-xl: 48px;
+
+    /* Otros */
+    --radio: 12px;
+    --sombra: 0 4px 16px rgba(52, 12, 22, 0.12);
+    --ancho-max: 1200px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+/* Textos largos (enlaces, direcciones, titulos) no desbordan su caja */
+a,
+p,
+h1,
+h2,
+h3,
+li {
+    overflow-wrap: break-word;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ======================================================================
+   2. TIPOGRAFIA
+   ====================================================================== */
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto);
+    line-height: 1.2;
+    margin: 0 0 var(--esp-sm) 0;
+}
+
+h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 0 0 var(--esp-sm) 0;
+    color: var(--color-texto-suave);
+}
+
+
+/* ======================================================================
+   3. ESTRUCTURA COMUN: HEADER, NAV Y FOOTER
+   ====================================================================== */
+
+/* ---- Encabezado principal (sticky en todas las paginas) ---- */
+.encabezado-principal-multimedia {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--esp-sm);
+    padding: var(--esp-sm) var(--esp-lg);
+    background-color: var(--color-fondo);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-xs);
+}
+
+.logo-adopPet {
+    width: 48px;
+    height: auto;
+}
+
+.nombre-marca {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+/* ---- Navegacion principal (enlaces en fila) ---- */
+.navegacion-principal .lista-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--esp-md);
+}
+
+.item-nav a {
+    display: inline-block;
+    padding: var(--esp-xs) 0;
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+/* Acciones de usuario (notificaciones / cuenta) */
+.acciones-usuario {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-sm);
+}
+
+.acciones-usuario a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--esp-xs);
+    padding: var(--esp-xs) var(--esp-sm);
+    border-radius: var(--radio);
+    font-weight: 500;
+    color: var(--color-primario);
+    border: 1px solid var(--color-borde);
+}
+
+/* ---- Navegacion secundaria (dentro de la pagina) ---- */
+.nav-secundaria {
+    background-color: var(--color-rosa-suave);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.lista-nav-secundaria {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--esp-md);
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: var(--esp-xs) var(--esp-lg);
+}
+
+.lista-nav-secundaria a {
+    display: inline-block;
+    padding: var(--esp-xs) 0;
+    font-weight: 500;
+    color: var(--color-primario);
+}
+
+/* ---- Pie de pagina ---- */
+.pie-de-pagina {
+    margin-top: var(--esp-xl);
+    background-color: var(--color-primario-oscuro);
+    color: #ffffff;
+}
+
+.contenedor-pie {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--esp-lg);
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: var(--esp-lg);
+}
+
+.enlaces-pie ul,
+.redes-sociales ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-md);
+}
+
+.enlaces-pie a {
+    color: #ffffff;
+}
+
+.logo-pie {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-xs);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.redes-sociales img {
+    width: 24px;
+    height: auto;
+}
+
+.derechos-autor {
+    padding: var(--esp-sm);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.derechos-autor p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ======================================================================
+   4. MAQUETACION COMUN (contenedores y espaciado base)
+   La maquetacion detallada de cada pagina esta en su propio archivo CSS.
+   ====================================================================== */
+
+/* Centra el contenido y evita que toque los bordes */
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Patron de seccion: ancho maximo centrado con aire interno */
+.seccion-hero,
+.seccion-galeria,
+.seccion-familia,
+.seccion-celebraciones,
+.seccion-equipo,
+.seccion-contacto {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: var(--esp-xl) var(--esp-lg);
+}
+
+
+/* ======================================================================
+   5. COMPONENTES: TARJETAS, BOTONES, TABLAS Y FORMULARIOS
+   ====================================================================== */
+
+/* ---- Botones (base compartida) ---- */
+.btn-ver-mas,
+.btn-contactar,
+.btn-enviar,
+.btn-limpiar {
+    display: inline-block;
+    padding: var(--esp-xs) var(--esp-md);
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--color-primario);
+    border-radius: var(--radio);
+    cursor: pointer;
+}
+
+/* Boton primario (relleno) */
+.btn-ver-mas,
+.btn-contactar,
+.btn-enviar {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+/* Boton secundario (contorno) */
+.btn-limpiar {
+    background-color: transparent;
+    color: var(--color-primario);
+}
+
+/* ---- Tarjetas con imagen (overflow hidden + border-radius) ---- */
+.targeta-contenido,
+.tarjeta-miembro {
+    overflow: hidden;
+    border-radius: var(--radio);
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra);
+}
+
+/* Etiqueta superpuesta sobre tarjeta/imagen (position absolute) */
+.etiqueta-destacado {
+    position: absolute;
+    top: var(--esp-sm);
+    left: var(--esp-sm);
+    z-index: 2;
+    padding: 4px var(--esp-xs);
+    background-color: var(--color-acento);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 999px;
+}
+
+/* ---- Tablas (contenedor con scroll + filas alternadas) ---- */
+.contenedor-table {
+    max-width: var(--ancho-max);
+    margin: 0 auto var(--esp-xl) auto;
+    padding: 0 var(--esp-lg);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: var(--esp-sm);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+/* ---- Formularios (campos base) ---- */
+fieldset {
+    margin: 0 0 var(--esp-md) 0;
+    padding: var(--esp-md);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+}
+
+legend {
+    padding: 0 var(--esp-xs);
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: var(--esp-xs);
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: var(--esp-xs) var(--esp-sm);
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    background-color: var(--color-fondo);
+}
+
+/* Controles que no deben ocupar todo el ancho */
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"] {
+    width: auto;
+}
+
+/* ---- Enlace "Volver arriba" (position fixed) ---- */
+.btn-volver-arriba {
+    position: fixed;
+    right: var(--esp-md);
+    bottom: var(--esp-md);
+    z-index: 200;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    box-shadow: var(--sombra);
+}
+
+
+/* ======================================================================
+   6. ESTADOS E INTERACCIONES
+   ====================================================================== */
+
+/* Transiciones suaves en elementos interactivos */
+.item-nav a,
+.lista-nav-secundaria a,
+.acciones-usuario a,
+.enlaces-pie a,
+.btn-ver-mas,
+.btn-contactar,
+.btn-enviar,
+.btn-limpiar,
+.btn-volver-arriba,
+.targeta-contenido,
+.tarjeta-miembro,
+input,
+select,
+textarea {
+    transition: color 0.25s ease, background-color 0.25s ease,
+        box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+/* ---- Enlaces de navegacion ---- */
+.item-nav a:hover,
+.lista-nav-secundaria a:hover {
+    color: var(--color-acento);
+}
+
+.item-nav a:focus-visible,
+.lista-nav-secundaria a:focus-visible,
+.btn-ver-mas:focus-visible,
+.btn-contactar:focus-visible,
+.btn-enviar:focus-visible,
+.btn-limpiar:focus-visible {
+    outline: 3px solid var(--color-primario-claro);
+    outline-offset: 2px;
+}
+
+/* Pagina actual en el menu */
+.item-nav a.activo {
+    color: var(--color-primario);
+    font-weight: 700;
+}
+
+/* ---- Botones ---- */
+.btn-ver-mas:hover,
+.btn-contactar:hover,
+.btn-enviar:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+.btn-limpiar:hover {
+    background-color: var(--color-rosa-suave);
+}
+
+.btn-ver-mas:active,
+.btn-contactar:active,
+.btn-enviar:active,
+.btn-limpiar:active {
+    transform: translateY(2px);
+}
+
+/* ---- Boton volver arriba ---- */
+.btn-volver-arriba:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+/* ---- Filas alternadas de tabla ---- */
+tbody tr:nth-child(even) {
+    background-color: var(--color-fondo-alt);
+}
+
+tbody tr:hover {
+    background-color: var(--color-rosa-suave);
+}
+
+/* ---- Formulario: foco y validacion ---- */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px var(--color-rosa-suave);
+}
+
+input:required {
+    border-left: 3px solid var(--color-acento);
+}
+
+input:valid {
+    border-color: #4a9d6b;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #c0392b;
+}
+
+/* Texto de ayuda de los campos (pseudoelemento) */
+::placeholder {
+    color: var(--color-texto-suave);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+
+/* ======================================================================
+   7. ANIMACIONES
+   ====================================================================== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Entrada sutil del titulo principal (no se repite) */
+.titulo-principal {
+    animation-name: aparecer;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}

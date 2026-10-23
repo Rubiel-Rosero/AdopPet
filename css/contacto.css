@@ -1,0 +1,31 @@
+/* ======================================================================
+   AdopPet - Estilos propios de contacto.html
+   Depende de estilos.css (reset, tipografia, header/nav/footer,
+   componentes, estados y animaciones compartidas).
+
+   Aqui va SOLO lo especifico de esta pagina:
+   4. Maquetacion de la pagina (equipo + formulario a dos columnas)
+   5. Componentes propios (tarjeta de miembro, columnas del formulario)
+   6. Estados propios (hover de tarjetas de equipo)
+   ====================================================================== */
+
+
+/* ======================================================================
+   4. MAQUETACION DE LA PAGINA
+   ====================================================================== */
+
+/* (pendiente) seccion-equipo (tarjetas con flex-wrap) y seccion-contacto (formulario + aside en fila) */
+
+
+/* ======================================================================
+   5. COMPONENTES PROPIOS
+   ====================================================================== */
+
+/* (pendiente) tarjeta-miembro, columna-formulario, columna-info-contacto, redes de miembro */
+
+
+/* ======================================================================
+   6. ESTADOS PROPIOS
+   ====================================================================== */
+
+/* (pendiente) hover de tarjetas de equipo */

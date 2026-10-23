@@ -1,0 +1,31 @@
+/* ======================================================================
+   AdopPet - Estilos propios de multimedia.html
+   Depende de estilos.css (reset, tipografia, header/nav/footer,
+   componentes, estados y animaciones compartidas).
+
+   Aqui va SOLO lo especifico de esta pagina:
+   4. Maquetacion de la pagina (hero, galeria, familia, celebraciones)
+   5. Componentes propios (carrusel, recursos multimedia)
+   6. Estados propios (hover de la galeria con transform: scale)
+   ====================================================================== */
+
+
+/* ======================================================================
+   4. MAQUETACION DE LA PAGINA
+   ====================================================================== */
+
+/* (pendiente) seccion-hero, seccion-galeria, seccion-familia, seccion-celebraciones */
+
+
+/* ======================================================================
+   5. COMPONENTES PROPIOS
+   ====================================================================== */
+
+/* (pendiente) carrusel de experiencias, recursos de video/audio/mapa, tarjetas de eventos */
+
+
+/* ======================================================================
+   6. ESTADOS PROPIOS
+   ====================================================================== */
+
+/* (pendiente) hover de imagenes de la galeria (transform: scale + overflow: hidden) */
