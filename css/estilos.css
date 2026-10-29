@@ -1,5 +1,16 @@
 /*Reset y Estilos base*/
 
-/*Tipo Grafia*/
+::before
+::after
 
+/*Tipo Grafia*/
+body{
+
+}
 /*Estructuras Comunes*/
+/*Header*/
+header{
+    background-color: antiquewhite;
+    display: flex;
+    
+}
