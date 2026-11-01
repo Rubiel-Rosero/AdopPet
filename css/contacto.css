@@ -1,0 +1,388 @@
+/* ==========================================================================
+   ADOPPET - ESTILOS ESPECÍFICOS DE CONTACTO (contacto.css)
+   Laboratorio No. 2 - Maquetación y Formulario Avanzado con Flexbox
+   ========================================================================== */
+
+/* Navegación secundaria de la página */
+.nav-secundaria {
+    display: flex;
+    justify-content: center;
+    margin: 16px auto 32px;
+}
+
+.lista-nav-secundaria {
+    display: flex;
+    gap: 16px;
+    background-color: var(--color-secundario);
+    padding: 8px 16px;
+    border-radius: var(--radio-pill);
+    border: 1px solid var(--color-borde);
+}
+
+.btn-Equipo,
+.btn-formulario {
+    display: inline-block;
+    padding: 8px 24px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--color-primario);
+    border-radius: var(--radio-pill);
+    transition: all 0.3s ease;
+}
+
+.btn-Equipo:hover,
+.btn-formulario:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.2);
+}
+
+/* Cabecera de Contacto */
+.cabecera-contacto {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 24px 20px;
+}
+
+.cabecera-contacto::before {
+    content: "PERSONAS QUE DEJAN HUELLA";
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--color-acento);
+    margin-bottom: 8px;
+}
+
+.descripcion-contacto {
+    font-size: 1.05rem;
+    color: var(--color-texto-muted);
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+/* Sección Equipo */
+.seccion-equipo h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.seccion-equipo h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primario);
+    border-radius: 2px;
+}
+
+/* Estilo de Tarjeta de Miembro */
+.targeta-miembro,
+.tarjeta-miembro {
+    flex: 1 1 240px;
+    max-width: 270px;
+    background: var(--color-blanco);
+    border-radius: 22px;
+    padding: 22px 18px;
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-tarjeta);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.foto-miembro {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background-color: var(--color-secundario);
+}
+
+.foto-miembro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.targeta-miembro:hover .foto-miembro img,
+.tarjeta-miembro:hover .foto-miembro img {
+    transform: scale(1.08);
+}
+
+.nombre-miembro {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 4px;
+}
+
+.cargo-miembro {
+    font-size: 0.88rem;
+    color: var(--color-texto-muted);
+    margin-bottom: 16px;
+}
+
+.lista-redes-miembro {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.lista-redes-miembro a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-secundario);
+    transition: all 0.3s ease;
+}
+
+.lista-redes-miembro a:hover {
+    background-color: var(--color-primario);
+    transform: translateY(-2px);
+}
+
+.lista-redes-miembro a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.btn-contactar {
+    margin-top: auto;
+    width: 85%;
+    padding: 10px 0;
+}
+
+/* Columna Formulario */
+.columna-formulario {
+    position: relative;
+}
+
+.columna-formulario::before {
+    content: "01  DATOS PERSONALES";
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    padding: 4px 12px;
+    border-radius: var(--radio-pill);
+    margin-bottom: 12px;
+}
+
+.columna-formulario h3 {
+    font-size: 1.6rem;
+    color: var(--color-texto);
+    margin-bottom: 24px;
+}
+
+/* Columna Información de Contacto */
+.columna-info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.columna-info-contacto .titulo-info {
+    font-size: 1.6rem;
+    color: var(--color-primario);
+    margin-bottom: 4px;
+}
+
+.columna-info-contacto .texto-info {
+    color: var(--color-texto-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Tarjeta Tu Próximo Paso (del Mockup) */
+.tarjeta-pasos {
+    background: var(--color-blanco);
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-suave);
+}
+
+.subtitulo-pasos {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: var(--color-primario);
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.linea-pasos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.numero-paso {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    border: 2px solid var(--color-borde);
+    transition: all 0.3s ease;
+}
+
+.paso.paso-activo .numero-paso {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border-color: var(--color-primario);
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.3);
+}
+
+.desc-paso {
+    font-size: 0.76rem;
+    color: var(--color-texto-muted);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.conector-paso {
+    flex: 0 0 30px;
+    height: 2px;
+    background-color: var(--color-borde);
+    margin-bottom: 24px;
+}
+
+/* Tarjetas de datos de contacto */
+.lista-datos-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.lista-datos-contacto li {
+    background: var(--color-blanco);
+    border-radius: 14px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.lista-datos-contacto li:hover {
+    transform: translateX(6px);
+    border-color: var(--color-primario);
+}
+
+.lista-datos-contacto img {
+    flex-shrink: 0;
+}
+
+/* Banner de Horario de acompañamiento (del Mockup) */
+.banner-horario {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    border-radius: 18px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 6px 20px rgba(80, 23, 38, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.banner-horario:hover {
+    transform: translateY(-2px);
+}
+
+.icono-horario {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.info-horario {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.estado-horario {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-horario strong {
+    font-size: 0.98rem;
+    color: var(--color-blanco);
+}
+
+.info-horario p {
+    font-size: 0.85rem;
+    color: #fcecef;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Redes en aside de contacto */
+.lista-redes-pequena {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.lista-redes-pequena a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    transition: all 0.3s ease;
+}
+
+.lista-redes-pequena a:hover {
+    background-color: var(--color-primario);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.2);
+}
+
+.lista-redes-pequena a:hover img {
+    filter: brightness(0) invert(1);
+}
