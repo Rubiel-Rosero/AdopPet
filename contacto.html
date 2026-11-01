@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contancto</title>
+    <title>AdopPet - Contacto</title>
 </head>
 
 <body>
-    <header id="encabezado-principal-multimedia" class="encabezado-principal-multimedia">
-        <!--Contenedor logo-->
+
+    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
+    <header id="encabezado-principal-contacto" class="encabezado-principal-multimedia">
+        <!-- Contenedor logo -->
         <div id="contenedor-logo" class="contenedor-logo">
-            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
-                width="48px">
+            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet" width="48">
             <strong class="nombre-marca">AdopPet</strong>
         </div>
-        <!--Navegacion de las paginas-->
-        <nav id="navegacion-principal" class="navegacion-principal">
+
+        <!-- Navegación de las páginas -->
+        <nav id="navegacion-principal" class="navegacion-principal" aria-label="Navegación principal">
             <ul class="lista-nav">
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
@@ -26,11 +28,11 @@
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <!--Contenedor Notificaines y cuenta-->
+
+        <!-- Contenedor Notificaciones y cuenta -->
         <div id="acciones-usuario" class="acciones-usuario">
             <a href="notificaciones.html" id="btn-notificaciones">
-                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion"
-                    width="24">
+                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion" width="24">
                 Notificación
             </a>
             <a href="cuenta.html" id="btn-cuenta">
@@ -40,9 +42,10 @@
         </div>
     </header>
 
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main>
-        <!-- nav para la navegacion en las secciones de la misma pagina -->
-        <nav id="navegacion-secundaria" class="nav-secundaria">
+        <!-- Navegación secundaria de la página -->
+        <nav id="navegacion-secundaria" class="nav-secundaria" aria-label="Navegación de secciones de contacto">
             <ul class="lista-nav-secundaria">
                 <li class="item-nav-secundaria">
                     <a href="#equipo-contacto" class="btn-Equipo">Equipo</a>
@@ -52,106 +55,109 @@
                 </li>
             </ul>
         </nav>
-        <!--Seccion de la vista del equipo-->
+
+        <!-- Cabecera principal -->
+        <section class="cabecera-contacto">
+            <h1 class="titulo-principal">Contacto</h1>
+            <p class="descripcion-contacto">Conoce al equipo que hace posible el milagro de las segundas oportunidades. Desde la atención médica hasta el proceso de adopción, estamos listos para ayudarte a dar el siguiente paso para salvar una vida.</p>
+        </section>
+
+        <!-- Sección de la vista del equipo -->
         <section id="equipo-contacto" class="seccion-equipo">
-            <div class="cabecera-contacto">
-                <h1 class="titulo-principal">Contacto</h1>
-                <p class="descripcion-contacto">Conoce al equipo que hace posible el milagro de las segundas
-                    oportunidades. Desde la atención médica hasta el proceso de adopción. Estamos listos para ayudarte a
-                    dar el siguiente paso para salvar una vida.</p>
-            </div>
-            <!--Lista del equipo-->
+            <h2>Nuestro Equipo</h2>
+            <!-- Lista del equipo -->
             <ul class="lista-equipo">
-                <!--Miembro 1-->
+                <!-- Miembro 1 -->
                 <li class="item-miembro">
                     <article class="targeta-miembro">
                         <figure class="foto-miembro">
-                            <img src="image/Fotografia Andre.jpg" alt="Fotografia de andre, Coordinador de adopcion"
-                                width="200">
+                            <img src="image/Fotografia Andre.jpg" alt="Fotografía de Andrés, Coordinador de adopción" width="200">
                         </figure>
-                        <h2 class="nombre-miembro">Andre</h2>
+                        <h3 class="nombre-miembro">Andrés</h3>
                         <p class="cargo-miembro">Coordinador de adopción</p>
-                        <nav class="redes-miebro" aria-label="Redes sociales de andre">
+                        <nav class="redes-miebro" aria-label="Redes sociales de Andrés">
                             <ul class="lista-redes-miembro">
-                                <li><a href=""><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
-                                <li><a href=""><img src="image/logo x.png" alt="X" width="20"></a></li>
-                                <li><a href=""><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
-                                <li><a href=""><img src="image/youtube logo.png" alt="facebook" width="20"></a></li>
+                                <li><a href="#" aria-label="LinkedIn de Andrés"><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
+                                <li><a href="#" aria-label="X de Andrés"><img src="image/logo x.png" alt="X" width="20"></a></li>
+                                <li><a href="#" aria-label="Instagram de Andrés"><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
+                                <li><a href="#" aria-label="YouTube de Andrés"><img src="image/youtube logo.png" alt="YouTube" width="20"></a></li>
                             </ul>
                         </nav>
-                        <button class="btn-contactar">Contactar</button>
+                        <button type="button" class="btn-contactar">Contactar</button>
                     </article>
                 </li>
-                <!--Miembro 2-->
+
+                <!-- Miembro 2 -->
                 <li class="item-miembro">
                     <article class="targeta-miembro">
                         <figure class="foto-miembro">
-                            <img src="image/Fotografia ana.jpg" alt="Fotografia de Ana, Veterinaria" width="200">
+                            <img src="image/Fotografia ana.jpg" alt="Fotografía de Ana, Veterinaria" width="200">
                         </figure>
-                        <h2 class="nombre-miembro">Ana</h2>
+                        <h3 class="nombre-miembro">Ana</h3>
                         <p class="cargo-miembro">Veterinaria</p>
-
                         <nav class="redes-miebro" aria-label="Redes sociales de Ana">
                             <ul class="lista-redes-miembro">
-                                <li><a href=""><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
-                                <li><a href=""><img src="image/logo x.png" alt="X" width="20"></a></li>
-                                <li><a href=""><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
-                                <li><a href=""><img src="image/youtube logo.png" alt="facebook" width="20"></a></li>
+                                <li><a href="#" aria-label="LinkedIn de Ana"><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
+                                <li><a href="#" aria-label="X de Ana"><img src="image/logo x.png" alt="X" width="20"></a></li>
+                                <li><a href="#" aria-label="Instagram de Ana"><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
+                                <li><a href="#" aria-label="YouTube de Ana"><img src="image/youtube logo.png" alt="YouTube" width="20"></a></li>
                             </ul>
                         </nav>
-                        <button class="btn-contactar">Contactar</button>
+                        <button type="button" class="btn-contactar">Contactar</button>
                     </article>
                 </li>
-                <!--Miembro 3-->
+
+                <!-- Miembro 3 -->
                 <li class="item-miembro">
                     <article class="targeta-miembro">
                         <figure class="foto-miembro">
-                            <img src="image/Fotografia juana.jpg" alt="Fotografia de Juana, Fundadora de AdopPet"
-                                width="200">
+                            <img src="image/Fotografia juana.jpg" alt="Fotografía de Juana, Fundadora de AdopPet" width="200">
                         </figure>
-                        <h2 class="nombre-miembro">Juana</h2>
+                        <h3 class="nombre-miembro">Juana</h3>
                         <p class="cargo-miembro">Fundadora de AdopPet</p>
-
                         <nav class="redes-miebro" aria-label="Redes sociales de Juana">
                             <ul class="lista-redes-miembro">
-                                <li><a href=""><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
-                                <li><a href=""><img src="image/logo x.png" alt="X" width="20"></a></li>
-                                <li><a href=""><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
-                                <li><a href=""><img src="image/youtube logo.png" alt="facebook" width="20"></a></li>
+                                <li><a href="#" aria-label="LinkedIn de Juana"><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
+                                <li><a href="#" aria-label="X de Juana"><img src="image/logo x.png" alt="X" width="20"></a></li>
+                                <li><a href="#" aria-label="Instagram de Juana"><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
+                                <li><a href="#" aria-label="YouTube de Juana"><img src="image/youtube logo.png" alt="YouTube" width="20"></a></li>
                             </ul>
                         </nav>
-                        <button class="btn-contactar">Contactar</button>
+                        <button type="button" class="btn-contactar">Contactar</button>
                     </article>
                 </li>
-                <!--Miembro 4-->
+
+                <!-- Miembro 4 -->
                 <li class="item-miembro">
                     <article class="targeta-miembro">
                         <figure class="foto-miembro">
-                            <img src="image/Fotografia Felipe.jpg" alt="Fotografia de Felipe, Encargado de voluntarios"
-                                width="200">
+                            <img src="image/Fotografia Felipe.jpg" alt="Fotografía de Felipe, Encargado de voluntarios" width="200">
                         </figure>
-                        <h2 class="nombre-miembro">Felipe</h2>
+                        <h3 class="nombre-miembro">Felipe</h3>
                         <p class="cargo-miembro">Encargado de voluntarios</p>
-
                         <nav class="redes-miebro" aria-label="Redes sociales de Felipe">
                             <ul class="lista-redes-miembro">
-                                <li><a href=""><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
-                                <li><a href=""><img src="image/logo x.png" alt="X" width="20"></a></li>
-                                <li><a href=""><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
-                                <li><a href=""><img src="image/youtube logo.png" alt="facebook" width="20"></a></li>
+                                <li><a href="#" aria-label="LinkedIn de Felipe"><img src="image/linkedin.png" alt="LinkedIn" width="20"></a></li>
+                                <li><a href="#" aria-label="X de Felipe"><img src="image/logo x.png" alt="X" width="20"></a></li>
+                                <li><a href="#" aria-label="Instagram de Felipe"><img src="image/logo instagram.png" alt="Instagram" width="20"></a></li>
+                                <li><a href="#" aria-label="YouTube de Felipe"><img src="image/youtube logo.png" alt="YouTube" width="20"></a></li>
                             </ul>
                         </nav>
-                        <a href="" class="btn-contactar">Contactar Kristin</a>
+                        <button type="button" class="btn-contactar">Contactar</button>
                     </article>
                 </li>
             </ul>
         </section>
-        <!-- Seccion de formulario de contacto -->
+
+        <!-- Sección de formulario de contacto -->
         <section id="contacto-principal" class="seccion-contacto">
+            <h2>Ponte en Contacto</h2>
+
             <article class="columna-formulario">
-                <!--formulario-->
+                <h3>Envíanos un mensaje</h3>
+                <!-- Formulario -->
                 <form action="#" method="POST" enctype="multipart/form-data">
-                    <!--recuadro de datos personales-->
+                    <!-- Recuadro de datos personales -->
                     <fieldset>
                         <legend>Datos Personales</legend>
                         <div>
@@ -172,10 +178,11 @@
                         </div>
                         <div>
                             <label for="telefono">Número Telefónico:</label>
-                            <input type="number" id="telefono" name="telefono" placeholder="+57 312 3456 789">
+                            <input type="tel" id="telefono" name="telefono" placeholder="+57 312 3456 789">
                         </div>
                     </fieldset>
-                    <!--recuadro de datalles de la solicitud-->
+
+                    <!-- Recuadro de detalles de la solicitud -->
                     <fieldset>
                         <legend>Detalles de la Solicitud</legend>
                         <div>
@@ -212,32 +219,32 @@
                             <input type="file" id="documento" name="documento" accept="image/*,.pdf">
                         </div>
                     </fieldset>
-                    <!--recuadro de mensaje-->
+
+                    <!-- Recuadro de mensaje -->
                     <fieldset>
                         <legend>Mensaje Adicional</legend>
                         <div>
-                            <label for="mensaje">Mensaje:</label><br>
-                            <textarea id="mensaje" name="mensaje" rows="4" cols="50"
-                                placeholder="Escribe el mensaje aquí"></textarea>
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe el mensaje aquí"></textarea>
                         </div>
                         <div>
                             <input type="checkbox" id="terminos" name="terminos" required>
-                            <label for="terminos">Acepto el tratamiento de datos personales para la gestión de
-                                adopciones.</label>
+                            <label for="terminos">Acepto el tratamiento de datos personales para la gestión de adopciones.</label>
                         </div>
                     </fieldset>
+
                     <div class="acciones-formulario">
-                        <input type="submit" value="Send Message" class="btn-enviar">
+                        <input type="submit" value="Enviar Mensaje" class="btn-enviar">
                         <input type="reset" value="Limpiar Formulario" class="btn-limpiar">
                     </div>
                 </form>
             </article>
-            <!--Contacto de informacion-->
+
+            <!-- Contacto de información -->
             <aside class="columna-info-contacto">
-                <h2 class="titulo-info">Contacto de Información</h2>
-                <p class="texto-info">Detrás de cada colita feliz hay un equipo comprometido. Escríbenos, estamos aquí
-                    para guiarte en el proceso.</p>
-                <!--Lista de datos-->
+                <h3 class="titulo-info">Contacto de Información</h3>
+                <p class="texto-info">Detrás de cada colita feliz hay un equipo comprometido. Escríbenos, estamos aquí para guiarte en el proceso.</p>
+                <!-- Lista de datos -->
                 <ul class="lista-datos-contacto">
                     <li>
                         <img src="image/icono-llamada.png" alt="Teléfono" width="30">
@@ -255,9 +262,9 @@
 
                 <nav class="redes-contacto" aria-label="Redes sociales de contacto">
                     <ul class="lista-redes-pequena">
-                        <li><a href="#"><img src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
-                        <li><a href="#"><img src="image/logo x.png" alt="X" width="24"></a></li>
-                        <li><a href="#"><img src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
+                        <li><a href="#" aria-label="Facebook"><img src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
+                        <li><a href="#" aria-label="X"><img src="image/logo x.png" alt="X" width="24"></a></li>
+                        <li><a href="#" aria-label="Instagram"><img src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
                     </ul>
                 </nav>
             </aside>
@@ -265,39 +272,35 @@
         </section>
     </main>
 
+    <!-- ================= PIE DE PÁGINA ================= -->
     <footer class="pie-de-pagina">
         <div class="contenedor-pie">
-            <nav class="enlaces-pie">
+            <nav class="enlaces-pie" aria-label="Enlaces del pie de página">
                 <ul>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#mas">Más</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="#">Más</a></li>
                 </ul>
             </nav>
 
             <div class="logo-pie">
-                <img src="image/AdopPet Logo.png" alt="Logo" width="60px">
+                <img src="image/AdopPet Logo.png" alt="Logotipo AdopPet" width="60">
                 <a href="index.html">AdopPet</a>
             </div>
 
-            <div class="redes-sociales">
+            <nav class="redes-sociales" aria-label="Redes sociales">
                 <ul>
-                    <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img
-                                src="image/youtube logo.png" alt="Youtube" width="24px"></a></li>
-                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
-                                src="image/icono facebook.png" alt="Facebook" width="24px"></a></li>
-                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png"
-                                alt="Twitter" width="24px"></a></li>
-                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
-                                src="image/logo instagram.png" alt="Instagram" width="24px"></a></li>
-                    <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img
-                                src="image/linkedin.png" alt="Linkedin" width="24px"></a></li>
+                    <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="image/youtube logo.png" alt="YouTube" width="24"></a></li>
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png" alt="Twitter" width="24"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="image/linkedin.png" alt="LinkedIn" width="24"></a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
         <div class="derechos-autor">
-            <p>AdopPet &copy; 2026. All rights reserved.</p>
+            <p><small>&copy; 2026 AdopPet. Todos los derechos reservados.</small></p>
         </div>
     </footer>
 </body>

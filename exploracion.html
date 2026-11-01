@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdopPet Exploración</title>
+    <title>AdopPet - Exploración</title>
 </head>
 
 <body>
+    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
     <header id="encabezado-principal-multimedia" class="encabezado-principal-multimedia">
-        <!--Contenedor logo-->
+        <!-- Contenedor logo -->
         <div id="contenedor-logo" class="contenedor-logo">
-            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
-                width="48px">
+            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet" width="48">
             <strong class="nombre-marca">AdopPet</strong>
         </div>
-        <!--Navegacion de las paginas-->
-        <nav id="navegacion-principal" class="navegacion-principal">
+
+        <!-- Navegación de las páginas -->
+        <nav id="navegacion-principal" class="navegacion-principal" aria-label="Navegación principal">
             <ul class="lista-nav">
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
@@ -26,11 +27,11 @@
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <!--Contenedor Notificaines y cuenta-->
+
+        <!-- Contenedor Notificaciones y cuenta -->
         <div id="acciones-usuario" class="acciones-usuario">
             <a href="notificaciones.html" id="btn-notificaciones">
-                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion"
-                    width="24">
+                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion" width="24">
                 Notificación
             </a>
             <a href="cuenta.html" id="btn-cuenta">
@@ -40,278 +41,204 @@
         </div>
     </header>
 
-    <main>
-        <nav class="segundoNav">
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main id="contenido-principal" class="main-contenido">
+        <!-- Navegación secundaria entre secciones de la página -->
+        <nav class="segundoNav" aria-label="Navegación de secciones">
             <ul>
                 <li><a href="#adopcion">Adopción Definitiva</a></li>
                 <li><a href="#hogares">Hogares de Paso</a></li>
                 <li><a href="#voluntarios">Voluntariado</a></li>
                 <li><a href="#bienestar">Bienestar e Higiene</a></li>
-                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#eventos">Eventos de peluditos</a></li>
             </ul>
         </nav>
-        <br>
+
+        <!-- ===== SECCIÓN 1: ADOPCIÓN DEFINITIVA ===== -->
         <section id="adopcion" class="adop">
             <div class="adop-img">
-                <img src="image/programa.jpg" alt="img de la adopcion">
+                <img src="image/programa.jpg" alt="Perro feliz en adopción">
             </div>
             <div class="adopcion-cont">
                 <h1>Nuestros Programas de Bienestar Animal</h1>
                 <h2>Adopción Definitiva</h2>
-                <p>Dale una segunda oportunidad a un peludito. Nuestro proceso de adopción busca el “match” perfecto
-                    entre tu estilo de vida y las necesidades del animal.</p>
+                <p>Dale una segunda oportunidad a un peludito. Nuestro proceso de adopción busca el “match” perfecto entre tu estilo de vida y las necesidades del animal.</p>
                 <p>Entregamos a los animales esterilizados, vacunados y desparasitados.</p>
                 <div class="adop-boton">
-                    <button class="adop-boton">Ver galeria de adopción</button>
+                    <button type="button" class="btn-adopcion">Ver galería de adopción</button>
                 </div>
             </div>
-            <br>
         </section>
+
+        <!-- ===== SECCIÓN 2: HOGARES DE PASO ===== -->
         <section id="hogares" class="hogares">
             <div class="cont-hogares">
                 <h2>Hogares de Paso</h2>
-                <p>Conviértete en un puente hacia su vida definitiva. Brinda refugio
-                    temporal y amor mientras encontramos una familia permanente</p>
-                <p>El refugio cubre el 100% de los gastos
-                    veterinarios y alimentacion.</p>
-                <div class="img-hogar">
-                    <img src="image/hogar.jpg" alt="imagen de hogares">
-                </div>
-                <br>
+                <p>Conviértete en un puente hacia su vida definitiva. Brinda refugio temporal y amor mientras encontramos una familia permanente.</p>
+                <p>El refugio cubre el 100% de los gastos veterinarios y alimentación.</p>
                 <div class="hogar-boton">
-                    <button>Conoce los lugares a un click</button>
+                    <button type="button">Conoce los lugares a un click</button>
                 </div>
             </div>
-            <br>
-            <br>
+            <div class="img-hogar">
+                <img src="image/hogar.jpg" alt="Familia brindando hogar de paso a una mascota">
+            </div>
         </section>
+
+        <!-- ===== SECCIÓN 3: VOLUNTARIADO ===== -->
         <section id="voluntarios" class="volunt">
             <div class="volunt-img">
-                <img src="image/voluntarios.jpg" alt="Imagen de Voluntariado">
+                <img src="image/voluntarios.jpg" alt="Equipo de voluntarios cuidando animales">
             </div>
             <div class="volunt-cont">
                 <h2>Voluntariado</h2>
-                <p>Únete a nuestro equipo operativo en las jornadas de limpieza,
-                    paseos y logistica en los refugios aliados.</p>
+                <p>Únete a nuestro equipo operativo en las jornadas de limpieza, paseos y logística en los refugios aliados.</p>
                 <p>Horarios flexibles (sáb/dom)</p>
-                <h3>Requisitos</h3>
-            </div>
-            <div class="requisitos-cont">
-                <div class="img-req1">
-                    <img src="image/persona.jpg" alt="icono de requisito" width="60" height="60">
-                    <p>Ser mayor de edad</p>
-                </div>
-                <div class="img-req2">
-                    <img src="image/grupo.jpg" alt="icono de requisito" width="60" height="60">
-                    <p>Asistir a inducción técnica</p>
-                </div>
-                <div class="img-req3">
-                    <img src="image/calendario.jpg" alt="icono de requisito" width="60" height="60">
-                    <p>Disponibilidad minima de 4 horas mensuales.</p>
-                </div>
-                <div class="img-req4">
-                    <img src="image/transporte.jpg" alt="icono de requisito" width="60" height="60">
-                    <p>Elegir donde quieres ir a nuestros servicios de voluntariado
-                        a lo largo de la ciudad.</p>
+
+                <h3>Requisitos:</h3>
+                <div class="requisitos-cont">
+                    <div class="img-req1">
+                        <img src="image/persona.jpg" alt="Icono requisito mayor de edad" width="60" height="60">
+                        <p>Ser mayor de edad</p>
+                    </div>
+                    <div class="img-req2">
+                        <img src="image/grupo.jpg" alt="Icono requisito inducción técnica" width="60" height="60">
+                        <p>Asistir a inducción técnica</p>
+                    </div>
+                    <div class="img-req3">
+                        <img src="image/calendario.jpg" alt="Icono requisito disponibilidad horaria" width="60" height="60">
+                        <p>Disponibilidad mínima de 4 horas mensuales.</p>
+                    </div>
+                    <div class="img-req4">
+                        <img src="image/transporte.jpg" alt="Icono requisito transporte y ubicación" width="60" height="60">
+                        <p>Elegir dónde quieres ir a nuestros servicios de voluntariado a lo largo de la ciudad.</p>
+                    </div>
                 </div>
                 <div class="re-boton">
-                    <button>Inscribirme Ahora</button>
+                    <button type="button">Inscribirme Ahora</button>
                 </div>
             </div>
-            </div>
-            <br>
         </section>
+
+        <!-- ===== SECCIÓN 4: BIENESTAR E HIGIENE ===== -->
         <section id="bienestar" class="bienestar">
             <div class="bienestar-contenido">
                 <h2>Bienestar e higiene</h2>
                 <div class="info-lista">
-                    <details>
-                        <summary><strong>Limpieza de dientes para evitar
-                                caries y mal aliento.</strong></summary>
-                        <br>
+                    <!-- Desplegable 1: Limpieza dental -->
+                    <details open>
+                        <summary><strong>Limpieza de dientes para evitar caries y mal aliento.</strong></summary>
                         <div class="bienestar-despliegue">
                             <div class="img-cont">
-                                <img src="image/limpieza-dental.jpg" alt="imagen de info">
+                                <img src="image/limpieza-dental.jpg" alt="Veterinario realizando profilaxis dental">
                             </div>
-                            <br>
                             <div class="contexto">
                                 <h3>Profilaxis dental</h3>
-                                <br>
                                 <ul>
-                                    <li>Consiste en un procedimiento de limpieza profundo donde se extrae cualquier tipo
-                                        de
-                                        barro, infección o contaminación que pueda afectar y representar un problema en
-                                        la
-                                        salud
-                                        dental de nuestras mascotas.
-                                        Existen varias señales que tu mascota refleja cuando
-                                        presenta alguna enfermedad bucal y lo ideal es acudir a un médico veterinario
-                                        para
-                                        actuar sobre esto, de manera rápida y efectiva.</li>
-                                    <br>
-                                    <li>El sarro dental es una placa que se acumula alrededor de los dientes y encías,
-                                        algunas
-                                        veces provoca inflamación y pequeñas infecciones generando mal aliento en tus
-                                        mascotas.
-                                        Asimismo, este método nos
-                                        permite cuidar el esmalte dental de nuestros peluditos,
-                                        eliminando la acumulación de bacterias que a diario crecen en sus encías.</li>
-                                    <br>
-                                    <li>Adicionalmente, prevenimos otro tipo de enfermedades que parten de las mismas
-                                        bacterias y
-                                        sarro que a diario crece en sus
-                                        dientes, enfermedades que pueden afectar incluso hasta
-                                        su corazón.</li>
-                                    <br>
+                                    <li>Consiste en un procedimiento de limpieza profundo donde se extrae cualquier tipo de barro, infección o contaminación que pueda afectar y representar un problema en la salud dental de nuestras mascotas. Existen varias señales que tu mascota refleja cuando presenta alguna enfermedad bucal y lo ideal es acudir a un médico veterinario para actuar sobre esto, de manera rápida y efectiva.</li>
+                                    <li>El sarro dental es una placa que se acumula alrededor de los dientes y encías, algunas veces provoca inflamación y pequeñas infecciones generando mal aliento en tus mascotas. Asimismo, este método nos permite cuidar el esmalte dental de nuestros peluditos, eliminando la acumulación de bacterias que a diario crecen en sus encías.</li>
+                                    <li>Adicionalmente, prevenimos otro tipo de enfermedades que parten de las mismas bacterias y sarro que a diario crece en sus dientes, enfermedades que pueden afectar incluso hasta su corazón.</li>
                                 </ul>
                             </div>
                         </div>
                     </details>
-                    <br>
+
+                    <!-- Desplegable 2: Cortes de pelo y baños -->
                     <details>
                         <summary><strong>Cortes de pelo, baños medicados y arreglo general.</strong></summary>
-                        <br>
                         <div class="bienestar-despliegue">
                             <div class="img-cont">
-                                <img src="image/pelaje.jpg" alt="imagen de info">
+                                <img src="image/pelaje.jpg" alt="Perro recibiendo corte de pelo y baño medicado">
                             </div>
-                            <br>
                             <div class="contexto">
-                                <h3>Cortes de pelo, baños medicados y arreglo general.</h3>
-                                <br>
+                                <h3>Cortes de pelo, baños medicados y arreglo general</h3>
                                 <ul>
-                                    <li>Iniciamos con una evaluación detallada de la piel y pelaje de la mascota para
-                                        elegir el champú y acondicionador medicado o hipoalergénico idóneo. Este
-                                        servicio busca aliviar
-                                        afecciones dermatológicas frecuentes como resequedad, descamación, pulgas o
-                                        sensibilidad cutánea.</li>
-                                    <br>
-                                    <li>Realizamos un corte higiénico estratégico en zonas sensibles, vaciado controlado
-                                        de glándulas anales,
-                                        desinfectado de oídos para prevenir otitis y un corte de uñas adecuado
-                                        que evite problemas en la pisada y postura del animal.</li>
-                                    <br>
-                                    <li>Finalizamos con un secado a temperatura regulada y un cepillado profundo
-                                        para remover todo el pelo muerto, garantizando que el proceso sea relajante,
-                                        seguro y libre de estrés para la mascota.</li>
-                                    <br>
+                                    <li>Iniciamos con una evaluación detallada de la piel y pelaje de la mascota para elegir el champú y acondicionador medicado o hipoalergénico idóneo. Este servicio busca aliviar afecciones dermatológicas frecuentes como resequedad, descamación, pulgas o sensibilidad cutánea.</li>
+                                    <li>Realizamos un corte higiénico estratégico en zonas sensibles, vaciado controlado de glándulas anales, desinfectado de oídos para prevenir otitis y un corte de uñas adecuado que evite problemas en la pisada y postura del animal.</li>
+                                    <li>Finalizamos con un secado a temperatura regulada y un cepillado profundo para remover todo el pelo muerto, garantizando que el proceso sea relajante, seguro y libre de estrés para la mascota.</li>
                                 </ul>
                             </div>
                         </div>
                     </details>
-                    <br>
+
+                    <!-- Desplegable 3: Terapias de rehabilitación -->
                     <details>
-                        <summary><strong> Terapias de rehabilitación física.</strong></summary>
-                        <br>
+                        <summary><strong>Terapias de rehabilitación física.</strong></summary>
                         <div class="bienestar-despliegue">
                             <div class="img-cont">
-                                <img src="image/Terapia.jpg" alt="imagen de info">
+                                <img src="image/Terapia.jpg" alt="Mascota en sesión de fisioterapia y rehabilitación">
                             </div>
-                            <br>
                             <div class="contexto">
-                                <h3>Terapias de rehabilitación física.</h3>
-                                <br>
+                                <h3>Terapias de rehabilitación física</h3>
                                 <ul>
-                                    <li>Diseñamos planes terapéuticos personalizados para mascotas que han sufrido
-                                        cirugías ortopédicas, accidentes
-                                        o que padecen patologías crónicas como displasia de cadera o artrosis.
-                                        El objetivo principal es reducir el dolor y restaurar la movilidad articular.
-                                    </li>
-                                    <br>
-                                    <li>Aplicamos técnicas de masajes descontracturantes,
-                                        estiramientos pasivos y termoterapia (aplicación de frío/calor) para estimular
-                                        la
-                                        circulación sanguínea y acelerar la regeneración muscular en áreas debilitadas.
-                                    </li>
-                                    <br>
-                                    <li>Acompañamos a la mascota en ejercicios de bajo impacto para recuperar el
-                                        equilibrio y la fuerza, garantizando que conserve su autonomía y
-                                        mejore su calidad de vida día a día.</li>
-                                    <br>
+                                    <li>Diseñamos planes terapéuticos personalizados para mascotas que han sufrido cirugías ortopédicas, accidentes o que padecen patologías crónicas como displasia de cadera o artrosis. El objetivo principal es reducir el dolor y restaurar la movilidad articular.</li>
+                                    <li>Aplicamos técnicas de masajes descontracturantes, estiramientos pasivos y termoterapia (aplicación de frío/calor) para estimular la circulación sanguínea y acelerar la regeneración muscular en áreas debilitadas.</li>
+                                    <li>Acompañamos a la mascota en ejercicios de bajo impacto para recuperar el equilibrio y la fuerza, garantizando que conserve su autonomía y mejore su calidad de vida día a día.</li>
                                 </ul>
                             </div>
                         </div>
                     </details>
-                    <br>
                 </div>
                 <div class="bienestar-boton">
-                    <button>¡Agenta tu cita ya!</button>
+                    <button type="button">¡Agenda tu cita ya!</button>
                 </div>
             </div>
-            <br>
         </section>
+
+        <!-- ===== SECCIÓN 5: EVENTOS ===== -->
         <section id="eventos" class="eventos-cont">
             <div class="event">
-                <h2>Evento de Peluditos</h2>
+                <h2>Evento de peluditos</h2>
             </div>
             <div class="video-evento">
                 <video src="video/evento.mp4" controls width="400">
                     Tu navegador no soporta el elemento de video.
                 </video>
-                <br>
             </div>
             <aside class="info-evento">
                 <h3>¡Pet Party!</h3>
-                <p>Realizamos eventos para que nuestros peluditos tenga una buena vida, darles esa oportunidad de
-                    encuentras su familia especial. Nuestro equipo trabaja continuamente para ofrecer el mejor de
-                    nuestros servicios, juntas de <a
-                        href="https://www.adventurevolunteer.org/project-category/voluntariados-con-animales/">caridad y
-                        voluntariados</a> para crecer cada vez mas con esta familia de
-                    peluditos. Su mayor felicidad
-                    es estar en un entorno que sean queridos y cuidados por personas maravillosas.</p>
-                <p>No te pierdas la oportunidad de asistir a nuestros eventos en distintos puntos de la
-                    ciudad y vivir una experiencia muy bonita en nuestra familia.</p>
-                <p>Que esperas, Visitamos en nuestros
-                    diferentes puntos: El Diamante, Granada, Calipso.</p>
+                <p>Realizamos eventos para que nuestros peluditos tengan una buena vida, darles esa oportunidad de encontrar su familia especial. Nuestro equipo trabaja continuamente para ofrecer el mejor de nuestros servicios, jornadas de <a href="https://www.adventurevolunteer.org/project-category/voluntariados-con-animales/" target="_blank">caridad y voluntariados</a> para crecer cada vez más con esta familia de peluditos. Su mayor felicidad es estar en un entorno donde sean queridos y cuidados por personas maravillosas.</p>
+                <p>No te pierdas la oportunidad de asistir a nuestros eventos en distintos puntos de la ciudad y vivir una experiencia muy bonita en nuestra familia.</p>
+                <p>¿Qué esperas? Visítanos en nuestros diferentes puntos: El Diamante, Granada, Calipso.</p>
 
                 <div class="icon-evento">
-                    <img src="image/ubicacion.jpg" alt="icono de evento" width="60" height="60">
+                    <img src="image/ubicacion.jpg" alt="Icono de ubicación del evento" width="60" height="60">
                 </div>
-                <br>
                 <div class="evento-boton">
-                    <button>¡Encuentranos Aqui!</button>
+                    <button type="button">¡Encuéntranos aquí!</button>
                 </div>
             </aside>
-            <br>
         </section>
     </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
     <footer id="pie-pagina" class="footer-principal">
         <div class="contenedor-superior-footer">
-            <nav class="nav-footer" aria-label="Navegación secundaria">
+            <nav class="nav-footer" aria-label="Enlaces del pie de página">
                 <ul class="lista-enlaces-footer">
                     <li class="item-enlace-footer"><a href="contacto.html">Contacto</a></li>
-                    <li class="item-enlace-footer"><a href="servicion.html">Servicios</a></li>
-                    <li class="item-enlace-footer"><a href="">Más</a></li>
+                    <li class="item-enlace-footer"><a href="servicios.html">Servicios</a></li>
+                    <li class="item-enlace-footer"><a href="#">Más</a></li>
                 </ul>
             </nav>
-            <!--Contenedor logo footer-->
+            <!-- Contenedor logo footer -->
             <div class="logo-footer">
-                <img src="image/AdopPet Logo.png" alt="Logo AdopPet Footer" width="100">
+                <img src="image/AdopPet Logo.png" alt="Logotipo AdopPet Footer" width="100">
                 <strong class="nombre-marca-footer">AdopPet</strong>
             </div>
-            <!--Vinculos a las redes sociales-->
+            <!-- Vínculos a las redes sociales -->
             <nav class="redes-sociales" aria-label="Redes sociales">
                 <ul class="lista-redes">
-                    <li class="item-red"><a href="" target="_blank"><img src="image/youtube logo.png"
-                                alt="Canal de YouTube" width="24"></a></li>
-                    <li class="item-red"><a href="" target="_blank"><img src="image/icono facebook.png"
-                                alt="Página de Facebook" width="24"></a></li>
-                    <li class="item-red"><a href="" target="_blank"><img src="image/logo x.png" alt="Perfil de x" width="24
-                        "></a></li>
-                    <li class="item-red"><a href="" target="_blank"><img src="image/logo instagram.png"
-                                alt="Perfil de Instagram" width="24"></a></li>
-                    <li class="item-red"><a href="" target="_blank"><img src="image/linkedin.png"
-                                alt="Perfil de LinkedIn" width="24"></a></li>
+                    <li class="item-red"><a href="#" target="_blank" aria-label="YouTube"><img src="image/youtube logo.png" alt="Canal de YouTube" width="24"></a></li>
+                    <li class="item-red"><a href="#" target="_blank" aria-label="Facebook"><img src="image/icono facebook.png" alt="Página de Facebook" width="24"></a></li>
+                    <li class="item-red"><a href="#" target="_blank" aria-label="X"><img src="image/logo x.png" alt="Perfil de X" width="24"></a></li>
+                    <li class="item-red"><a href="#" target="_blank" aria-label="Instagram"><img src="image/logo instagram.png" alt="Perfil de Instagram" width="24"></a></li>
+                    <li class="item-red"><a href="#" target="_blank" aria-label="LinkedIn"><img src="image/linkedin.png" alt="Perfil de LinkedIn" width="24"></a></li>
                 </ul>
             </nav>
-
-            <div class="copyright-footer">
-                <p><small></small></p>
-            </div>
         </div>
-        <br>
-        <div class="pie-coyrght">
-            <p>AdopPet @ 2026. All rights reserved.</p>
+        <div class="pie-copyright">
+            <p><small>&copy; 2026 AdopPet. Todos los derechos reservados.</small></p>
         </div>
     </footer>
 </body>

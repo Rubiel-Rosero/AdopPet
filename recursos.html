@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdopPet - Directorio de Recursos</title>
-    <!-- Aquí irá tu archivo CSS -->
 </head>
 
 <body>
 
     <!-- ================= ENCABEZADO PRINCIPAL ================= -->
-    <header id="encabezado-principal-multimedia" class="encabezado-principal-multimedia">
-        <!--Contenedor logo-->
+    <header id="encabezado-principal-recursos" class="encabezado-principal-multimedia">
+        <!-- Contenedor logo -->
         <div id="contenedor-logo" class="contenedor-logo">
-            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
-                width="48px">
+            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet" width="48">
             <strong class="nombre-marca">AdopPet</strong>
         </div>
-        <!--Navegacion de las paginas-->
-        <nav id="navegacion-principal" class="navegacion-principal">
+
+        <!-- Navegación de las páginas -->
+        <nav id="navegacion-principal" class="navegacion-principal" aria-label="Navegación principal">
             <ul class="lista-nav">
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
@@ -29,11 +28,11 @@
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <!--Contenedor Notificaines y cuenta-->
+
+        <!-- Contenedor Notificaciones y cuenta -->
         <div id="acciones-usuario" class="acciones-usuario">
             <a href="notificaciones.html" id="btn-notificaciones">
-                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion"
-                    width="24">
+                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion" width="24">
                 Notificación
             </a>
             <a href="cuenta.html" id="btn-cuenta">
@@ -44,7 +43,7 @@
     </header>
 
     <!-- ================= NAVEGACIÓN SECUNDARIA ================= -->
-    <nav class="navegacion-secundaria" aria-label="Menú de secciones">
+    <nav class="navegacion-secundaria" aria-label="Menú de secciones de recursos">
         <ul>
             <li><a href="#recomendaciones">Recomendaciones</a></li>
             <li><a href="#emergencias">Emergencias</a></li>
@@ -59,14 +58,13 @@
         <!-- ===== SECCIÓN 1: RECOMENDACIONES ===== -->
         <section id="recomendaciones" class="seccion-dividida">
             <div class="columna-titulo">
-                <h1>DIRECTORIO DE RECURSOS</h1>
-                <p class="subtitulo-destacado">RECOMENDACIONES</p>
+                <h1>Directorio de Recursos</h1>
+                <h2>Recomendaciones</h2>
             </div>
 
             <div class="columna-tarjetas">
                 <article class="tarjeta-recurso">
                     <div class="icono-recurso">
-                        <!-- Marcador de icono -->
                         <img src="icono-comida.png" alt="Icono Alimentación">
                     </div>
                     <h3>Alimentación</h3>
@@ -76,7 +74,6 @@
 
                 <article class="tarjeta-recurso">
                     <div class="icono-recurso">
-                        <!-- Marcador de icono -->
                         <img src="icono-seguridad.png" alt="Icono Seguridad">
                     </div>
                     <h3>Seguridad</h3>
@@ -86,7 +83,6 @@
 
                 <article class="tarjeta-recurso">
                     <div class="icono-recurso">
-                        <!-- Marcador de icono -->
                         <img src="icono-metodologia.png" alt="Icono Metodología">
                     </div>
                     <h3>Metodología</h3>
@@ -99,22 +95,22 @@
         <!-- ===== SECCIÓN 2: EMERGENCIAS ===== -->
         <section id="emergencias" class="seccion-dividida-video">
             <div class="columna-lista">
-                <h2>CASOS DE EMERGENCIAS</h2>
+                <h2>Casos de Emergencias</h2>
                 <ol class="lista-pasos-numerada">
                     <li>
-                        <h3>AISLAMIENTO</h3>
+                        <h3>Aislamiento</h3>
                         <p>Asegura al animal en una zona controlada y segura.</p>
                     </li>
                     <li>
-                        <h3>REVISIÓN</h3>
+                        <h3>Revisión</h3>
                         <p>Revisa visualmente si tiene heridas o collares.</p>
                     </li>
                     <li>
-                        <h3>LLAMADA</h3>
+                        <h3>Llamada</h3>
                         <p>Contacta a las autoridades o redes de apoyo.</p>
                     </li>
                     <li>
-                        <h3>PROVEE</h3>
+                        <h3>Provee</h3>
                         <p>Ofrece agua fresca, nunca comida de inmediato.</p>
                     </li>
                 </ol>
@@ -124,7 +120,7 @@
                 <div class="contenedor-video">
                     <figure>
                         <figcaption>Video tutorial de emergencias</figcaption>
-                        <video src="Video/videoSedes.mp4" width="450" controls type="Video/mp4"></video>
+                        <video src="Video/videoSedes.mp4" width="450" controls type="video/mp4"></video>
                     </figure>
                 </div>
             </div>
@@ -133,7 +129,7 @@
         <!-- ===== SECCIÓN 3: CLÍNICAS E INFORMACIÓN ===== -->
         <section id="informacion" class="seccion-clinicas-info">
             <div class="columna-tabla">
-                <h2>CLÍNICAS ALIADAS</h2>
+                <h2>Clínicas Aliadas</h2>
 
                 <table class="tabla-datos">
                     <thead>
@@ -179,30 +175,25 @@
                 </nav>
 
                 <div class="marcador-imagen-grande">
-                    <img src="image/Fotografia juana.jpg" alt="Mapa de clínicas aliadas" width="400px">
+                    <img src="image/Fotografia juana.jpg" alt="Mapa y ubicación de clínicas aliadas" width="400">
                 </div>
             </div>
 
             <aside class="columna-tarjeta-blanca">
                 <div class="tarjeta-informacion-descargas">
-                    <h2>Información</h2>
+                    <h2>Información y Descargas</h2>
                     <ol class="lista-descargas">
                         <li>
                             <h3><a href="cirugias.pdf" download>CIRUGÍAS PDF - DESCARGAR</a></h3>
-                            <p>Información sobre los procesos y la realización de las operaciones, incluye los exámenes
-                                como: rayos X, hemograma completo, examen coprológico, etc...</p>
+                            <p>Información sobre los procesos y la realización de las operaciones, incluye exámenes como: rayos X, hemograma completo, examen coprológico, etc.</p>
                         </li>
                         <li>
                             <h3><a href="vacunacion.pdf" download>VACUNACIÓN PDF - DESCARGAR</a></h3>
-                            <p>Guía de vacunación estricta para tu mascota siendo la herramienta de medicina preventiva
-                                más eficaz para asegurar su bienestar y prolongar su vida.</p>
+                            <p>Guía de vacunación estricta para tu mascota siendo la herramienta de medicina preventiva más eficaz para asegurar su bienestar y prolongar su vida.</p>
                         </li>
                         <li>
                             <h3><a href="nutricion.pdf" download>NUTRICIÓN PDF - DESCARGAR</a></h3>
-                            <p>Guía completa para la nutrición de tu mascota siendo fundamental ya que impacta
-                                directamente en su salud, longevidad y calidad de vida. Al igual que los humanos, los
-                                animales necesitan un equilibrio óptimo de nutrientes para que su cuerpo funcione
-                                correctamente.</p>
+                            <p>Guía completa para la nutrición de tu mascota siendo fundamental ya que impacta directamente en su salud, longevidad y calidad de vida. Al igual que los humanos, los animales necesitan un equilibrio óptimo de nutrientes para que su cuerpo funcione correctamente.</p>
                         </li>
                     </ol>
                 </div>
@@ -219,44 +210,34 @@
                 <article class="tarjeta-beneficio-larga">
                     <h3>Beneficios generales de salud</h3>
                     <ul>
-                        <li><strong>Detección temprana de enfermedades:</strong> Permite identificar problemas de salud
-                            antes de que se vuelvan graves o crónicos.</li>
-                        <li><strong>Control de vacunación:</strong> Mantiene a tu mascota protegida contra virus y
-                            enfermedades mortales.</li>
-                        <li><strong>Prevención de parásitos:</strong> Facilita el tratamiento continuo contra pulgas,
-                            garrapatas y gusanos internos.</li>
-                        <li><strong>Monitoreo del peso:</strong> Ayuda a prevenir la obesidad o detectar pérdidas de
-                            peso asociadas a problemas médicos.</li>
-                        <li><strong>Cuidado dental integral:</strong> Evita infecciones en la boca que puedan afectar a
-                            órganos vitales como el corazón o los riñones.</li>
+                        <li><strong>Detección temprana de enfermedades:</strong> Permite identificar problemas de salud antes de que se vuelvan graves o crónicos.</li>
+                        <li><strong>Control de vacunación:</strong> Mantiene a tu mascota protegida contra virus y enfermedades mortales.</li>
+                        <li><strong>Prevención de parásitos:</strong> Facilita el tratamiento continuo contra pulgas, garrapatas y parásitos internos.</li>
+                        <li><strong>Monitoreo del peso:</strong> Ayuda a prevenir la obesidad o detectar pérdidas de peso asociadas a problemas médicos.</li>
+                        <li><strong>Cuidado dental integral:</strong> Evita infecciones bucales que puedan afectar a órganos vitales como el corazón o los riñones.</li>
                     </ul>
                     <div class="marcador-imagen-ancha">
-                        <img src="image/Inicio Año.jpg" alt="Imagen beneficios generales" width="400px">
+                        <img src="image/Inicio Año.jpg" alt="Atención veterinaria preventiva" width="400">
                     </div>
                 </article>
 
                 <article class="tarjeta-beneficio-larga">
                     <h3>Pasos clave en el impacto a largo plazo</h3>
                     <ol>
-                        <li><strong>Prolongación de la esperanza de vida:</strong> Las revisiones constantes aumentan
-                            los años que tu mascota pasará a tu lado.</li>
-                        <li><strong>Ahorro económico futuro:</strong> Prevenir una enfermedad siempre es menos costoso
-                            que financiar un tratamiento de emergencia complejo.</li>
-                        <li><strong>Paz mental para la familia:</strong> Te da la tranquilidad de saber que estás
-                            haciendo lo correcto por el bienestar de tu compañero.</li>
-                        <li><strong>Historial médico sólido:</strong> Facilita diagnósticos más rápidos y precisos en el
-                            futuro al tener un registro completo de su salud.</li>
-                        <li><strong>Asesoría personalizada:</strong> Recibes consejos actualizados sobre nutrición y
-                            comportamiento adaptados a la edad exacta de tu mascota.</li>
+                        <li><strong>Prolongación de la esperanza de vida:</strong> Las revisiones constantes aumentan los años que tu mascota pasará a tu lado.</li>
+                        <li><strong>Ahorro económico futuro:</strong> Prevenir una enfermedad siempre es menos costoso que financiar un tratamiento de emergencia complejo.</li>
+                        <li><strong>Paz mental para la familia:</strong> Te da la tranquilidad de saber que estás haciendo lo correcto por el bienestar de tu compañero.</li>
+                        <li><strong>Historial médico sólido:</strong> Facilita diagnósticos más rápidos y precisos en el futuro al tener un registro completo de su salud.</li>
+                        <li><strong>Asesoría personalizada:</strong> Recibes consejos actualizados sobre nutrición y comportamiento adaptados a la edad exacta de tu mascota.</li>
                     </ol>
                     <div class="marcador-imagen-ancha">
-                        <img src="image/mascota en el parque.jpg" alt="Imagen impacto a largo plazo" width="400px">
+                        <img src="image/mascota en el parque.jpg" alt="Mascota saludable jugando en el parque" width="400">
                     </div>
                 </article>
             </div>
 
             <div class="contenedor-boton-centro">
-                <button class="boton-primario">Información personalizada aquí</button>
+                <button type="button" class="boton-primario">Información personalizada aquí</button>
             </div>
         </section>
 
@@ -265,37 +246,32 @@
     <!-- ================= PIE DE PÁGINA ================= -->
     <footer class="pie-de-pagina">
         <div class="contenedor-pie">
-            <nav class="enlaces-pie">
+            <nav class="enlaces-pie" aria-label="Enlaces del pie de página">
                 <ul>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#mas">Más</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="#">Más</a></li>
                 </ul>
             </nav>
 
             <div class="logo-pie">
-                <img src="image/AdopPet Logo.png" alt="Logo" width="60px">
+                <img src="image/AdopPet Logo.png" alt="Logotipo AdopPet" width="60">
                 <a href="index.html">AdopPet</a>
             </div>
 
-            <div class="redes-sociales">
+            <nav class="redes-sociales" aria-label="Redes sociales">
                 <ul>
-                    <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img
-                                src="image/youtube logo.png" alt="Youtube" width="24px"></a></li>
-                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
-                                src="image/icono facebook.png" alt="Facebook" width="24px"></a></li>
-                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png"
-                                alt="Twitter" width="24px"></a></li>
-                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
-                                src="image/logo instagram.png" alt="Instagram" width="24px"></a></li>
-                    <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img
-                                src="image/linkedin.png" alt="Linkedin" width="24px"></a></li>
+                    <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="image/youtube logo.png" alt="YouTube" width="24"></a></li>
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png" alt="Twitter" width="24"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="image/linkedin.png" alt="LinkedIn" width="24"></a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
         <div class="derechos-autor">
-            <p>AdopPet &copy; 2026. All rights reserved.</p>
+            <p><small>&copy; 2026 AdopPet. Todos los derechos reservados.</small></p>
         </div>
     </footer>
 

@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>multimedia</title>
+    <title>AdopPet - Multimedia</title>
 </head>
 
 <body>
+    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
     <header id="encabezado-principal-multimedia" class="encabezado-principal-multimedia">
-        <!--Contenedor logo-->
+        <!-- Contenedor logo -->
         <div id="contenedor-logo" class="contenedor-logo">
-            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
-                width="48px">
+            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet" width="48">
             <strong class="nombre-marca">AdopPet</strong>
         </div>
-        <!--Navegacion de las paginas-->
-        <nav id="navegacion-principal" class="navegacion-principal">
+
+        <!-- Navegación de las páginas -->
+        <nav id="navegacion-principal" class="navegacion-principal" aria-label="Navegación principal">
             <ul class="lista-nav">
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
@@ -26,11 +27,11 @@
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <!--Contenedor Notificaines y cuenta-->
+
+        <!-- Contenedor Notificaciones y cuenta -->
         <div id="acciones-usuario" class="acciones-usuario">
             <a href="notificaciones.html" id="btn-notificaciones">
-                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion"
-                    width="24">
+                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion" width="24">
                 Notificación
             </a>
             <a href="cuenta.html" id="btn-cuenta">
@@ -40,9 +41,10 @@
         </div>
     </header>
 
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main id="contenido-principal" class="main-contenido">
-        <!-- nav para la navegacion en las secciones de la misma pagina -->
-        <nav id="navegacion-secundaria" class="nav-secundaria">
+        <!-- Navegación interna de la página -->
+        <nav id="navegacion-secundaria" class="nav-secundaria" aria-label="Navegación interna de galería multimedia">
             <ul class="lista-nav-secundaria">
                 <li class="item-nav-secundaria">
                     <a href="#conocenos" class="btn-conocenos">Conócenos más!</a>
@@ -59,32 +61,33 @@
             </ul>
         </nav>
 
+        <!-- Sección Hero -->
         <section id="conocenos" class="seccion-hero">
             <h1 class="titulo-principal">Conócenos un poco más!</h1>
             <p class="descripcion-hero">Mira nuestra galería de nuestra familia.</p>
         </section>
-        <!--Seccion de galeria de imagenes-->
+
+        <!-- Sección de galería de imágenes / Carrusel -->
         <section id="experiencias" class="seccion-galeria">
             <h2 class="titulo-secundario">Experiencias unidas</h2>
             <article id="carrusel-experiencias" class="contenedor-carrusel">
-                <a href="" id="btn-anterior" class="control-carrucel-flecha-izquierda" aria-label="Imagen anterior"><</a>
+                <a href="#anterior" id="btn-anterior" class="control-carrucel-flecha-izquierda" aria-label="Imagen anterior">&lt;</a>
 
-                    <figure class="item-galeria">
-                        <img class="img-galeria" src="image/familia feliz.jpg"
-                            alt="Familia feliz con su nueva mascota adoptada" width="800">
-                    </figure>
+                <figure class="item-galeria">
+                    <img class="img-galeria" src="image/familia feliz.jpg" alt="Familia feliz con su nueva mascota adoptada" width="800">
+                </figure>
 
-                    <figure class="item-galeria">
-                        <img class="img-galeria" src="image/mascota en el parque.jpg"
-                            alt="Mascota rescatada jugando en el parque" width="800">
-                    </figure>
+                <figure class="item-galeria">
+                    <img class="img-galeria" src="image/mascota en el parque.jpg" alt="Mascota rescatada jugando en el parque" width="800">
+                </figure>
 
-                        <a href="#siguiente" id="btn-siguiente" class="control-carrusel flecha-derecha"aria-label="Siguiente imagen">></a>
+                <a href="#siguiente" id="btn-siguiente" class="control-carrusel flecha-derecha" aria-label="Siguiente imagen">&gt;</a>
             </article>
         </section>
-        <!--Seccion de contenido complementario-->
+
+        <!-- Sección de contenido complementario y video -->
         <section id="familia" class="seccion-familia">
-            <!--Video en columna-->
+            <!-- Video en columna -->
             <div class="contenedor-video">
                 <article class="columna-video">
                     <figure class="recurso-video">
@@ -97,40 +100,46 @@
                     </figure>
                 </article>
             </div>
-            <!--Contenido de la columna-->
+
+            <!-- Contenido de la columna -->
             <aside class="columna-contenido-complementario">
-                <h2 class="titulo-secundario">Juntos como familia peruana</h2>
-                <p class="texto-descriptivo">Nuestra mayor alegría es ayudar a quienes lo necesiten de la mejor manera
-                    posible y poder convivir espectacularmente con nuestros peluditos.</p>
-                <!--Ubicacion-->
+                <h2 class="titulo-secundario">Juntos como familia</h2>
+                <p class="texto-descriptivo">Nuestra mayor alegría es ayudar a quienes lo necesiten de la mejor manera posible y poder convivir espectacularmente con nuestros peluditos.</p>
+
+                <!-- Ubicación -->
                 <figure class="recurso-ubicacion">
-                    <figcaption>Encuentra nuestra sede en cali</figcaption>
+                    <figcaption>Encuentra nuestra sede en Cali</figcaption>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127415.75619176166!2d-76.60492828359374!3d3.3950619000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
                         width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-
                 </figure>
+
+                <!-- Video instalaciones -->
                 <figure>
                     <figcaption>Nuestras instalaciones</figcaption>
-                    <video src="Video/videoSedes.mp4" width="450" controls type="Video/mp4"></video>
+                    <video src="Video/videoSedes.mp4" width="450" controls type="video/mp4"></video>
                 </figure>
-                <!--Audio-->
+
+                <!-- Audio -->
                 <figure class="recurso-audio">
+                    <figcaption>Sonido de nuestros peluditos</figcaption>
                     <audio controls>
                         <source src="Audio/Audio Perro.mp3" type="audio/mpeg">
                     </audio>
                 </figure>
             </aside>
         </section>
-        <!--Seccion de eventos-->
+
+        <!-- Sección de eventos y celebraciones -->
         <section id="celebraciones" class="seccion-celebraciones">
             <div class="cabecera-seccion">
-                <h2 class="titulo-principal">Celebraciones</h2>
-                <p class="descripcion-seccion">Que mayor alegría que compartir con quienes más amas.</p>
+                <h2 class="titulo-secundario">Celebraciones</h2>
+                <p class="descripcion-seccion">Qué mayor alegría que compartir con quienes más amas.</p>
             </div>
-            <!--Evento 1 Inicio de año-->
+
             <ul class="lista-eventos">
+                <!-- Evento 1: Inicio de año -->
                 <li class="item-eventos">
                     <article class="targeta-contenido">
                         <figure class="imagen-evento">
@@ -138,13 +147,13 @@
                         </figure>
                         <div class="detalles-evento">
                             <h3 class="titulo-evento">Inicio de año!</h3>
-                            <p class="texto-evento">Experiencias con nuestras veterinarias asociadas, compartiendo
-                                experiencias en nuestro evento único de inicio de año.</p>
-                            <button class="btn-ver-mas">Ver mas</button>
+                            <p class="texto-evento">Experiencias con nuestras veterinarias asociadas, compartiendo vivencias en nuestro evento único de inicio de año.</p>
+                            <button type="button" class="btn-ver-mas">Ver más</button>
                         </div>
                     </article>
                 </li>
-                <!--Evento 2 San valetin-->
+
+                <!-- Evento 2: San Valentín -->
                 <li class="item-eventos">
                     <article class="targeta-contenido">
                         <figure class="imagen-evento">
@@ -152,13 +161,13 @@
                         </figure>
                         <div class="detalles-evento">
                             <h3 class="titulo-evento">San Valentín!</h3>
-                            <p class="texto-evento">No hay mejor amor que el de nuestros peluditos. Acompañados de las
-                                mejores personas y repartiendo nuestro amor en grande.</p>
-                            <button class="btn-ver-mas">Ver mas</button>
+                            <p class="texto-evento">No hay mejor amor que el de nuestros peluditos. Acompañados de las mejores personas y repartiendo nuestro amor en grande.</p>
+                            <button type="button" class="btn-ver-mas">Ver más</button>
                         </div>
                     </article>
                 </li>
-                <!--Evento 3 Diciembre-->
+
+                <!-- Evento 3: Diciembre -->
                 <li class="item-eventos">
                     <article class="targeta-contenido">
                         <figure class="imagen-evento">
@@ -166,49 +175,44 @@
                         </figure>
                         <div class="detalles-evento">
                             <h3 class="titulo-evento">Diciembre unidos!</h3>
-                            <p class="texto-evento">Que estas navidades sean las mejores unidos en familia y acompañados
-                                de nuestro peludito. Vamos a celebrar un nuevo comienzo.</p>
-                            <button class="btn-ver-mas">Ver mas</button>
+                            <p class="texto-evento">Que estas navidades sean las mejores unidos en familia y acompañados de nuestro peludito. Vamos a celebrar un nuevo comienzo.</p>
+                            <button type="button" class="btn-ver-mas">Ver más</button>
                         </div>
                     </article>
                 </li>
             </ul>
         </section>
     </main>
-    <!--Footer-->
+
+    <!-- ================= PIE DE PÁGINA ================= -->
     <footer class="pie-de-pagina">
         <div class="contenedor-pie">
-            <nav class="enlaces-pie">
+            <nav class="enlaces-pie" aria-label="Enlaces del pie de página">
                 <ul>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#mas">Más</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="#">Más</a></li>
                 </ul>
             </nav>
 
             <div class="logo-pie">
-                <img src="image/AdopPet Logo.png" alt="Logo" width="60px">
+                <img src="image/AdopPet Logo.png" alt="Logotipo AdopPet" width="60">
                 <a href="index.html">AdopPet</a>
             </div>
 
-            <div class="redes-sociales">
+            <nav class="redes-sociales" aria-label="Redes sociales">
                 <ul>
-                    <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img
-                                src="image/youtube logo.png" alt="Youtube" width="24px"></a></li>
-                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
-                                src="image/icono facebook.png" alt="Facebook" width="24px"></a></li>
-                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png"
-                                alt="Twitter" width="24px"></a></li>
-                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
-                                src="image/logo instagram.png" alt="Instagram" width="24px"></a></li>
-                    <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img
-                                src="image/linkedin.png" alt="Linkedin" width="24px"></a></li>
+                    <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="image/youtube logo.png" alt="YouTube" width="24"></a></li>
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png" alt="Twitter" width="24"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="image/linkedin.png" alt="LinkedIn" width="24"></a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
         <div class="derechos-autor">
-            <p>AdopPet &copy; 2026. All rights reserved.</p>
+            <p><small>&copy; 2026 AdopPet. Todos los derechos reservados.</small></p>
         </div>
     </footer>
 </body>

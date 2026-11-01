@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdopPet Inicio</title>
+    <title>AdopPet - Inicio</title>
 </head>
 
 <body>
-    <header id="encabezado-principal-multimedia" class="encabezado-principal-multimedia">
-        <!--Contenedor logo-->
+    <!-- ================= ENCABEZADO PRINCIPAL ================= -->
+    <header id="encabezado-principal-inicio" class="encabezado-principal-multimedia">
+        <!-- Contenedor logo -->
         <div id="contenedor-logo" class="contenedor-logo">
-            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
-                width="48px">
+            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet" width="48">
             <strong class="nombre-marca">AdopPet</strong>
         </div>
-        <!--Navegacion de las paginas-->
-        <nav id="navegacion-principal" class="navegacion-principal">
+
+        <!-- Navegación de las páginas -->
+        <nav id="navegacion-principal" class="navegacion-principal" aria-label="Navegación principal">
             <ul class="lista-nav">
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
@@ -26,11 +27,11 @@
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <!--Contenedor Notificaines y cuenta-->
+
+        <!-- Contenedor Notificaciones y cuenta -->
         <div id="acciones-usuario" class="acciones-usuario">
             <a href="notificaciones.html" id="btn-notificaciones">
-                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion"
-                    width="24">
+                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion" width="24">
                 Notificación
             </a>
             <a href="cuenta.html" id="btn-cuenta">
@@ -40,18 +41,21 @@
         </div>
     </header>
 
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main>
-        <nav class="segundoNav">
+        <!-- Navegación secundaria entre secciones de la página -->
+        <nav class="segundoNav" aria-label="Navegación interna de inicio">
             <ul>
                 <li><a href="#quienesSomos">¿Quiénes somos?</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#clientes">Nuestros Clientes</a></li>
-                <li><a href="#caracteristicas">Caracteristicas</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
                 <li><a href="#preguntas">Preguntas</a></li>
                 <li><a href="#costos">Costos</a></li>
             </ul>
         </nav>
-        <br>
+
+        <!-- ===== SECCIÓN 1: ¿QUIÉNES SOMOS? ===== -->
         <section id="quienesSomos" class="Somos">
             <div class="Somos-Cont">
                 <h1>AdopPet</h1>
@@ -63,140 +67,130 @@
                     el amor y el cuidado que merecen.
                 </p>
                 <div class="Somos-boton">
-                    <button>¡Adopta ya!</button>
-                    <button>¡Registrarse!</button>
+                    <button type="button">¡Adopta ya!</button>
+                    <button type="button">¡Registrarse!</button>
                 </div>
             </div>
-            <br>
             <div class="Somos-img">
-                <img src="image/adopPet_icon.jpg" alt="imagen de presentación AdopPet">
+                <img src="image/adopPet_icon.jpg" alt="Presentación oficial de AdopPet">
             </div>
-            <br>
         </section>
 
+        <!-- ===== SECCIÓN 2: SERVICIOS ===== -->
         <section id="servicios" class="Servi">
             <div class="servicios-img">
-                <img src="image/servicios.jpg" alt="Servicios">
+                <img src="image/servicios.jpg" alt="Servicios integrales veterinarios">
             </div>
-            <br>
             <div class="servi-cont">
-                <h2>Tu mayor felicidad será tener a tu amigo peludo a tu lado. Ofrecemos
-                    el mejor servicio integral para nuestros usuarios.</h2>
+                <h2>Tu mayor felicidad será tener a tu amigo peludo a tu lado. Ofrecemos el mejor servicio integral para nuestros usuarios.</h2>
                 <div class="Servi-detalles">
                     <div class="cont-1">
-                        <img src="image/asistencia.jpg" alt="icono de asistencia medica" width="60" height="60">
-                        <p><strong>Asistencia medica para tu mascota. Contamos con un
-                                personal especializado para tratar a tu mascota.</strong></p>
+                        <img src="image/asistencia.jpg" alt="Icono de asistencia médica" width="60" height="60">
+                        <p><strong>Asistencia médica para tu mascota.</strong> Contamos con un personal especializado para tratar a tu mascota.</p>
                     </div>
                     <div class="cont-2">
                         <img src="image/transporte.jpg" alt="Icono de Transporte" width="60" height="60">
-                        <p> <strong>¿Se te dificulta llevar a tu mascota?</strong></p>
+                        <p><strong>¿Se te dificulta llevar a tu mascota?</strong> Contamos con servicio de transporte especializado.</p>
                     </div>
                 </div>
+                <div class="Servi-boton">
+                    <button type="button">Consulta aquí</button>
+                    <button type="button">Más información</button>
+                </div>
             </div>
-            <div class="Servi-boton">
-                <button>Consulta aqui</button>
-                <button>Mas información</button>
-            </div>
-            <br>
         </section>
+
+        <!-- ===== SECCIÓN 3: NUESTROS CLIENTES ===== -->
         <section id="clientes">
-            <h2>Nuestros clientes.</h2>
+            <h2>Nuestros clientes</h2>
             <div class="clientes-cont">
+                <!-- Mascota 1 -->
                 <article class="tarjeta-mascota">
                     <div class="mascota-img">
                         <img src="image/perri1.jpg" alt="Foto de Pepito" width="60" height="60">
                     </div>
                     <div class="mascota-info">
-                        <h3>Mascota <br> <strong>Pepito</strong></h3>
+                        <h3>Mascota: <strong>Pepito</strong></h3>
                         <ul>
                             <li><strong>Edad:</strong> 6 meses.</li>
                             <li><strong>Tamaño:</strong> Pequeño.</li>
-                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y
-                                espacios amplios.</li>
+                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y espacios amplios.</li>
                         </ul>
                     </div>
                     <div class="mascota-cuidador">
                         <img src="image/persona.jpg" alt="Foto de Jane Doe" width="60" height="60">
-                        <p><strong>Jane Doe</strong> <br> Cuidadora</p>
+                        <p><strong>Jane Doe</strong><br>Cuidadora</p>
                     </div>
                 </article>
-                <br>
 
-
+                <!-- Mascota 2 -->
                 <article class="tarjeta-mascota">
                     <div class="mascota-img">
-                        <img src="image/perri2.jpg" alt="Foto de Pepito 2" width="60" height="60">
+                        <img src="image/perri2.jpg" alt="Foto de Pablo" width="60" height="60">
                     </div>
                     <div class="mascota-info">
-                        <h3>Mascota <br> <strong>Pablo</strong></h3>
+                        <h3>Mascota: <strong>Pablo</strong></h3>
                         <ul>
                             <li><strong>Edad:</strong> 1 año.</li>
                             <li><strong>Tamaño:</strong> Pequeño.</li>
-                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y
-                                espacios amplios.</li>
+                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y espacios amplios.</li>
                         </ul>
                     </div>
                     <div class="mascota-cuidador">
-                        <img src="image/persona.jpg" alt="Foto de Jane Doe" width="60" height="60">
-                        <p><strong>Meiling Kov</strong> <br> Cuidadora</p>
+                        <img src="image/persona.jpg" alt="Foto de Meiling Kov" width="60" height="60">
+                        <p><strong>Meiling Kov</strong><br>Cuidadora</p>
                     </div>
                 </article>
-                <br>
 
-
+                <!-- Mascota 3 -->
                 <article class="tarjeta-mascota">
                     <div class="mascota-img">
-                        <img src="image/perri3.jpg" alt="Foto de Pepito 3" width="60" height="60">
+                        <img src="image/perri3.jpg" alt="Foto de Petri" width="60" height="60">
                     </div>
                     <div class="mascota-info">
-                        <h3>Mascota <br> <strong>Petri</strong></h3>
+                        <h3>Mascota: <strong>Petri</strong></h3>
                         <ul>
                             <li><strong>Edad:</strong> 4 meses.</li>
                             <li><strong>Tamaño:</strong> Pequeño.</li>
-                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y
-                                espacios amplios.</li>
+                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y espacios amplios.</li>
                         </ul>
                     </div>
                     <div class="mascota-cuidador">
-                        <img src="images/persona.jpg" alt="Foto de Jane Doe" width="60" height="60">
-                        <p><strong>Janna Montane</strong> <br> Cuidadora</p>
+                        <img src="image/persona.jpg" alt="Foto de Janna Montane" width="60" height="60">
+                        <p><strong>Janna Montane</strong><br>Cuidadora</p>
                     </div>
                 </article>
-                <br>
 
-
+                <!-- Mascota 4 -->
                 <article class="tarjeta-mascota">
                     <div class="mascota-img">
-                        <img src="image/perri4.jpg" alt="Foto de Pepito 4" width="60" height="60">
+                        <img src="image/perri4.jpg" alt="Foto de Chily" width="60" height="60">
                     </div>
                     <div class="mascota-info">
-                        <h3>Mascota <br> <strong>Chily</strong></h3>
+                        <h3>Mascota: <strong>Chily</strong></h3>
                         <ul>
-                            <li><strong>Edad:</strong> 1 año</li>
+                            <li><strong>Edad:</strong> 1 año.</li>
                             <li><strong>Tamaño:</strong> Pequeño.</li>
-                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y
-                                espacios amplios.</li>
+                            <li><strong>Descripción:</strong> Cachorro juguetón, ideal para familias activas con niños y espacios amplios.</li>
                         </ul>
                     </div>
                     <div class="mascota-cuidador">
-                        <img src="image/persona.jpg" alt="Foto de Jane Doe" width="60" height="60">
-                        <p><strong>Hanna Parker</strong> <br> Cuidadora</p>
+                        <img src="image/persona.jpg" alt="Foto de Hanna Parker" width="60" height="60">
+                        <p><strong>Hanna Parker</strong><br>Cuidadora</p>
                     </div>
                 </article>
+            </div>
 
-            </div>
-            <br>
             <div class="clientes-boton">
-                <button>¡Empieza a adoptar ahora!</button>
+                <button type="button">¡Empieza a adoptar ahora!</button>
             </div>
-            <br>
         </section>
-        <aside class="datos-curiosos">
+
+        <!-- Barra lateral informativa -->
+        <aside class="datos-curiosos" aria-label="Información complementaria de adopción">
             <h3>¿Sabías qué?</h3>
-            <p>Adoptar un animal de compañía reduce los niveles de estrés, mejora la salud cardiovascular y ayuda a
-                crear rutinas más saludables y activas en toda la familia.</p>
-            <br>
+            <p>Adoptar un animal de compañía reduce los niveles de estrés, mejora la salud cardiovascular y ayuda a crear rutinas más saludables y activas en toda la familia.</p>
+
             <h3>Top 5: Beneficios de la Adopción Responsable</h3>
             <ol>
                 <li>Salvas una vida en peligro de abandono.</li>
@@ -206,80 +200,71 @@
                 <li>Consigues un amigo incondicional para toda la vida.</li>
             </ol>
         </aside>
-        <br>
+
+        <!-- ===== SECCIÓN 4: CARACTERÍSTICAS ===== -->
         <section id="caracteristicas" class="Caracter">
             <h2>Prepárate para recibir a tu nueva mejor compañía.</h2>
             <div class="caracter-prinl">
                 <div class="bloq-1">
                     <img src="image/calendario.jpg" alt="Icono de calendario" width="100" height="100">
-                    <p>Elige la fecha y hora que mejor se adapten a tu rutina en nuestro
-                        calendario digital para agendar tu entrevista y visitarnos
-                        para conocer a las mascotas disponibles.</p>
+                    <p>Elige la fecha y hora que mejor se adapten a tu rutina en nuestro calendario digital para agendar tu entrevista y visitarnos para conocer a las mascotas disponibles.</p>
                 </div>
 
                 <div class="caracter-2">
                     <img src="image/contrato.jpg" alt="Icono de contrato" width="100" height="100">
-                    <p>El proceso de adopción incluye la firma de un contrato
-                        legal donde te comprometes a cuidar y proteger a la mascota
-                        durante toda su vida.</p>
+                    <p>El proceso de adopción incluye la firma de un contrato legal donde te comprometes a cuidar y proteger a la mascota durante toda su vida.</p>
                 </div>
+
                 <div class="caracter-3">
                     <img src="image/salud.jpg" alt="Icono de salud" width="100" height="100">
-                    <p>Todas nuestras mascotas se entregan esterilizadas, desparasitadas y con su esquema
-                        de vacunación al día certificado en su carnet médico oficial según su edad.</p>
+                    <p>Todas nuestras mascotas se entregan esterilizadas, desparasitadas y con su esquema de vacunación al día certificado en su carnet médico oficial según su edad.</p>
                 </div>
+
                 <div class="caracter-4">
                     <img src="image/transporte.jpg" alt="Icono de transporte" width="100" height="100">
-                    <p>La entrega de la mascota se realiza directamente en nuestro refugio o coordinando
-                        un punto de encuentro seguro una vez que tu solicitud haya sido completamente
-                        aprobada.</p>
+                    <p>La entrega de la mascota se realiza directamente en nuestro refugio o coordinando un punto de encuentro seguro una vez que tu solicitud haya sido completamente aprobada.</p>
                 </div>
             </div>
             <div class="caracter-boton">
-                <button>Nuestras reseñas</button>
+                <button type="button">Nuestras reseñas</button>
             </div>
-            <br>
         </section>
 
+        <!-- ===== SECCIÓN 5: PREGUNTAS FRECUENTES ===== -->
         <section id="preguntas" class="preguntas">
             <h2>Preguntas Frecuentes</h2>
             <div class="lista-pe">
                 <details>
                     <summary>¿Por qué debería adoptar en esta plataforma?</summary>
-                    <p>Garantizamos el estado de salud, vacunación y
-                        acompañamiento continuo para tu nueva mascota.</p> <!-- agregar info -->
+                    <p>Garantizamos el estado de salud, vacunación y acompañamiento continuo para tu nueva mascota.</p>
                 </details>
-                <br>
+
                 <details>
                     <summary>¿Se debe pagar algo por la adopción?</summary>
-                    <p>El proceso de adopción es totalmente gratuito. Solo se solicita un aporte voluntario opcional
-                        para apoyar el carnet médico y las vacunas del peludito.</p> <!-- agregar info -->
+                    <p>El proceso de adopción es totalmente gratuito. Solo se solicita un aporte voluntario opcional para apoyar el carnet médico y las vacunas del peludito.</p>
                 </details>
-                <br>
+
                 <details>
                     <summary>¿Se incluyen servicios de asistencia médica?</summary>
-                    <p>Sí, entregamos a las mascotas desparasitadas, esterilizadas y con su primera consulta
-                        de control veterinario incluida sin costo adicional.</p> <!-- agregar info -->
+                    <p>Sí, entregamos a las mascotas desparasitadas, esterilizadas y con su primera consulta de control veterinario incluida sin costo adicional.</p>
                 </details>
-                <br>
+
                 <details>
                     <summary>¿Cuánto tiempo tarda la aprobación de la solicitud?</summary>
-                    <p>Nuestro equipo evalúa el formulario y agenda la entrevista en un plazo de
-                        24 a 48 horas hábiles después de realizar la solicitud.</p> <!-- agregar info -->
+                    <p>Nuestro equipo evalúa el formulario y agenda la entrevista en un plazo de 24 a 48 horas hábiles después de realizar la solicitud.</p>
                 </details>
-                <br>
+
                 <details>
                     <summary>¿Cuáles son los requisitos para adoptar?</summary>
-                    <p>Ser mayor de edad, presentar una copia de tu documento de identidad, comprobante de domicilio y
-                        disponer de un espacio adecuado para el bienestar del animal.</p> <!-- agregar info -->
+                    <p>Ser mayor de edad, presentar una copia de tu documento de identidad, comprobante de domicilio y disponer de un espacio adecuado para el bienestar del animal.</p>
                 </details>
-                <br>
             </div>
         </section>
-        <section id="costos">
 
-            <h2>Costos y Cuidados. </h2>
-            <nav class="costycuidados-nav">
+        <!-- ===== SECCIÓN 6: COSTOS Y CUIDADOS ===== -->
+        <section id="costos">
+            <h2>Costos y Cuidados</h2>
+            <nav class="costycuidados-nav" aria-label="Categorías de costos y cuidados">
                 <ul>
                     <li><a href="#mascotas" class="nav-act">Mascotas</a></li>
                     <li><a href="#servicios">Servicios <span>7</span></a></li>
@@ -290,98 +275,88 @@
                     <li><a href="#mas">•••</a></li>
                 </ul>
             </nav>
-            <br>
-            <h3>Mascotas Disponibles.</h3>
+
+            <h3>Mascotas Disponibles</h3>
             <table class="tbla-mascot">
                 <thead>
                     <tr>
                         <th>Tipo Mascota</th>
                         <th>Cuidados Esenciales</th>
-                        <th>Inversion Mensual</th>
+                        <th>Inversión Mensual</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="image/perro3.jpg" alt="Icono de la mascota" width="40" height="40">Perro Pequeño
-                        </td>
-                        <td>Alimento de alta calidad, cepillado 2 veces por
-                            semana y paseos diarios cortos.</td>
+                        <td><img src="image/perro3.jpg" alt="Icono perro pequeño" width="40" height="40"> Perro Pequeño</td>
+                        <td>Alimento de alta calidad, cepillado 2 veces por semana y paseos diarios cortos.</td>
                         <td>$120.000 COP</td>
                     </tr>
                     <tr>
-                        <td><img src="image/perritop.jpg" alt="Icono de la mascota" width="40" height="40">Perro
-                            Mediano</td>
+                        <td><img src="image/perritop.jpg" alt="Icono perro mediano" width="40" height="40"> Perro Mediano</td>
                         <td>Alimentación balanceada, ejercicio constante y desparasitación cada 3 meses.</td>
                         <td>$180.000 COP</td>
                     </tr>
                     <tr>
-                        <td><img src="image/perro.jpg" alt="Icono de la mascota" width="40" height="40">Perro Grande
-                        </td>
-                        <td>Dieta alta en proteína, espacio amplio, entrenamiento y vacunas anuales</td>
+                        <td><img src="image/perro.jpg" alt="Icono perro grande" width="40" height="40"> Perro Grande</td>
+                        <td>Dieta alta en proteína, espacio amplio, entrenamiento y vacunas anuales.</td>
                         <td>$250.000 COP</td>
                     </tr>
                     <tr>
-                        <td><img src="image/perro4.jpg" alt="Icono de la mascota" width="40" height="40">Perro Pequeño
-                        </td>
+                        <td><img src="image/perro4.jpg" alt="Icono perro pequeño" width="40" height="40"> Perro Pequeño</td>
                         <td>Esquema completo de vacunación, alimento húmedo y consultas mensuales.</td>
                         <td>$200.000 COP</td>
                     </tr>
                     <tr>
-                        <td><img src="image/perro5.jpg" alt="Icono de la mascota" width="40" height="40">Perro Mediano
-                        </td>
+                        <td><img src="image/perro5.jpg" alt="Icono perro mediano" width="40" height="40"> Perro Mediano</td>
                         <td>Chequeos veterinarios frecuentes, suplementos articulares y comida blanda.</td>
                         <td>$200.000 COP</td>
                     </tr>
                 </tbody>
             </table>
-            <br>
-            <div class="num-pag">
+
+            <nav class="num-pag" aria-label="Paginación de costos y cuidados">
                 <a href="#anterior" class="anter-boton">&lt; Anterior</a>
                 <a href="#p1">1</a>
-                <a href="#p2" class="pag-actual">2</a>
-                <a href="#p1">3</a>
-                <a href="#p1">4</a>
-                <a href="#p1">5</a>
+                <a href="#p2" class="pag-actual" aria-current="page">2</a>
+                <a href="#p3">3</a>
+                <a href="#p4">4</a>
+                <a href="#p5">5</a>
                 <span>...</span>
-                <a href="#p1">11</a>
-                <a href="#siguient" class="siguient-boton">Siguiente &gt;</a>
-            </div>
-            <br>
+                <a href="#p11">11</a>
+                <a href="#siguiente" class="siguient-boton">Siguiente &gt;</a>
+            </nav>
         </section>
     </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
     <footer class="pie-de-pagina">
         <div class="contenedor-pie">
-            <nav class="enlaces-pie">
+            <nav class="enlaces-pie" aria-label="Enlaces del pie de página">
                 <ul>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#mas">Más</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="#">Más</a></li>
                 </ul>
             </nav>
 
             <div class="logo-pie">
-                <img src="image/AdopPet Logo.png" alt="Logo" width="60px">
+                <img src="image/AdopPet Logo.png" alt="Logotipo AdopPet" width="60">
                 <a href="index.html">AdopPet</a>
             </div>
 
-            <div class="redes-sociales">
+            <nav class="redes-sociales" aria-label="Redes sociales">
                 <ul>
-                    <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img
-                                src="image/youtube logo.png" alt="Youtube" width="24px"></a></li>
-                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
-                                src="image/icono facebook.png" alt="Facebook" width="24px"></a></li>
-                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png"
-                                alt="Twitter" width="24px"></a></li>
-                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
-                                src="image/logo instagram.png" alt="Instagram" width="24px"></a></li>
-                    <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img
-                                src="image/linkedin.png" alt="Linkedin" width="24px"></a></li>
+                    <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="image/youtube logo.png" alt="YouTube" width="24"></a></li>
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png" alt="Twitter" width="24"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="image/linkedin.png" alt="LinkedIn" width="24"></a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
         <div class="derechos-autor">
-            <p>AdopPet &copy; 2026. All rights reserved.</p>
+            <p><small>&copy; 2026 AdopPet. Todos los derechos reservados.</small></p>
         </div>
     </footer>
 </body>

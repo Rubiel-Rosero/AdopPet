@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdopPet - Contenido Médico</title>
-    <!-- Aquí irá tu archivo CSS -->
 </head>
 
 <body>
 
     <!-- ================= ENCABEZADO PRINCIPAL ================= -->
-    <header id="encabezado-principal-multimedia" class="encabezado-principal-multimedia">
-        <!--Contenedor logo-->
+    <header id="encabezado-principal-contenido" class="encabezado-principal-multimedia">
+        <!-- Contenedor logo -->
         <div id="contenedor-logo" class="contenedor-logo">
-            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet"
-                width="48px">
+            <img src="image/AdopPet Logo.png" alt="Logotipo de AdopPet" class="logo-adopPet" id="logo-adopPet" width="48">
             <strong class="nombre-marca">AdopPet</strong>
         </div>
-        <!--Navegacion de las paginas-->
-        <nav id="navegacion-principal" class="navegacion-principal">
+
+        <!-- Navegación de las páginas -->
+        <nav id="navegacion-principal" class="navegacion-principal" aria-label="Navegación principal">
             <ul class="lista-nav">
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
@@ -29,11 +28,11 @@
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <!--Contenedor Notificaines y cuenta-->
+
+        <!-- Contenedor Notificaciones y cuenta -->
         <div id="acciones-usuario" class="acciones-usuario">
             <a href="notificaciones.html" id="btn-notificaciones">
-                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion"
-                    width="24">
+                <img src="image/icono notificacion.png" alt="Icono de notificaciones" id="icono-notificacion" width="24">
                 Notificación
             </a>
             <a href="cuenta.html" id="btn-cuenta">
@@ -46,8 +45,8 @@
     <!-- ================= MIGAS DE PAN ================= -->
     <nav class="migas-de-pan" aria-label="Ruta de navegación">
         <ul>
-            <li><a href="#">La guía del cachorro para...</a></li>
-            <li><a href="#">Directorio de Recursos</a></li>
+            <li><a href="#">La guía del cachorro</a></li>
+            <li><a href="recursos.html">Directorio de Recursos</a></li>
             <li aria-current="page">Página Clínicas Aliadas</li>
         </ul>
     </nav>
@@ -67,74 +66,52 @@
         <!-- ===== COLUMNA IZQUIERDA: CONTENIDO PRINCIPAL ===== -->
         <main class="contenido-principal">
 
+            <!-- Título principal de la página -->
+            <header class="encabezado-contenido">
+                <h1 class="titulo-principal">Guía de Salud y Contenido Médico Veterinario</h1>
+                <p class="descripcion-contenido">Información especializada y rigurosa para el cuidado integral y preventivo de tu mascota.</p>
+            </header>
+
             <!-- SECCIÓN 1: Nutrición -->
             <article id="nutricion" class="articulo-medico">
                 <header>
-                    <h1>Nutrición y Rendimiento Físico</h1>
+                    <h2>Nutrición y Rendimiento Físico</h2>
                     <p class="subtitulo">Dieta BARF vs. Alimento Concentrado</p>
                 </header>
 
                 <div class="marcador-imagen-grande">
-                    <!-- Espacio para la imagen principal de nutrición -->
-                    <img src="image/Fotografia juana.jpg" alt="Imagen representativa de nutrición" width="400px">
+                    <img src="image/Fotografia juana.jpg" alt="Veterinaria Juana preparando alimentación balanceada" width="400">
                 </div>
 
                 <div class="cuerpo-texto">
-                    <p>La dieta BARF se basa en ofrecer alimentos crudos, principalmente carne, huesos, órganos, frutas
-                        y verduras. Los defensores de esta dieta argumentan que es más natural y saludable para los
-                        perros, ya que se asemeja a la alimentación que tendrían en la naturaleza. Según Christian
-                        Vergara, director médico de BarfChile, esta dieta puede mejorar la calidad del pelaje, estimular
-                        el sistema inmune, reducir las heces fecales y mejorar la salud dental.</p>
+                    <p>La dieta BARF se basa en ofrecer alimentos crudos, principalmente carne, huesos, órganos, frutas y verduras. Los defensores de esta dieta argumentan que es más natural y saludable para los perros, ya que se asemeja a la alimentación que tendrían en la naturaleza. Según Christian Vergara, director médico de BarfChile, esta dieta puede mejorar la calidad del pelaje, estimular el sistema inmune, reducir las heces fecales y mejorar la salud dental.</p>
                     <ul>
-                        <li><strong>Beneficios y riesgos de la dieta BARF:</strong> Entre los beneficios de la dieta
-                            BARF, se destaca la mejora en lo microbiata intestinal y el aumento de energía en los
-                            perros. Sin embargo, también existen riesgos asociados. La principal preocupación de los
-                            veterinarios es la seguridad alimentaria, ya que los alimentos crudos pueden estar
-                            contaminados con bacterias patógenas como Salmonella y E. Coli.</li>
-                        <li>Por otro lado, cocinar los alimentos, aunque sea a baja temperatura, puede eliminar estos
-                            riesgos, lo que hace que algunos veterinarios prefieran recomendar dietas cocinadas o
-                            concentrados.</li>
+                        <li><strong>Beneficios y riesgos de la dieta BARF:</strong> Entre los beneficios de la dieta BARF, se destaca la mejora en la microbiota intestinal y el aumento de energía en los perros. Sin embargo, también existen riesgos asociados. La principal preocupación de los veterinarios es la seguridad alimentaria, ya que los alimentos crudos pueden estar contaminados con bacterias patógenas como Salmonella y E. Coli.</li>
+                        <li>Por otro lado, cocinar los alimentos, aunque sea a baja temperatura, puede eliminar estos riesgos, lo que hace que algunos veterinarios prefieran recomendar dietas cocinadas o concentrados.</li>
                     </ul>
-                    <p>El concentrado, o alimento seco para perros, es una opción popular debido a su convenencia y
-                        balance nutricional. Estos alimentos están formulados para proporcionar una dieta completa y
-                        equilibrada, incluyendo proteínas, grasas, carbohidratos, vitaminas y minerales esenciales.
-                        Además, el concentrado tiene una larga vida útil y es fácil de almacenar.</p>
+                    <p>El concentrado, o alimento seco para perros, es una opción popular debido a su conveniencia y balance nutricional. Estos alimentos están formulados para proporcionar una dieta completa y equilibrada, incluyendo proteínas, grasas, carbohidratos, vitaminas y minerales esenciales. Además, el concentrado tiene una larga vida útil y es fácil de almacenar.</p>
                     <ul>
-                        <li><strong>Opiniones de los veterinarios:</strong> La elección entre la dieta BARF y el
-                            concentrado depende de varios factores, incluyendo las necesidades específicas del perro y
-                            las preferencias del dueño.</li>
-                        <li><strong>Lo que recomiendan los expertos:</strong> Algunos veterinarios recomiendan la dieta
-                            BARF para perros con alergias alimentarias o problemas digestivos, mientras que otros
-                            prefieren el concentrado por su seguridad y facilidad de uso.</li>
+                        <li><strong>Opiniones de los veterinarios:</strong> La elección entre la dieta BARF y el concentrado depende de varios factores, incluyendo las necesidades específicas del perro y las preferencias del dueño.</li>
+                        <li><strong>Lo que recomiendan los expertos:</strong> Algunos veterinarios recomiendan la dieta BARF para perros con alergias alimentarias o problemas digestivos, mientras que otros prefieren el concentrado por su seguridad y facilidad de uso.</li>
                     </ul>
-                    <a
-                        href="https://caracol.com.co/2024/12/16/que-es-mejor-para-los-perros-la-dieta-barf-o-el-concentrado-opinion-de-veterinarios/">Qué
-                        es mejor para los perros: ¿la dieta BARF o el ‘concentrado’? Opinión de veterinarios</a>
+                    <a href="https://caracol.com.co/2024/12/16/que-es-mejor-para-los-perros-la-dieta-barf-o-el-concentrado-opinion-de-veterinarios/" target="_blank">Qué es mejor para los perros: ¿la dieta BARF o el ‘concentrado’? Opinión de veterinarios</a>
                 </div>
             </article>
 
             <!-- SECCIÓN 2: Inmunización -->
             <article id="inmunizacion" class="articulo-medico">
                 <header>
-                    <h1>Inmunización Preventiva</h1>
+                    <h2>Inmunización Preventiva</h2>
                     <p class="subtitulo">Esquema de Vacunación</p>
                 </header>
 
                 <div class="marcador-imagen-grande">
-                    <!-- Espacio para la imagen principal de inmunización -->
-                    <img src="image/Fotografia ana.jpg" alt="Imagen representativa de inmunización" width="400px">
+                    <img src="image/Fotografia ana.jpg" alt="Veterinaria Ana administrando vacuna preventiva" width="400">
                 </div>
 
                 <div class="cuerpo-texto">
-                    <p>Cuando se trata de proteger la salud a largo plazo de su mascota, pocas cosas son tan efectivas y
-                        sencillas como mantener sus vacunas al día. Las vacunas desempeñan un papel fundamental en la
-                        prevención de enfermedades graves que pueden propagarse rápidamente entre los animales y, en
-                        algunos casos, incluso afectar a las personas. Si bien puede ser fácil posponer una visita al
-                        veterinario si su mascota parece estar perfectamente sana, esas vacunas de rutina hacen mucho
-                        más de lo que usted cree. Son una protección contra amenazas invisibles, una forma de prolongar
-                        la vida de su mascota y una parte esencial de la tenencia responsable de mascotas.</p>
-                    <a href="https://leparvet.net/blog/importance-of-cat-and-dog-vaccinations/">The Importance of
-                        Routine Cat and Dog Vaccinations</a>
+                    <p>Cuando se trata de proteger la salud a largo plazo de su mascota, pocas cosas son tan efectivas y sencillas como mantener sus vacunas al día. Las vacunas desempeñan un papel fundamental en la prevención de enfermedades graves que pueden propagarse rápidamente entre los animales y, en algunos casos, incluso afectar a las personas. Si bien puede ser fácil posponer una visita al veterinario si su mascota parece estar perfectamente sana, esas vacunas de rutina hacen mucho más de lo que usted cree. Son una protección contra amenazas invisibles, una forma de prolongar la vida de su mascota y una parte esencial de la tenencia responsable de mascotas.</p>
+                    <a href="https://leparvet.net/blog/importance-of-cat-and-dog-vaccinations/" target="_blank">The Importance of Routine Cat and Dog Vaccinations</a>
                 </div>
 
                 <!-- Tabla de Vacunas -->
@@ -152,14 +129,12 @@
                             <tr>
                                 <td>6 - 8 semanas</td>
                                 <td>Moquillo, Parvovirus, Hepatitis, Leptospirosis, Parainfluenza</td>
-                                <td>Depende del fabricante, se recomienda la primera dosis (polivalente) a las 6 u 8
-                                    semanas según el estado del cachorro y su salud.</td>
+                                <td>Depende del fabricante, se recomienda la primera dosis (polivalente) a las 6 u 8 semanas según el estado del cachorro y su salud.</td>
                             </tr>
                             <tr>
                                 <td>9 - 11 semanas</td>
                                 <td>Segunda dosis de polivalente</td>
-                                <td>Refuerzo a las 3 semanas de la primera aplicación, fortaleciendo la inmunidad en
-                                    etapas de crecimiento y exploración.</td>
+                                <td>Refuerzo a las 3 semanas de la primera aplicación, fortaleciendo la inmunidad en etapas de crecimiento y exploración.</td>
                             </tr>
                             <tr>
                                 <td>12 - 16 semanas</td>
@@ -174,20 +149,16 @@
             <!-- SECCIÓN 3: Especialidades Médicas -->
             <article id="especialidades" class="articulo-medico">
                 <header>
-                    <h1>Especialidades médicas</h1>
+                    <h2>Especialidades médicas</h2>
                     <p class="subtitulo">Salud rigurosa</p>
                 </header>
 
                 <div class="marcador-imagen-grande">
-                    <!-- Espacio para la imagen principal de especialidades -->
-                    <img src="image/Fotografia Andre.jpg" alt="Imagen representativa de especialidades" width="400px">
+                    <img src="image/Fotografia Andre.jpg" alt="Especialista médico veterinario en consulta" width="400">
                 </div>
 
                 <div class="cuerpo-texto">
-                    <p>Las especialidades en veterinaria son áreas de estudio avanzado que permiten a los médicos
-                        veterinarios enfocar su práctica en el diagnóstico y tratamiento específico de ciertas
-                        enfermedades, sistemas de órganos o tipos de animales. Nosotros brindamos servicios para la
-                        salud y bienestar de tu peludito.</p>
+                    <p>Las especialidades en veterinaria son áreas de estudio avanzado que permiten a los médicos veterinarios enfocar su práctica en el diagnóstico y tratamiento específico de ciertas enfermedades, sistemas de órganos o tipos de animales. Nosotros brindamos servicios para la salud y bienestar de tu peludito.</p>
                 </div>
 
                 <div class="seccion-servicios">
@@ -200,40 +171,36 @@
                         <!-- Tarjeta 1 -->
                         <div class="tarjeta-servicio">
                             <div class="icono-servicio">
-                                <!-- Marcador de imagen para el servicio -->
-                                <img src="icono-derma.png" alt="Dermatología">
+                                <img src="icono-derma.png" alt="Icono Dermatología">
                             </div>
                             <div class="info-servicio">
                                 <h4>Dermatología</h4>
-                                <p>Diagnóstico de alergias, infecciones y pérdida de pelo, para mantener su pelaje y
-                                    piel sanos.</p>
-                                <button class="boton-borde">Ver opciones</button>
+                                <p>Diagnóstico de alergias, infecciones y pérdida de pelo, para mantener su pelaje y piel sanos.</p>
+                                <button type="button" class="boton-borde">Ver opciones</button>
                             </div>
                         </div>
 
                         <!-- Tarjeta 2 -->
                         <div class="tarjeta-servicio">
                             <div class="icono-servicio">
-                                <!-- Marcador de imagen para el servicio -->
-                                <img src="icono-cardio.png" alt="Cardiología">
+                                <img src="icono-cardio.png" alt="Icono Cardiología">
                             </div>
                             <div class="info-servicio">
                                 <h4>Cardiología</h4>
                                 <p>Diagnóstico y manejo de enfermedades cardíacas y de hipertensión.</p>
-                                <button class="boton-borde">Ver opciones</button>
+                                <button type="button" class="boton-borde">Ver opciones</button>
                             </div>
                         </div>
 
                         <!-- Tarjeta 3 -->
                         <div class="tarjeta-servicio">
                             <div class="icono-servicio">
-                                <!-- Marcador de imagen para el servicio -->
-                                <img src="icono-oftalmo.png" alt="Oftalmología">
+                                <img src="icono-oftalmo.png" alt="Icono Oftalmología">
                             </div>
                             <div class="info-servicio">
                                 <h4>Oftalmología</h4>
                                 <p>Prevención de cataratas, úlceras, glaucoma y problemas oculares.</p>
-                                <button class="boton-borde">Ver opciones</button>
+                                <button type="button" class="boton-borde">Ver opciones</button>
                             </div>
                         </div>
 
@@ -243,59 +210,66 @@
 
             <!-- SECCIÓN 4: Video y Llamado a la acción -->
             <section class="seccion-video-cta">
+                <h2>Emergencias Médicas y Sedes</h2>
                 <div class="contenedor-video">
-                    <!-- Marcador para el video -->
                     <div class="caja-reproductor">
                         <figure>
-                            <video src="Video/videoSedes.mp4" width="450" controls type="Video/mp4"></video>
+                            <video src="Video/videoSedes.mp4" width="450" controls type="video/mp4">
+                                Tu navegador no soporta el formato de video.
+                            </video>
                         </figure>
                     </div>
                 </div>
                 <div class="contenido-cta">
-                    <p>Emergencias médicas o asignar citas, con una revisión de rigor te ayudaremos a identificar y
-                        tratar a tiempo. Los diagnósticos oportunos permiten abordar el problema para detener la
-                        enfermedad o evitar sus secuelas. La prioridad debe ser el bienestar de tu compañero animal.
-                        Asegura su futuro con el cuidado que merece.</p>
-                    <button class="boton-primario">Más Información</button>
+                    <p>Emergencias médicas o asignar citas, con una revisión de rigor te ayudaremos a identificar y tratar a tiempo. Los diagnósticos oportunos permiten abordar el problema para detener la enfermedad o evitar sus secuelas. La prioridad debe ser el bienestar de tu compañero animal. Asegura su futuro con el cuidado que merece.</p>
+                    <button type="button" class="boton-primario">Más Información</button>
                 </div>
             </section>
 
         </main>
 
         <!-- ===== COLUMNA DERECHA: BARRA LATERAL (ASIDE) ===== -->
-        <aside class="barra-lateral">
+        <aside class="barra-lateral" aria-label="Recursos adicionales">
 
             <!-- Menú de enlaces laterales acordeón -->
             <div class="menu-lateral">
+                <details class="item-acordeon" open>
+                    <summary>Recursos Locales</summary>
+                    <div class="contenido-acordeon">
+                        <ul>
+                            <li><a href="#refugios">Refugios</a></li>
+                            <li><a href="#veterinarias">Veterinarias 24/7</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="item-acordeon">
+                    <summary>Descargas</summary>
+                    <div class="contenido-acordeon">
+                        <ul>
+                            <li><a href="#manual">Manual de Cuidados.pdf</a></li>
+                        </ul>
+                    </div>
+                </details>
+
                 <details class="item-acordeon">
                     <summary>Preguntas Frecuentes</summary>
-                    <div class="contenido-acordeon">Aquí va el contenido de preguntas.</div>
-                </details>
-
-                <details class="item-acordeon">
-                    <summary>Consultas</summary>
-                    <div class="contenido-acordeon">Información sobre consultas.</div>
-                </details>
-
-                <details class="item-acordeon">
-                    <summary>Urgencias 24/7</summary>
-                    <div class="contenido-acordeon">Información sobre urgencias.</div>
-                </details>
-
-                <details class="item-acordeon">
-                    <summary>Personajes</summary>
-                    <div class="contenido-acordeon">Nuestros personajes.</div>
+                    <div class="contenido-acordeon">
+                        <p>Respuestas a las dudas más comunes sobre la atención veterinaria de mascotas.</p>
+                    </div>
                 </details>
 
                 <details class="item-acordeon">
                     <summary>Menú de Exámenes</summary>
-                    <div class="contenido-acordeon">Lista de exámenes.</div>
+                    <div class="contenido-acordeon">
+                        <p>Lista y preparación previa para exámenes de laboratorio y ecografías.</p>
+                    </div>
                 </details>
             </div>
 
             <!-- Marcador publicitario o imagen lateral -->
             <div class="marcador-anuncio-lateral">
-                <img src="image/Evento san valentin.jpg" alt="Publicidad o imagen lateral" width="400px">
+                <img src="image/Evento san valentin.jpg" alt="Campaña especial de bienestar y salud animal" width="400">
             </div>
 
         </aside>
@@ -305,37 +279,32 @@
     <!-- ================= PIE DE PÁGINA ================= -->
     <footer class="pie-de-pagina">
         <div class="contenedor-pie">
-            <nav class="enlaces-pie">
+            <nav class="enlaces-pie" aria-label="Enlaces del pie de página">
                 <ul>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#mas">Más</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="#">Más</a></li>
                 </ul>
             </nav>
 
             <div class="logo-pie">
-                <img src="image/AdopPet Logo.png" alt="Logo" width="60px">
+                <img src="image/AdopPet Logo.png" alt="Logotipo AdopPet" width="60">
                 <a href="index.html">AdopPet</a>
             </div>
 
-            <div class="redes-sociales">
+            <nav class="redes-sociales" aria-label="Redes sociales">
                 <ul>
-                    <li><a href="https://youtube.com" target="_blank" aria-label="Youtube"><img
-                                src="image/youtube logo.png" alt="Youtube" width="24px"></a></li>
-                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img
-                                src="image/icono facebook.png" alt="Facebook" width="24px"></a></li>
-                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="image/logo x.png"
-                                alt="Twitter" width="24px"></a></li>
-                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
-                                src="image/logo instagram.png" alt="Instagram" width="24px"></a></li>
-                    <li><a href="https://linkedin.com" target="_blank" aria-label="Linkedin"><img
-                                src="image/linkedin.png" alt="Linkedin" width="24px"></a></li>
+                    <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="image/youtube logo.png" alt="YouTube" width="24"></a></li>
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="image/icono facebook.png" alt="Facebook" width="24"></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter / X"><img src="image/logo x.png" alt="Twitter / X" width="24"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="image/logo instagram.png" alt="Instagram" width="24"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="image/linkedin.png" alt="LinkedIn" width="24"></a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
 
         <div class="derechos-autor">
-            <p>AdopPet &copy; 2026. All rights reserved.</p>
+            <p><small>&copy; 2026 AdopPet. Todos los derechos reservados.</small></p>
         </div>
     </footer>
 
