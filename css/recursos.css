@@ -1,0 +1,874 @@
+/* ==========================================================================
+   recursos.css — Hoja de estilos especfica para recursos.html
+   AdopPet | Laboratorio No. 2 | Fundamentos Web UNIAJC
+   Estructura:
+     1. Animaciones y Keyframes
+     2. Navegacin Secundaria de Recursos
+     3. Seccin 1: Recomendaciones (Banner Dividido y Tarjetas en Fila)
+     4. Seccin 2: Casos de Emergencias (50/50 Pasos Numerados y Video)
+     5. Seccin 3: Clnicas Aliadas e Informacin (Tabla y Descargas)
+     6. Seccin 4: Beneficios Centralizados (Tarjetas Verticales y CTA)
+   ========================================================================== */
+
+/* ===== 1. ANIMACIONES Y KEYFRAMES ===== */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(36px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-48px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(48px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsePlay {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.65);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.08);
+        box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes pulsoBoton {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(80, 23, 38, 0.35);
+    }
+    50% {
+        box-shadow: 0 0 0 12px rgba(80, 23, 38, 0);
+    }
+}
+
+/* Scroll margin para anclaje suave */
+section[id] {
+    scroll-margin-top: 130px;
+}
+
+/* ===== 2. NAVEGACIN SECUNDARIA DE RECURSOS ===== */
+.navegacion-secundaria {
+    position: sticky;
+    top: 72px;
+    z-index: 90;
+    background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
+    border-bottom: 1.5px solid var(--color-borde);
+    padding: 12px 48px;
+    box-shadow: 0 4px 14px rgba(80, 23, 38, 0.05);
+}
+
+.navegacion-secundaria ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.navegacion-secundaria a {
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1.5px solid var(--color-borde);
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navegacion-secundaria a:hover,
+.navegacion-secundaria a:focus-visible,
+.navegacion-secundaria a.activo {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border-color: var(--color-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.18);
+}
+
+/* ===== 3. SECCIN 1: RECOMENDACIONES (BANNER Y TARJETAS EN FILA) ===== */
+.seccion-dividida {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60vh;
+    background: linear-gradient(150deg, var(--color-secundario) 0%, #ffffff 80%);
+    padding: 64px 48px;
+    gap: 48px;
+    border-bottom: 2px solid var(--color-borde);
+    animation: fadeSlideUp 0.8s ease both;
+}
+
+/* Columna de Ttulo */
+.columna-titulo {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInLeft 0.8s ease both;
+}
+
+.columna-titulo h1 {
+    font-size: 2.5rem;
+    line-height: 1.12;
+    color: var(--color-primario);
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.columna-titulo h2 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--color-texto-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0;
+}
+
+/* Tarjetas en fila horizontal segn el mockup */
+.columna-tarjetas {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+    animation: slideInRight 0.8s ease both;
+}
+
+.tarjeta-recurso {
+    flex: 1 1 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 16px;
+    padding: 28px 22px;
+    box-shadow: 0 4px 16px rgba(80, 23, 38, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta-recurso:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(80, 23, 38, 0.14);
+    border-color: var(--color-acento);
+}
+
+.tarjeta-recurso .etiqueta-flotante {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--color-acento);
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(179, 57, 81, 0.3);
+}
+
+.icono-recurso {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background-color: var(--color-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(80, 23, 38, 0.08);
+}
+
+.icono-recurso img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.tarjeta-recurso h3 {
+    font-size: 1.15rem;
+    color: var(--color-primario);
+    margin: 0 0 6px;
+    font-weight: 800;
+}
+
+.tarjeta-recurso p {
+    font-size: 0.85rem;
+    color: var(--color-texto-muted);
+    margin: 0 0 14px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.tarjeta-recurso .pista-interactiva {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--color-acento);
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: 8px;
+    transition: visibility 0.25s ease, opacity 0.25s ease;
+}
+
+.tarjeta-recurso:hover .pista-interactiva {
+    visibility: visible;
+    opacity: 1;
+}
+
+.enlace-mas {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.enlace-mas:hover,
+.enlace-mas:focus-visible {
+    color: var(--color-primario);
+    transform: translateX(4px);
+}
+
+/* ===== 4. SECCIN 2: CASOS DE EMERGENCIAS (50/50 PASOS Y VIDEO) ===== */
+.seccion-dividida-video {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 75vh;
+    padding: 72px 48px;
+    gap: 56px;
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--color-borde);
+    animation: fadeSlideUp 0.85s ease both;
+}
+
+/* Mitad 1 (50%): Pasos numerados */
+.columna-lista {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInLeft 0.85s ease both;
+}
+
+.columna-lista h2 {
+    font-size: 2.1rem;
+    font-weight: 900;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    margin: 0 0 28px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.columna-lista h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 56px;
+    height: 3px;
+    background-color: var(--color-acento);
+    border-radius: 2px;
+}
+
+.lista-pasos-numerada {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: pasos;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.lista-pasos-numerada li {
+    counter-increment: pasos;
+    position: relative;
+    padding: 12px 14px 12px 68px;
+    border-bottom: 1px solid var(--color-borde);
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lista-pasos-numerada li:hover {
+    background-color: var(--color-fondo-suave);
+    transform: translateX(6px);
+}
+
+.lista-pasos-numerada li:last-child {
+    border-bottom: none;
+}
+
+.lista-pasos-numerada li::before {
+    content: counter(pasos) ".";
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--color-primario);
+    line-height: 1;
+}
+
+.lista-pasos-numerada h3 {
+    font-size: 1.05rem;
+    color: var(--color-primario);
+    margin: 0 0 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lista-pasos-numerada p {
+    font-size: 0.88rem;
+    color: var(--color-texto-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Mitad 2 (50%): Video tutorial */
+.columna-video {
+    flex: 1 1 50%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #d8c2c8 0%, #c9b0b7 100%);
+    box-shadow: 0 8px 32px rgba(80, 23, 38, 0.12);
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideInRight 0.85s ease both;
+}
+
+.columna-video .contenedor-video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.columna-video figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.columna-video figure::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 6px 24px rgba(80, 23, 38, 0.25);
+    animation: pulsePlay 2.5s infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.columna-video figure::after {
+    content: "\25B6";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-42%, -50%);
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.columna-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.columna-video figcaption {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    z-index: 4;
+}
+
+/* ===== 5. SECCIN 3: CLNICAS E INFORMACIN (TABLA Y DESCARGAS) ===== */
+.seccion-clinicas-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 72px 48px;
+    background-color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-borde);
+    animation: fadeSlideUp 0.85s ease both;
+}
+
+/* Columna de Tabla (58%) */
+.columna-tabla {
+    flex: 1 1 58%;
+    min-width: 0;
+    animation: slideInLeft 0.8s ease both;
+}
+
+.columna-tabla h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(80, 23, 38, 0.06);
+    margin-bottom: 18px;
+}
+
+.columna-tabla .tabla-datos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.columna-tabla .tabla-datos thead {
+    background-color: var(--color-primario);
+}
+
+.columna-tabla .tabla-datos th {
+    padding: 14px 18px;
+    font-size: 0.84rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.columna-tabla .tabla-datos tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.columna-tabla .tabla-datos tbody tr:nth-child(even) {
+    background-color: var(--color-fondo-suave);
+}
+
+.columna-tabla .tabla-datos tbody tr:hover {
+    background-color: var(--color-secundario-alt);
+}
+
+.columna-tabla .tabla-datos td {
+    padding: 12px 18px;
+    font-size: 0.86rem;
+    color: var(--color-texto);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.columna-tabla .tabla-datos tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Paginacin segn el mockup con pgina 2 activa */
+.paginacion-tabla {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 16px 0 24px;
+    flex-wrap: wrap;
+}
+
+.paginacion-tabla a,
+.paginacion-tabla span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.paginacion-tabla a:hover,
+.paginacion-tabla a:focus-visible {
+    background-color: var(--color-secundario-alt);
+    border-color: var(--color-acento);
+}
+
+.paginacion-tabla .activo {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border-color: var(--color-primario);
+}
+
+.paginacion-tabla span {
+    border: none;
+    background: transparent;
+    color: var(--color-texto-muted);
+}
+
+.columna-tabla .marcador-imagen-grande {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(80, 23, 38, 0.1);
+}
+
+.columna-tabla .marcador-imagen-grande img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.columna-tabla .marcador-imagen-grande:hover img {
+    transform: scale(1.02);
+}
+
+/* Columna de Tarjeta Blanca de Descargas (42%) */
+.columna-tarjeta-blanca {
+    flex: 0 0 380px;
+    animation: slideInRight 0.8s ease both;
+}
+
+.tarjeta-informacion-descargas {
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 18px;
+    padding: 36px 30px;
+    box-shadow: 0 10px 32px rgba(80, 23, 38, 0.08);
+}
+
+.tarjeta-informacion-descargas h2 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--color-primario);
+    margin: 0 0 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-secundario-alt);
+}
+
+.lista-descargas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: descargas;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista-descargas li {
+    counter-increment: descargas;
+    position: relative;
+    padding-left: 44px;
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 16px;
+}
+
+.lista-descargas li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.lista-descargas li::before {
+    content: counter(descargas) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-primario);
+    line-height: 1;
+}
+
+.lista-descargas h3 {
+    margin: 0 0 6px;
+}
+
+.lista-descargas h3 a {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+}
+
+.lista-descargas h3 a:hover,
+.lista-descargas h3 a:focus-visible {
+    color: var(--color-acento);
+}
+
+.lista-descargas p {
+    font-size: 0.82rem;
+    color: var(--color-texto-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ===== 6. SECCIN 4: BENEFICIOS CENTRALIZADOS ===== */
+.seccion-beneficios-central {
+    padding: 72px 48px 84px;
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-fondo-suave) 100%);
+    text-align: center;
+    animation: fadeSlideUp 0.9s ease both;
+}
+
+.encabezado-centrado {
+    margin-bottom: 44px;
+}
+
+.encabezado-centrado h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 14px;
+}
+
+.encabezado-centrado h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 3px;
+    background-color: var(--color-acento);
+    border-radius: 2px;
+}
+
+.contenedor-dos-tarjetas {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 36px;
+    text-align: left;
+    margin-bottom: 48px;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tarjeta-beneficio-larga {
+    flex: 1 1 0;
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 18px;
+    padding: 32px 28px 0;
+    box-shadow: 0 6px 24px rgba(80, 23, 38, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.tarjeta-beneficio-larga:hover {
+    box-shadow: 0 16px 36px rgba(80, 23, 38, 0.15);
+    transform: translateY(-8px);
+}
+
+.tarjeta-beneficio-larga h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-secundario-alt);
+}
+
+.tarjeta-beneficio-larga ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.tarjeta-beneficio-larga ul li {
+    padding: 8px 0 8px 24px;
+    font-size: 0.88rem;
+    color: var(--color-texto);
+    line-height: 1.55;
+    border-bottom: 1px dashed var(--color-borde);
+    position: relative;
+}
+
+.tarjeta-beneficio-larga ul li::before {
+    content: "\1F43E";
+    position: absolute;
+    left: 2px;
+    top: 8px;
+    font-size: 0.8rem;
+}
+
+.tarjeta-beneficio-larga ul li:last-child {
+    border-bottom: none;
+}
+
+.tarjeta-beneficio-larga ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    counter-reset: beneficios;
+}
+
+.tarjeta-beneficio-larga ol li {
+    counter-increment: beneficios;
+    padding: 8px 0 8px 28px;
+    font-size: 0.88rem;
+    color: var(--color-texto);
+    line-height: 1.55;
+    border-bottom: 1px dashed var(--color-borde);
+    position: relative;
+}
+
+.tarjeta-beneficio-larga ol li::before {
+    content: counter(beneficios) ".";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--color-primario);
+}
+
+.tarjeta-beneficio-larga ol li:last-child {
+    border-bottom: none;
+}
+
+.tarjeta-beneficio-larga strong {
+    color: var(--color-primario);
+}
+
+.marcador-imagen-ancha {
+    margin: 0 -28px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.marcador-imagen-ancha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-beneficio-larga:hover .marcador-imagen-ancha img {
+    transform: scale(1.05);
+}
+
+.contenedor-boton-centro {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-boton-centro .boton-primario {
+    padding: 14px 48px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(80, 23, 38, 0.25);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    animation: pulsoBoton 3s infinite;
+}
+
+.contenedor-boton-centro .boton-primario:hover,
+.contenedor-boton-centro .boton-primario:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(80, 23, 38, 0.35);
+}
+
+.contenedor-boton-centro .boton-primario:active {
+    transform: translateY(0);
+}

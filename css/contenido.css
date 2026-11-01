@@ -1,0 +1,829 @@
+/* ==========================================================================
+   contenido.css — Hoja de estilos especfica para contenido.html
+   AdopPet | Laboratorio No. 2 | Fundamentos Web UNIAJC
+   Estructura:
+     1. Animaciones y Keyframes
+     2. Migas de Pan y Navegacin Secundaria
+     3. Maquetacin Principal en Dos Espacios (Flexbox)
+     4. Artculos Mdicos y Contenido Especializado
+     5. Componentes: Tabla de Vacunas y Filtros
+     6. Tratamientos y Tarjetas de Especialidades
+     7. Seccin Multimedia 50/50: Video y Llamado a la Accin
+     8. Barra Lateral (Aside): Acorden y Banner Flotante
+   ========================================================================== */
+
+/* ===== 1. ANIMACIONES Y KEYFRAMES ===== */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulsePlay {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.08);
+        box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes pulsoBoton {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(80, 23, 38, 0.35);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(80, 23, 38, 0);
+    }
+}
+
+/* ===== 2. MIGAS DE PAN Y NAVEGACIN SECUNDARIA ===== */
+.migas-de-pan {
+    padding: 12px 48px;
+    background-color: var(--color-fondo-suave);
+    border-bottom: 1px solid var(--color-borde);
+    animation: fadeSlideUp 0.5s ease both;
+}
+
+.migas-de-pan ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.migas-de-pan li {
+    font-size: 0.8rem;
+    color: var(--color-texto-muted);
+}
+
+.migas-de-pan li a {
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.migas-de-pan li a:hover,
+.migas-de-pan li a:focus-visible {
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+
+.migas-de-pan li + li::before {
+    content: "/";
+    margin-right: 8px;
+    color: var(--color-borde);
+}
+
+.migas-de-pan li[aria-current="page"] {
+    color: var(--color-primario);
+    font-weight: 700;
+}
+
+/* Navegacin secundaria de secciones ancladas */
+.navegacion-secundaria {
+    position: sticky;
+    top: 72px;
+    z-index: 90;
+    background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
+    border-bottom: 1.5px solid var(--color-borde);
+    padding: 10px 48px;
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.04);
+}
+
+.navegacion-secundaria ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.navegacion-secundaria a {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--color-borde);
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navegacion-secundaria a:hover,
+.navegacion-secundaria a:focus-visible {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(80, 23, 38, 0.15);
+}
+
+/* ===== 3. MAQUETACIN PRINCIPAL EN DOS ESPACIOS (FLEXBOX) ===== */
+.contenedor-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 36px 40px 72px;
+}
+
+/* Espacio 1: Contenido Principal */
+.contenido-principal {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Espacio 2: Barra Lateral (Aside) */
+.barra-lateral {
+    flex: 0 0 320px;
+    position: sticky;
+    top: 130px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    animation: slideInRight 0.8s ease both;
+}
+
+/* Encabezado hero de la gua */
+.encabezado-contenido {
+    padding: 32px 36px;
+    background: linear-gradient(135deg, var(--color-secundario) 0%, #ffffff 100%);
+    border-left: 5px solid var(--color-primario);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(80, 23, 38, 0.05);
+    animation: slideInLeft 0.7s ease both;
+}
+
+.encabezado-contenido .titulo-principal {
+    font-size: 1.85rem;
+    color: var(--color-primario);
+    font-weight: 800;
+    margin: 0 0 8px;
+    line-height: 1.25;
+}
+
+.encabezado-contenido .descripcion-contenido {
+    font-size: 0.95rem;
+    color: var(--color-texto-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===== 4. ARTCULOS MDICOS Y CONTENIDO ESPECIALIZADO ===== */
+.articulo-medico {
+    padding-bottom: 44px;
+    border-bottom: 2px solid var(--color-borde);
+    scroll-margin-top: 140px;
+    animation: fadeSlideUp 0.8s ease both;
+}
+
+.articulo-medico:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.articulo-medico header {
+    margin-bottom: 20px;
+}
+
+.articulo-medico header h2 {
+    font-size: 1.65rem;
+    color: var(--color-primario);
+    font-weight: 800;
+    margin: 0 0 6px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.articulo-medico header h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 56px;
+    height: 3px;
+    background-color: var(--color-acento);
+    border-radius: 2px;
+}
+
+.articulo-medico header .subtitulo {
+    font-size: 0.92rem;
+    color: var(--color-texto-muted);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Imgenes principales de los artculos */
+.marcador-imagen-grande {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(80, 23, 38, 0.08);
+    margin-bottom: 22px;
+}
+
+.marcador-imagen-grande img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    transition: transform 0.45s ease;
+}
+
+.marcador-imagen-grande:hover img {
+    transform: scale(1.03);
+}
+
+/* Cuerpo de texto y prrafos con primera letra estilizada */
+.cuerpo-texto {
+    line-height: 1.75;
+    color: var(--color-texto);
+}
+
+.cuerpo-texto p {
+    margin: 0 0 16px;
+    font-size: 0.92rem;
+    overflow-wrap: break-word;
+}
+
+.cuerpo-texto p:first-of-type::first-letter {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: var(--color-primario);
+}
+
+.cuerpo-texto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.cuerpo-texto ul li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed var(--color-borde);
+    line-height: 1.6;
+}
+
+.cuerpo-texto ul li::before {
+    content: "\1F43E";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 0.85rem;
+}
+
+.cuerpo-texto ul li strong {
+    color: var(--color-primario);
+}
+
+.cuerpo-texto a {
+    display: inline-block;
+    color: var(--color-acento);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-top: 10px;
+    font-size: 0.88rem;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.cuerpo-texto a:hover,
+.cuerpo-texto a:focus-visible {
+    color: var(--color-primario);
+    transform: translateX(4px);
+}
+
+/* ===== 5. COMPONENTES: TABLA DE VACUNAS Y FILTROS ===== */
+.seccion-tabla {
+    margin: 32px 0 16px;
+    overflow-x: auto;
+    border-radius: 14px;
+}
+
+.cabecera-tabla-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cabecera-tabla-flex h3 {
+    font-size: 1.15rem;
+    color: var(--color-primario);
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.filtros-tabla {
+    display: flex;
+    gap: 8px;
+}
+
+.chip-filtro {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    background-color: var(--color-fondo-suave);
+    border: 1.5px solid var(--color-borde);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.chip-filtro.activo,
+.chip-filtro:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border-color: var(--color-primario);
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(80, 23, 38, 0.05);
+}
+
+.tabla-datos thead {
+    background-color: var(--color-secundario);
+}
+
+.tabla-datos th {
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: left;
+    border-bottom: 2px solid var(--color-borde);
+}
+
+.tabla-datos tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.tabla-datos tbody tr:nth-child(even) {
+    background-color: var(--color-fondo-suave);
+}
+
+.tabla-datos tbody tr:hover {
+    background-color: var(--color-secundario-alt);
+}
+
+.tabla-datos td {
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    color: var(--color-texto);
+    border-bottom: 1px solid var(--color-borde);
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.tabla-datos tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-datos td:first-child {
+    font-weight: 700;
+    color: var(--color-primario);
+    white-space: nowrap;
+}
+
+/* ===== 6. TRATAMIENTOS Y TARJETAS DE ESPECIALIDADES ===== */
+.seccion-servicios {
+    margin-top: 36px;
+}
+
+.seccion-servicios h3 {
+    font-size: 1.25rem;
+    color: var(--color-primario);
+    font-weight: 800;
+    margin: 0 0 4px;
+}
+
+.seccion-servicios .subtexto {
+    font-size: 0.82rem;
+    color: var(--color-texto-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 20px;
+}
+
+.lista-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Tarjeta de servicio horizontal segn mockup */
+.tarjeta-servicio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 24px;
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(80, 23, 38, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-acento);
+    box-shadow: 0 10px 28px rgba(80, 23, 38, 0.12);
+}
+
+.icono-servicio {
+    flex-shrink: 0;
+    width: 88px;
+    height: 88px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(80, 23, 38, 0.1);
+}
+
+.icono-servicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-servicio:hover .icono-servicio img {
+    transform: scale(1.08);
+}
+
+.info-servicio {
+    flex: 1;
+    min-width: 0;
+}
+
+.info-servicio h4 {
+    font-size: 1.15rem;
+    color: var(--color-primario);
+    font-weight: 800;
+    margin: 0 0 6px;
+}
+
+.info-servicio p {
+    font-size: 0.88rem;
+    color: var(--color-texto-muted);
+    margin: 0 0 6px;
+    line-height: 1.45;
+}
+
+/* Pista interactiva que usa visibility: hidden segn requisito RAA2 */
+.pista-interactiva {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-acento);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.25s ease, opacity 0.25s ease;
+}
+
+.tarjeta-servicio:hover .pista-interactiva {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Botn en pldora oscura segn el mockup */
+.boton-borde {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.boton-borde:hover,
+.boton-borde:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(80, 23, 38, 0.25);
+}
+
+.boton-borde:active {
+    transform: translateY(0);
+}
+
+/* ===== 7. SECCIN MULTIMEDIA 50/50: VIDEO Y CTA ===== */
+.seccion-video-cta {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-secundario) 0%, #ffffff 100%);
+    border: 1.5px solid var(--color-borde);
+    box-shadow: 0 8px 30px rgba(80, 23, 38, 0.09);
+    margin-top: 48px;
+    min-height: 360px;
+    animation: fadeSlideUp 0.9s ease both;
+    scroll-margin-top: 140px;
+}
+
+.seccion-video-cta h2 {
+    display: none;
+}
+
+/* Mitad 1 (50%): Espacio de video con botn play animado */
+.contenedor-video {
+    flex: 1 1 50%;
+    position: relative;
+    background: linear-gradient(135deg, #d8c2c8 0%, #c9b0b7 100%);
+    overflow: hidden;
+    min-height: 340px;
+}
+
+.caja-reproductor {
+    width: 100%;
+    height: 100%;
+}
+
+.caja-reproductor figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.caja-reproductor figure::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 6px 24px rgba(80, 23, 38, 0.25);
+    animation: pulsePlay 2.5s infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.caja-reproductor figure::after {
+    content: "\25B6";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-42%, -50%);
+    font-size: 2rem;
+    color: var(--color-primario);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.caja-reproductor video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mitad 2 (50%): Contenido del llamado a la accin */
+.contenido-cta {
+    flex: 1 1 50%;
+    padding: 44px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background: transparent;
+}
+
+.contenido-cta p {
+    font-size: 0.96rem;
+    color: var(--color-texto);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.contenido-cta .boton-primario {
+    align-self: flex-start;
+    padding: 12px 36px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(80, 23, 38, 0.2);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    animation: pulsoBoton 3s infinite;
+}
+
+.contenido-cta .boton-primario:hover,
+.contenido-cta .boton-primario:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(80, 23, 38, 0.3);
+}
+
+.contenido-cta .boton-primario:active {
+    transform: translateY(0);
+}
+
+/* ===== 8. BARRA LATERAL (ASIDE): ACORDEN Y BANNER FLOTANTE ===== */
+.menu-lateral {
+    background-color: var(--color-fondo-suave);
+    border: 1.5px solid var(--color-borde);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(80, 23, 38, 0.05);
+}
+
+.item-acordeon {
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.item-acordeon:last-child {
+    border-bottom: none;
+}
+
+.item-acordeon summary {
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.item-acordeon summary::-webkit-details-marker {
+    display: none;
+}
+
+.item-acordeon summary::after {
+    content: "\25BE";
+    font-size: 0.8rem;
+    color: var(--color-acento);
+    transition: transform 0.3s ease;
+}
+
+.item-acordeon[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.item-acordeon summary:hover,
+.item-acordeon summary:focus-visible {
+    background-color: var(--color-secundario);
+}
+
+.contenido-acordeon {
+    padding: 4px 20px 18px;
+}
+
+.contenido-acordeon ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenido-acordeon ul li a {
+    display: block;
+    padding: 7px 0;
+    font-size: 0.88rem;
+    color: var(--color-acento);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--color-borde);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.contenido-acordeon ul li a:hover,
+.contenido-acordeon ul li a:focus-visible {
+    color: var(--color-primario);
+    padding-left: 8px;
+}
+
+.contenido-acordeon p {
+    font-size: 0.85rem;
+    color: var(--color-texto-muted);
+    margin: 8px 0 0;
+    line-height: 1.55;
+}
+
+/* Banner publicitario con etiqueta absoluta (Requisito RAA2) */
+.marcador-anuncio-lateral {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 22px rgba(80, 23, 38, 0.1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.marcador-anuncio-lateral:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(80, 23, 38, 0.18);
+}
+
+.marcador-anuncio-lateral .etiqueta-flotante {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 12px;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.marcador-anuncio-lateral img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.marcador-anuncio-lateral:hover img {
+    transform: scale(1.05);
+}

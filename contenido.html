@@ -7,6 +7,7 @@
     <title>AdopPet - Contenido Médico</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contenido.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             <ul class="lista-nav">
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
-                <li class="item-nav"><a href="contenido.html">Contenido</a></li>
+                <li class="item-nav"><a href="contenido.html" class="activo" aria-current="page">Contenido</a></li>
                 <li class="item-nav"><a href="recursos.html">Recursos</a></li>
                 <li class="item-nav"><a href="multimedia.html">Multimedia</a></li>
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
@@ -118,7 +119,14 @@
 
                 <!-- Tabla de Vacunas -->
                 <div class="seccion-tabla">
-                    <h3>Seguimiento de Vacunas</h3>
+                    <div class="cabecera-tabla-flex">
+                        <h3>Seguimiento de Vacunas</h3>
+                        <div class="filtros-tabla">
+                            <span class="chip-filtro activo">Todos</span>
+                            <span class="chip-filtro">Perros</span>
+                            <span class="chip-filtro">Gatos</span>
+                        </div>
+                    </div>
                     <table class="tabla-datos">
                         <thead>
                             <tr>
@@ -173,37 +181,40 @@
                         <!-- Tarjeta 1 -->
                         <div class="tarjeta-servicio">
                             <div class="icono-servicio">
-                                <img src="icono-derma.png" alt="Icono Dermatología">
+                                <img src="image/Fotografia juana.jpg" alt="Especialidad Dermatología" width="90" height="90">
                             </div>
                             <div class="info-servicio">
                                 <h4>Dermatología</h4>
                                 <p>Diagnóstico de alergias, infecciones y pérdida de pelo, para mantener su pelaje y piel sanos.</p>
-                                <button type="button" class="boton-borde">Ver opciones</button>
+                                <span class="pista-interactiva">Consulta prioritaria en Sede Sur</span>
                             </div>
+                            <button type="button" class="boton-borde">Ver opciones</button>
                         </div>
 
                         <!-- Tarjeta 2 -->
                         <div class="tarjeta-servicio">
                             <div class="icono-servicio">
-                                <img src="icono-cardio.png" alt="Icono Cardiología">
+                                <img src="image/Fotografia Andre.jpg" alt="Especialidad Cardiología" width="90" height="90">
                             </div>
                             <div class="info-servicio">
                                 <h4>Cardiología</h4>
                                 <p>Diagnóstico y manejo de enfermedades cardíacas y de hipertensión.</p>
-                                <button type="button" class="boton-borde">Ver opciones</button>
+                                <span class="pista-interactiva">Electrocardiogramas y monitoreo</span>
                             </div>
+                            <button type="button" class="boton-borde">Ver opciones</button>
                         </div>
 
                         <!-- Tarjeta 3 -->
                         <div class="tarjeta-servicio">
                             <div class="icono-servicio">
-                                <img src="icono-oftalmo.png" alt="Icono Oftalmología">
+                                <img src="image/Fotografia ana.jpg" alt="Especialidad Oftalmología" width="90" height="90">
                             </div>
                             <div class="info-servicio">
                                 <h4>Oftalmología</h4>
                                 <p>Prevención de cataratas, úlceras, glaucoma y problemas oculares.</p>
-                                <button type="button" class="boton-borde">Ver opciones</button>
+                                <span class="pista-interactiva">Cirugías y evaluación de retina</span>
                             </div>
+                            <button type="button" class="boton-borde">Ver opciones</button>
                         </div>
 
                     </div>
@@ -273,6 +284,7 @@
 
             <!-- Marcador publicitario o imagen lateral -->
             <div class="marcador-anuncio-lateral">
+                <span class="etiqueta-flotante">Campaña 2026</span>
                 <img src="image/Evento san valentin.jpg" alt="Campaña especial de bienestar y salud animal" width="400">
             </div>
 

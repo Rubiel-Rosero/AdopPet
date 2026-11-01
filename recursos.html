@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdopPet - Directorio de Recursos</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/recursos.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <li class="item-nav"><a href="index.html">Home</a></li>
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
                 <li class="item-nav"><a href="contenido.html">Contenido</a></li>
-                <li class="item-nav"><a href="recursos.html">Recursos</a></li>
+                <li class="item-nav"><a href="recursos.html" class="activo" aria-current="page">Recursos</a></li>
                 <li class="item-nav"><a href="multimedia.html">Multimedia</a></li>
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
@@ -46,7 +47,7 @@
     <!-- ================= NAVEGACIÓN SECUNDARIA ================= -->
     <nav class="navegacion-secundaria" aria-label="Menú de secciones de recursos">
         <ul>
-            <li><a href="#recomendaciones">Recomendaciones</a></li>
+            <li><a href="#recomendaciones" class="activo">&#128062; Recomendaciones</a></li>
             <li><a href="#emergencias">Emergencias</a></li>
             <li><a href="#informacion">Información</a></li>
             <li><a href="#beneficios">Beneficios</a></li>
@@ -65,29 +66,33 @@
 
             <div class="columna-tarjetas">
                 <article class="tarjeta-recurso">
+                    <span class="etiqueta-flotante">Recomendado</span>
                     <div class="icono-recurso">
-                        <img src="icono-comida.png" alt="Icono Alimentación">
+                        <img src="icono-comida.png" alt="Icono Alimentación" width="32" height="32">
                     </div>
                     <h3>Alimentación</h3>
                     <p>Proveedores locales de dieta BARF.</p>
+                    <span class="pista-interactiva">Ver proveedores certificados</span>
                     <a href="#" class="enlace-mas">Ver más &rarr;</a>
                 </article>
 
                 <article class="tarjeta-recurso">
                     <div class="icono-recurso">
-                        <img src="icono-seguridad.png" alt="Icono Seguridad">
+                        <img src="icono-seguridad.png" alt="Icono Seguridad" width="32" height="32">
                     </div>
                     <h3>Seguridad</h3>
                     <p>Clínicas de vacunación y esterilización a bajo costo.</p>
+                    <span class="pista-interactiva">Puntos de atención diurna</span>
                     <a href="#" class="enlace-mas">Ver más &rarr;</a>
                 </article>
 
                 <article class="tarjeta-recurso">
                     <div class="icono-recurso">
-                        <img src="icono-metodologia.png" alt="Icono Metodología">
+                        <img src="icono-metodologia.png" alt="Icono Metodología" width="32" height="32">
                     </div>
                     <h3>Metodología</h3>
                     <p>Educadores en positivo para corregir conductas.</p>
+                    <span class="pista-interactiva">Terapia en positivo</span>
                     <a href="#" class="enlace-mas">Ver más &rarr;</a>
                 </article>
             </div>
@@ -136,7 +141,8 @@
             <div class="columna-tabla">
                 <h2>Clínicas Aliadas</h2>
 
-                <table class="tabla-datos">
+                <div class="contenedor-tabla">
+                    <table class="tabla-datos">
                     <thead>
                         <tr>
                             <th>Veterinaria</th>
@@ -165,12 +171,13 @@
                             <td>Lunes a Sábado</td>
                         </tr>
                     </tbody>
-                </table>
+                    </table>
+                </div>
 
                 <nav class="paginacion-tabla" aria-label="Paginación de clínicas">
                     <a href="#">&lt; Previous</a>
-                    <a href="#" class="activo" aria-current="page">1</a>
-                    <a href="#">2</a>
+                    <a href="#">1</a>
+                    <a href="#" class="activo" aria-current="page">2</a>
                     <a href="#">3</a>
                     <a href="#">4</a>
                     <a href="#">5</a>
