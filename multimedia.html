@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdopPet - Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/multimedia.css">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
                 <li class="item-nav"><a href="exploracion.html">Exploracion</a></li>
                 <li class="item-nav"><a href="contenido.html">Contenido</a></li>
                 <li class="item-nav"><a href="recursos.html">Recursos</a></li>
-                <li class="item-nav"><a href="multimedia.html">Multimedia</a></li>
+                <li class="item-nav"><a href="multimedia.html" class="activo" aria-current="page">Multimedia</a></li>
                 <li class="item-nav"><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -71,17 +73,22 @@
         <section id="experiencias" class="seccion-galeria">
             <h2 class="titulo-secundario">Experiencias unidas</h2>
             <article id="carrusel-experiencias" class="contenedor-carrusel">
-                <a href="#anterior" id="btn-anterior" class="control-carrucel-flecha-izquierda" aria-label="Imagen anterior">&lt;</a>
+                <a href="#slide-1" class="control-carrusel control-carrusel-izquierda" aria-label="Imagen anterior">&lt;</a>
 
-                <figure class="item-galeria">
-                    <img class="img-galeria" src="image/familia feliz.jpg" alt="Familia feliz con su nueva mascota adoptada" width="800">
-                </figure>
+                <div class="pista-carrusel">
+                    <figure id="slide-1" class="item-galeria">
+                        <span class="etiqueta-destacado">Destacado</span>
+                        <img class="img-galeria" src="image/familia feliz.jpg" alt="Familia feliz con su nueva mascota adoptada" width="800">
+                        <figcaption class="leyenda-galeria">Una familia feliz con su nueva mascota adoptada</figcaption>
+                    </figure>
 
-                <figure class="item-galeria">
-                    <img class="img-galeria" src="image/mascota en el parque.jpg" alt="Mascota rescatada jugando en el parque" width="800">
-                </figure>
+                    <figure id="slide-2" class="item-galeria">
+                        <img class="img-galeria" src="image/mascota en el parque.jpg" alt="Mascota rescatada jugando en el parque" width="800">
+                        <figcaption class="leyenda-galeria">Mascota rescatada disfrutando del parque</figcaption>
+                    </figure>
+                </div>
 
-                <a href="#siguiente" id="btn-siguiente" class="control-carrusel flecha-derecha" aria-label="Siguiente imagen">&gt;</a>
+                <a href="#slide-2" class="control-carrusel control-carrusel-derecha" aria-label="Siguiente imagen">&gt;</a>
             </article>
         </section>
 
@@ -109,23 +116,28 @@
                 <!-- Ubicación -->
                 <figure class="recurso-ubicacion">
                     <figcaption>Encuentra nuestra sede en Cali</figcaption>
-                    <iframe
+                    <iframe class="mapa-ubicacion"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127415.75619176166!2d-76.60492828359374!3d3.3950619000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
-                        width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="450" height="300" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </figure>
-
                 <!-- Video instalaciones -->
-                <figure>
+                <figure class="recurso-instalaciones">
                     <figcaption>Nuestras instalaciones</figcaption>
-                    <video src="Video/videoSedes.mp4" width="450" controls type="video/mp4"></video>
+                    <video width="450" controls>
+                        <source src="media/Video/videoSedes.mp4" type="video/mp4">
+                        <source src="Video/videoSedes.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                 </figure>
 
                 <!-- Audio -->
                 <figure class="recurso-audio">
                     <figcaption>Sonido de nuestros peluditos</figcaption>
                     <audio controls>
+                        <source src="media/Audio/Audio Perro.mp3" type="audio/mpeg">
                         <source src="Audio/Audio Perro.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
                     </audio>
                 </figure>
             </aside>
@@ -145,11 +157,12 @@
                         <figure class="imagen-evento">
                             <img src="image/Inicio Año.jpg" alt="Celebración de inicio de año con mascotas" width="250">
                         </figure>
-                        <div class="detalles-evento">
+                        <div class="info-evento">
+                            <span class="numero-evento">01</span>
                             <h3 class="titulo-evento">Inicio de año!</h3>
                             <p class="texto-evento">Experiencias con nuestras veterinarias asociadas, compartiendo vivencias en nuestro evento único de inicio de año.</p>
-                            <button type="button" class="btn-ver-mas">Ver más</button>
                         </div>
+                        <button class="btn-ver-mas">Ver más <span class="flecha-btn">&rarr;</span></button>
                     </article>
                 </li>
 
@@ -159,11 +172,12 @@
                         <figure class="imagen-evento">
                             <img src="image/Evento san valentin.jpg" alt="Mascotas celebrando San Valentín" width="250">
                         </figure>
-                        <div class="detalles-evento">
+                        <div class="info-evento">
+                            <span class="numero-evento">02</span>
                             <h3 class="titulo-evento">San Valentín!</h3>
                             <p class="texto-evento">No hay mejor amor que el de nuestros peluditos. Acompañados de las mejores personas y repartiendo nuestro amor en grande.</p>
-                            <button type="button" class="btn-ver-mas">Ver más</button>
                         </div>
+                        <button class="btn-ver-mas">Ver más <span class="flecha-btn">&rarr;</span></button>
                     </article>
                 </li>
 
@@ -173,11 +187,12 @@
                         <figure class="imagen-evento">
                             <img src="image/evento diciembre.jpg" alt="Familias y mascotas en Navidad" width="250">
                         </figure>
-                        <div class="detalles-evento">
+                        <div class="info-evento">
+                            <span class="numero-evento">03</span>
                             <h3 class="titulo-evento">Diciembre unidos!</h3>
                             <p class="texto-evento">Que estas navidades sean las mejores unidos en familia y acompañados de nuestro peludito. Vamos a celebrar un nuevo comienzo.</p>
-                            <button type="button" class="btn-ver-mas">Ver más</button>
                         </div>
+                        <button class="btn-ver-mas">Ver más <span class="flecha-btn">&rarr;</span></button>
                     </article>
                 </li>
             </ul>
@@ -215,6 +230,10 @@
             <p><small>&copy; 2026 AdopPet. Todos los derechos reservados.</small></p>
         </div>
     </footer>
+
+    <!-- Enlace fijo para volver arriba -->
+    <a href="#encabezado-principal-multimedia" id="volver-arriba" class="btn-volver-arriba"
+        aria-label="Volver arriba">&uarr;</a>
 </body>
 
 </html>
