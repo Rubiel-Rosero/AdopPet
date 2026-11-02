@@ -18,6 +18,7 @@
         opacity: 0;
         transform: translateY(32px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -29,6 +30,7 @@
         opacity: 0;
         transform: translateX(-40px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -40,6 +42,7 @@
         opacity: 0;
         transform: translateX(40px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -47,10 +50,13 @@
 }
 
 @keyframes pulsePlay {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(-50%, -50%) scale(1);
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.08);
         box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
@@ -58,101 +64,15 @@
 }
 
 @keyframes pulsoBoton {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 0 0 rgba(80, 23, 38, 0.35);
     }
+
     50% {
         box-shadow: 0 0 0 10px rgba(80, 23, 38, 0);
     }
-}
-
-/* ===== 2. MIGAS DE PAN Y NAVEGACIN SECUNDARIA ===== */
-.migas-de-pan {
-    padding: 12px 48px;
-    background-color: var(--color-fondo-suave);
-    border-bottom: 1px solid var(--color-borde);
-    animation: fadeSlideUp 0.5s ease both;
-}
-
-.migas-de-pan ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    padding: 0;
-    margin: 0;
-}
-
-.migas-de-pan li {
-    font-size: 0.8rem;
-    color: var(--color-texto-muted);
-}
-
-.migas-de-pan li a {
-    color: var(--color-acento);
-    text-decoration: none;
-    transition: color 0.25s ease;
-}
-
-.migas-de-pan li a:hover,
-.migas-de-pan li a:focus-visible {
-    color: var(--color-primario);
-    text-decoration: underline;
-}
-
-.migas-de-pan li + li::before {
-    content: "/";
-    margin-right: 8px;
-    color: var(--color-borde);
-}
-
-.migas-de-pan li[aria-current="page"] {
-    color: var(--color-primario);
-    font-weight: 700;
-}
-
-/* Navegacin secundaria de secciones ancladas */
-.navegacion-secundaria {
-    position: sticky;
-    top: 72px;
-    z-index: 90;
-    background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
-    border-bottom: 1.5px solid var(--color-borde);
-    padding: 10px 48px;
-    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.04);
-}
-
-.navegacion-secundaria ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-.navegacion-secundaria a {
-    display: inline-block;
-    padding: 6px 18px;
-    border-radius: 50px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--color-primario);
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid var(--color-borde);
-    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.navegacion-secundaria a:hover,
-.navegacion-secundaria a:focus-visible {
-    background-color: var(--color-primario);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(80, 23, 38, 0.15);
 }
 
 /* ===== 3. MAQUETACIN PRINCIPAL EN DOS ESPACIOS (FLEXBOX) ===== */
@@ -165,7 +85,14 @@
     max-width: 1240px;
     margin: 0 auto;
     padding: 36px 40px 72px;
+
 }
+
+/* Scroll margin para anclaje suave */
+section[id] {
+    scroll-margin-top: 130px;
+}
+
 
 /* Espacio 1: Contenido Principal */
 .contenido-principal {

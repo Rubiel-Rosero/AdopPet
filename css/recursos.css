@@ -16,6 +16,7 @@
         opacity: 0;
         transform: translateY(36px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -27,6 +28,7 @@
         opacity: 0;
         transform: translateX(-48px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -38,6 +40,7 @@
         opacity: 0;
         transform: translateX(48px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -49,6 +52,7 @@
         opacity: 0;
         transform: scale(0.92);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -56,10 +60,13 @@
 }
 
 @keyframes pulsePlay {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(-50%, -50%) scale(1);
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.65);
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.08);
         box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
@@ -67,63 +74,18 @@
 }
 
 @keyframes pulsoBoton {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 0 0 rgba(80, 23, 38, 0.35);
     }
+
     50% {
         box-shadow: 0 0 0 12px rgba(80, 23, 38, 0);
     }
 }
 
-/* Scroll margin para anclaje suave */
-section[id] {
-    scroll-margin-top: 130px;
-}
 
-/* ===== 2. NAVEGACIN SECUNDARIA DE RECURSOS ===== */
-.navegacion-secundaria {
-    position: sticky;
-    top: 72px;
-    z-index: 90;
-    background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
-    border-bottom: 1.5px solid var(--color-borde);
-    padding: 12px 48px;
-    box-shadow: 0 4px 14px rgba(80, 23, 38, 0.05);
-}
-
-.navegacion-secundaria ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-.navegacion-secundaria a {
-    display: inline-block;
-    padding: 7px 20px;
-    border-radius: 50px;
-    font-size: 0.84rem;
-    font-weight: 700;
-    color: var(--color-primario);
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1.5px solid var(--color-borde);
-    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.navegacion-secundaria a:hover,
-.navegacion-secundaria a:focus-visible,
-.navegacion-secundaria a.activo {
-    background-color: var(--color-primario);
-    color: #ffffff;
-    border-color: var(--color-primario);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.18);
-}
 
 /* ===== 3. SECCIN 1: RECOMENDACIONES (BANNER Y TARJETAS EN FILA) ===== */
 .seccion-dividida {
