@@ -270,7 +270,7 @@ header {
     object-fit: contain;
 }
 
-/* Navegacin Secundaria Comn (Pills / pestaas) */
+/* Navegacin Secundaria Generalizada (Exploracin, Contenido, Recursos, Multimedia) */
 .navegacion-secundaria {
     position: sticky;
     top: 72px;
@@ -278,6 +278,7 @@ header {
     background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
     border-bottom: 1.5px solid var(--color-borde);
     padding: 10px 48px;
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.04);
 }
 
 .navegacion-secundaria ul {
@@ -289,6 +290,44 @@ header {
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
+}
+
+.navegacion-secundaria li {
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion-secundaria a {
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: var(--radio-pill);
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1.5px solid var(--color-borde);
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navegacion-secundaria a:hover,
+.navegacion-secundaria a:focus-visible {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border-color: var(--color-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.18);
+}
+
+.navegacion-secundaria a.activo {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border-color: var(--color-primario);
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.18);
+}
+
+.navegacion-secundaria a:active {
+    transform: translateY(0);
 }
 
 /* Migas de Pan Comn */
