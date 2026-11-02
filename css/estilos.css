@@ -1,5 +1,9 @@
 /*Reset y Estilos base*/
-
+*{
+    margin: 0px;
+    padding: 0px ;
+    @import url('https://fonts.googleapis.com/css2?family=family=ADLaM+Display&display=swap&family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
+}
 ::before
 ::after
 
@@ -10,7 +14,24 @@ body{
 /*Estructuras Comunes*/
 /*Header*/
 header{
-    background-color: antiquewhite;
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    padding: 10px;
+    .contenedor-logo{
+        font-family: 'ADLaM Display',sans-serif;
+        color: #592232;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo-adopPet{
+            margin-right: 5px;
+        }
+    }
+}
+/*enlaces y listas*/
+a, li{
+    text-decoration: none;
+    list-style: none;
 }
