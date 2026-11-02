@@ -827,3 +827,34 @@
 .marcador-anuncio-lateral:hover img {
     transform: scale(1.05);
 }
+
+/* Boton de accion solido en tarjeta de servicio segun mockup */
+.tarjeta-servicio .boton-borde {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: var(--radio-pill);
+    font-family: var(--fuente-principal);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(80, 23, 38, 0.2);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-servicio .boton-borde:hover,
+.tarjeta-servicio .boton-borde:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(80, 23, 38, 0.35);
+}
+
+.tarjeta-servicio .boton-borde:active {
+    transform: translateY(0);
+}

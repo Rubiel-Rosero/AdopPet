@@ -303,10 +303,42 @@
 }
 
 .btn-ver-mas {
-    padding: 12px 28px;
-    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    font-family: var(--fuente-principal);
     white-space: nowrap;
     flex-shrink: 0;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: var(--radio-pill);
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(80, 23, 38, 0.2);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-ver-mas:hover,
+.btn-ver-mas:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(80, 23, 38, 0.35);
+}
+
+.btn-ver-mas .flecha-btn {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.btn-ver-mas:hover .flecha-btn {
+    transform: translateX(4px);
+}
+
+.btn-ver-mas:active {
+    transform: translateY(0);
 }
 
 

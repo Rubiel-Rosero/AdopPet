@@ -537,8 +537,11 @@ main.contenido-principal {
 
 /* ===== 5. COMPONENTES COMUNES: TARJETAS, BOTONES, TABLAS Y FORMULARIOS ===== */
 
-/* Botn Primario Reutilizable */
-.boton-primario {
+/* Botn Primario y Acciones Principales Reutilizables */
+.boton-primario,
+.btn-enviar,
+.btn-contactar,
+.btn-ver-mas {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -558,14 +561,21 @@ main.contenido-principal {
 }
 
 .boton-primario:hover,
-.boton-primario:focus-visible {
+.btn-enviar:hover,
+.btn-contactar:hover,
+.btn-ver-mas:hover,
+.boton-primario:focus-visible,
+.btn-enviar:focus-visible,
+.btn-contactar:focus-visible,
+.btn-ver-mas:focus-visible {
     background-color: var(--color-primario-hover);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(80, 23, 38, 0.35);
 }
 
-/* Botn Secundario Reutilizable */
-.boton-secundario {
+/* Botn Secundario y de Limpieza */
+.boton-secundario,
+.btn-limpiar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -583,7 +593,9 @@ main.contenido-principal {
 }
 
 .boton-secundario:hover,
-.boton-secundario:focus-visible {
+.btn-limpiar:hover,
+.boton-secundario:focus-visible,
+.btn-limpiar:focus-visible {
     background-color: var(--color-secundario-alt);
     border-color: var(--color-acento);
     transform: translateY(-2px);
@@ -761,7 +773,11 @@ textarea {
 button:active,
 .boton-primario:active,
 .boton-secundario:active,
-.boton-borde:active {
+.boton-borde:active,
+.btn-enviar:active,
+.btn-limpiar:active,
+.btn-contactar:active,
+.btn-ver-mas:active {
     transform: translateY(1px) scale(0.98);
 }
 

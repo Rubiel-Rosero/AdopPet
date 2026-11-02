@@ -3,22 +3,6 @@
    Laboratorio No. 2 - Maquetación y Formulario Avanzado con Flexbox
    ========================================================================== */
 
-/* Navegación secundaria de la página */
-.nav-secundaria {
-    display: flex;
-    justify-content: center;
-    margin: 16px auto 32px;
-}
-
-.lista-nav-secundaria {
-    display: flex;
-    gap: 16px;
-    background-color: var(--color-secundario);
-    padding: 8px 16px;
-    border-radius: var(--radio-pill);
-    border: 1px solid var(--color-borde);
-}
-
 .btn-Equipo,
 .btn-formulario {
     display: inline-block;
@@ -162,7 +146,29 @@
 .btn-contactar {
     margin-top: auto;
     width: 85%;
-    padding: 10px 0;
+    padding: 10px 24px;
+    border-radius: var(--radio-pill);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-family: var(--fuente-principal);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(80, 23, 38, 0.2);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-contactar:hover,
+.btn-contactar:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(80, 23, 38, 0.35);
+}
+
+.btn-contactar:active {
+    transform: translateY(0);
 }
 
 /* Columna Formulario */
@@ -418,4 +424,90 @@
     justify-content: center;
     gap: 28px;
     margin-top: 24px;
+}
+/* Contenedor de botones del formulario de contacto */
+.acciones-formulario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.btn-enviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 44px;
+    border-radius: var(--radio-pill);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-family: var(--fuente-principal);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(80, 23, 38, 0.25);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-enviar:hover,
+.btn-enviar:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(80, 23, 38, 0.38);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+.btn-limpiar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: var(--radio-pill);
+    background-color: transparent;
+    color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1.5px solid var(--color-borde);
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-limpiar:hover,
+.btn-limpiar:focus-visible {
+    background-color: var(--color-secundario);
+    border-color: var(--color-acento);
+    color: var(--color-primario-hover);
+    transform: translateY(-2px);
+}
+
+.btn-limpiar:active {
+    transform: translateY(0);
+}
+
+/* Estilo para el boton de adjuntar archivo segun mockup */
+input[type="file"]::file-selector-button {
+    padding: 8px 20px;
+    border-radius: var(--radio-pill);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    font-family: var(--fuente-principal);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 14px;
+    box-shadow: 0 2px 8px rgba(80, 23, 38, 0.2);
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-1px);
 }
