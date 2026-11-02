@@ -308,3 +308,33 @@
     white-space: nowrap;
     flex-shrink: 0;
 }
+
+
+/* Revelacion interactiva de leyenda en galeria con visibility y opacity (Requisito 5.5) */
+.item-galeria .leyenda-galeria {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(42, 27, 31, 0.9));
+    color: var(--color-blanco);
+    padding: 28px 20px 14px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2;
+}
+
+.item-galeria:hover .leyenda-galeria {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Scroll snap y transicion de diapositiva */
+.diapositiva-scroll {
+    scroll-snap-align: center;
+    flex: 0 0 calc(50% - 12px);
+    min-width: 320px;
+}

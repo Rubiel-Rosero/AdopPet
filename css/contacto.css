@@ -386,3 +386,36 @@
 .lista-redes-pequena a:hover img {
     filter: brightness(0) invert(1);
 }
+
+#asunto_adoptar {
+    display: flex;
+    flex-grow: initial;
+}
+
+/* Contenedor principal de la seccion de contacto en dos columnas (Flexbox) */
+.seccion-contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+    min-height: 80vh;
+}
+
+/* Contenedor flexible del equipo en fila */
+.seccion-equipo {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 24px 64px;
+}
+
+.lista-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 24px;
+}
