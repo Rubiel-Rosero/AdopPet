@@ -176,94 +176,82 @@
         <!-- Sección de formulario de contacto -->
         <section id="contacto-principal" class="seccion-contacto">
             <article class="columna-formulario">
-                <h3>Envíanos un mensaje</h3>
+                <div class="cabecera-form">
+                    <span class="etiqueta-form">01 DATOS PERSONALES</span>
+                    <h3>Conversemos sobre tu próxima historia</h3>
+                    <p>Déjanos tus datos y nuestro equipo te acompañará en cada paso.</p>
+                </div>
+
                 <!-- Formulario -->
                 <form action="#" method="POST" enctype="multipart/form-data">
-                    <!-- Recuadro de datos personales -->
-                    <fieldset>
-                        <legend>Datos Personales</legend>
-                        <div>
-                            <label for="nombres">Nombres:</label>
+
+                    <div class="form-grid-2">
+                        <div class="form-grupo">
+                            <label for="nombres">Nombres</label>
                             <input type="text" id="nombres" name="nombres" required>
                         </div>
-                        <div>
-                            <label for="apellidos">Apellidos:</label>
+                        <div class="form-grupo">
+                            <label for="apellidos">Apellidos</label>
                             <input type="text" id="apellidos" name="apellidos" required>
                         </div>
-                        <div>
-                            <label for="correo">Correo Electrónico:</label>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-grupo">
+                            <label for="correo">Correo Electrónico</label>
                             <input type="email" id="correo" name="correo" required>
                         </div>
-                        <div>
-                            <label for="clave">Crea una contraseña para seguimiento:</label>
-                            <input type="password" id="clave" name="clave">
+                        <div class="form-grupo">
+                            <label for="clave">Crear una contraseña</label>
+                            <input type="password" id="clave" name="clave" placeholder="••••••••••">
                         </div>
-                        <div>
-                            <label for="telefono">Número Telefónico:</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+57 312 3456 789">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="telefono">Número Telefónico</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57 312 3456 789">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>Selecciona el asunto</label>
+                        <div class="radio-grid">
+                            <label class="radio-label"><input type="radio" name="asunto" value="adoptar"> Quiero
+                                adoptar</label>
+                            <label class="radio-label"><input type="radio" name="asunto" value="voluntario"> Quiero ser
+                                voluntario</label>
+                            <label class="radio-label"><input type="radio" name="asunto" value="medica"> Asistencia
+                                Médica</label>
+                            <label class="radio-label"><input type="radio" name="asunto" value="otros"> Otros</label>
                         </div>
-                    </fieldset>
+                    </div>
 
-                    <!-- Recuadro de detalles de la solicitud -->
-                    <fieldset>
-                        <legend>Detalles de la Solicitud</legend>
-                        <div>
-                            <label for="interes_animal">¿En qué animal estás interesado?</label>
-                            <select id="interes_animal" name="interes_animal">
-                                <option value="perro">Perro</option>
-                                <option value="gato">Gato</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <p>Selecciona el asunto:</p>
-
-                            <input type="radio" id="asunto_adoptar" name="asunto" value="adoptar">
-                            <label for="asunto_adoptar">Quiero adoptar</label>
-
-
-                            <label for="asunto_voluntario">Quiero ser voluntario<input type="radio"
-                                    id="asunto_voluntario" name="asunto" value="voluntario"></label>
-
-
-                            <label for="asunto_medica">Asistencia Médica<input type="radio" id="asunto_medica"
-                                    name="asunto" value="medica"></label>
-
-
-                            <label for="asunto_otros">Otros<input type="radio" id="asunto_otros" name="asunto"
-                                    value="otros"></label>
-                        </div>
-                        <div>
-                            <label for="fecha_visita">Fecha ideal para visitarnos:</label>
+                    <div class="form-grid-2">
+                        <div class="form-grupo">
+                            <label for="fecha_visita">Fecha ideal para visitarnos</label>
                             <input type="date" id="fecha_visita" name="fecha_visita">
-
-                            <label for="hora_visita">Hora preferida:</label>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="hora_visita">Hora preferida</label>
                             <input type="time" id="hora_visita" name="hora_visita">
                         </div>
-                        <div>
-                            <label for="documento">Adjuntar copia de documento de identidad (Opcional):</label>
-                            <input type="file" id="documento" name="documento" accept="image/*,.pdf">
-                        </div>
-                    </fieldset>
+                    </div>
 
-                    <!-- Recuadro de mensaje -->
-                    <fieldset>
-                        <legend>Mensaje Adicional</legend>
-                        <div>
-                            <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" cols="50"
-                                placeholder="Escribe el mensaje aquí"></textarea>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="terminos" name="terminos" required>
-                            <label for="terminos">Acepto el tratamiento de datos personales para la gestión de
-                                adopciones.</label>
-                        </div>
-                    </fieldset>
+                    <div class="form-grupo archivo-grupo">
+                        <label for="documento">Adjuntar copia de documento de identidad (Opcional)</label>
+                        <input type="file" id="documento" name="documento" accept="image/*,.pdf">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensaje">Mensaje Adicional</label>
+                        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
 
                     <div class="acciones-formulario">
-                        <input type="submit" value="Enviar Mensaje" class="btn-enviar">
-                        <input type="reset" value="Limpiar Formulario" class="btn-limpiar">
+                        <label class="terminos-label">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            Al enviar aceptas que nuestro equipo se comunique contigo para orientarte.
+                        </label>
+                        <button type="submit" class="btn-enviar">Enviar solicitud &rarr;</button>
                     </div>
                 </form>
             </article>
@@ -305,10 +293,8 @@
                         <img src="image/icono-correo.png" alt="Correo" width="30">
                         AdopPet@gmail.com
                     </li>
-                    <li>
-                        <img src="image/icono-ubicacion.png" alt="Ubicación" width="30">
-                        Cl. 25 #127-220, Barrio Pance, Cali, Valle del Cauca
-                    </li>
+                    <li class="ubicacion-completa"><img src="image/icono-ubicacion.png" alt="Ubicación" width="24"> Cl.
+                        25 #127-220, Barrio Pance, Cali</li>
                 </ul>
 
                 <!-- Banner de Horario según mockup -->

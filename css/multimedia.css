@@ -5,9 +5,11 @@
 
 /* Hero Multimedia de Pantalla Completa */
 .seccion-hero {
-    min-height: 48vh;
-    padding: 72px 24px;
-    background: linear-gradient(180deg, #ffffff 0%, var(--color-secundario) 100%);
+    min-height: 35vh;
+    /* Reducido para parecerse al mockup */
+    padding: 40px 24px 60px;
+    background: var(--color-secundario);
+    /* Cambiado a color sólido */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,9 +124,12 @@
 }
 
 @keyframes pulseBadge {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }

@@ -40,6 +40,78 @@
     margin-bottom: 8px;
 }
 
+.cabecera-form .etiqueta-form {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: var(--radio-pill);
+    margin-bottom: 16px;
+}
+
+.cabecera-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.cabecera-form p {
+    color: var(--color-texto-muted);
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+}
+
+/* Grids del formulario */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: var(--color-texto);
+}
+
+/* Estilo de radios */
+.radio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.acciones-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.terminos-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.8rem;
+    color: var(--color-texto-muted);
+    max-width: 60%;
+}
+
 .descripcion-contacto {
     font-size: 1.05rem;
     color: var(--color-texto-muted);
@@ -70,8 +142,11 @@
 /* Estilo de Tarjeta de Miembro */
 .targeta-miembro,
 .tarjeta-miembro {
-    flex: 1 1 240px;
-    max-width: 270px;
+    flex: 1 1 260px;
+    /* Flex base óptimo para 4 columnas */
+    max-width: 255px;
+    /* Límite para que no se estiren demasiado */
+    width: 100%;
     background: var(--color-blanco);
     border-radius: 22px;
     padding: 22px 18px;
@@ -83,9 +158,13 @@
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
+/* Ajuste proporcional de la foto */
 .foto-miembro {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 1 / 1;
+    /* Mantiene la foto perfectamente cuadrada sin importar el ancho */
+    height: auto;
+    /* Reemplaza el height: 220px anterior */
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 16px;
@@ -173,7 +252,11 @@
 
 /* Columna Formulario */
 .columna-formulario {
-    position: relative;
+    flex: 1.2;
+    padding: 48px;
+    background-color: var(--color-blanco);
+    border: none;
+    /* Quitamos el borde suelto */
 }
 
 .columna-formulario::before {
@@ -197,9 +280,14 @@
 
 /* Columna Información de Contacto */
 .columna-info-contacto {
+    flex: 1;
+    padding: 48px;
+    background-color: var(--color-secundario);
+    /* Fondo rosado del mockup */
+    border: none;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 70px;
 }
 
 .columna-info-contacto .titulo-info {
@@ -287,24 +375,17 @@
 
 /* Tarjetas de datos de contacto */
 .lista-datos-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
 .lista-datos-contacto li {
     background: var(--color-blanco);
-    border-radius: 14px;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 0.92rem;
-    font-weight: 500;
-    color: var(--color-texto);
-    border: 1px solid var(--color-borde);
-    box-shadow: var(--sombra-suave);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 16px;
+    padding: 16px;
+    border: none;
+    /* Sin borde, diseño más limpio */
 }
 
 .lista-datos-contacto li:hover {
@@ -314,6 +395,11 @@
 
 .lista-datos-contacto img {
     flex-shrink: 0;
+}
+
+.lista-datos-contacto .ubicacion-completa {
+    grid-column: 1 / -1;
+    /* Ocupa el ancho completo abajo */
 }
 
 /* Banner de Horario de acompañamiento (del Mockup) */
@@ -347,7 +433,7 @@
 .estado-horario {
     font-size: 0.78rem;
     font-weight: 600;
-    color: #4ade80;
+    color: var(--color-primario);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -402,13 +488,18 @@
 .seccion-contacto {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 32px 24px 80px;
-    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    background-color: var(--color-blanco);
+    border-radius: 32px;
+    /* Borde redondeado de toda la tarjeta */
+    box-shadow: 0 10px 40px rgba(80, 23, 38, 0.08);
+    /* Sombra unificada */
+    overflow: hidden;
+    /* Clave para que los fondos respeten los bordes redondeados */
+    min-height: auto;
+    padding: 0;
+    /* Quitamos padding externo */
 }
 
 /* Contenedor flexible del equipo en fila */
@@ -425,6 +516,7 @@
     gap: 28px;
     margin-top: 24px;
 }
+
 /* Contenedor de botones del formulario de contacto */
 .acciones-formulario {
     display: flex;

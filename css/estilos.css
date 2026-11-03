@@ -279,10 +279,10 @@ header {
     position: sticky;
     top: 72px;
     z-index: 90;
-    background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
-    border-bottom: 1.5px solid var(--color-borde);
+    background: var(--color-secundario); /* Cambiado a color sólido */
+    /* border-bottom: 1.5px solid var(--color-borde); ELIMINAR ESTA LÍNEA */
     padding: 10px 48px;
-    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.04);
+    box-shadow: none; /* Eliminar sombra para que se fusione con el hero */
 }
 
 .navegacion-secundaria ul {
