@@ -53,6 +53,13 @@
 /* Previene scrollbar horizontal sin romper position: sticky (Requisito 5.4) */
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section[id],
+article[id] {
+    scroll-margin-top: 135px;
+    /* Altura suficiente para cubrir Header + Nav secundaria */
 }
 
 body {
@@ -279,10 +286,12 @@ header {
     position: sticky;
     top: 72px;
     z-index: 90;
-    background: var(--color-secundario); /* Cambiado a color sólido */
+    background: var(--color-secundario);
+    /* Cambiado a color sólido */
     /* border-bottom: 1.5px solid var(--color-borde); ELIMINAR ESTA LÍNEA */
     padding: 10px 48px;
-    box-shadow: none; /* Eliminar sombra para que se fusione con el hero */
+    box-shadow: none;
+    /* Eliminar sombra para que se fusione con el hero */
 }
 
 .navegacion-secundaria ul {
