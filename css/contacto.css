@@ -1,32 +1,12 @@
 /* ==========================================================================
-   ADOPPET - ESTILOS ESPECÍFICOS DE CONTACTO (contacto.css)
-   Laboratorio No. 2 - Maquetación y Formulario Avanzado con Flexbox
+   ADOPPET - ESTILOS DE LA PÁGINA CONTACTO (contacto.css)
    ========================================================================== */
 
-.btn-Equipo,
-.btn-formulario {
-    display: inline-block;
-    padding: 8px 24px;
-    font-size: 0.92rem;
-    font-weight: 600;
-    color: var(--color-primario);
-    border-radius: var(--radio-pill);
-    transition: all 0.3s ease;
-}
-
-.btn-Equipo:hover,
-.btn-formulario:hover {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.2);
-}
-
+/* ===== 1. CABECERA ===== */
 #navegacion-secundaria-contacto {
     background: var(--color-blanco);
 }
 
-/* Cabecera de Contacto */
 .cabecera-contacto {
     text-align: center;
     max-width: 640px;
@@ -59,14 +39,13 @@
     margin-top: 16px;
 }
 
-/* Sección Equipo */
+/* ===== 2. EQUIPO ===== */
 .seccion-equipo {
     max-width: 1340px;
     margin: 0 auto;
     padding: 24px 24px 96px;
 }
 
-/* El mockup no muestra el título; se oculta visualmente pero sigue accesible */
 .seccion-equipo h2 {
     position: absolute;
     width: 1px;
@@ -90,9 +69,7 @@
     max-width: 304px;
 }
 
-/* Estilo de Tarjeta de Miembro: sin caja, solo foto y datos como en el mockup */
-.targeta-miembro,
-.tarjeta-miembro {
+.targeta-miembro {
     width: 100%;
     background: transparent;
     display: flex;
@@ -101,7 +78,6 @@
     text-align: center;
 }
 
-/* Ajuste proporcional de la foto */
 .foto-miembro {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -119,11 +95,6 @@
     transition: transform 0.5s ease;
 }
 
-.targeta-miembro:hover .foto-miembro img,
-.tarjeta-miembro:hover .foto-miembro img {
-    transform: scale(1.06);
-}
-
 .nombre-miembro {
     font-size: 1.05rem;
     font-weight: 500;
@@ -137,7 +108,6 @@
     margin-bottom: 24px;
 }
 
-/* Anula la letra capital global de estilos.css en el cargo */
 .targeta-miembro p:first-of-type::first-letter {
     font-size: inherit;
     font-weight: inherit;
@@ -168,44 +138,7 @@
     transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-.lista-redes-miembro a:hover {
-    transform: translateY(-2px);
-}
-
-.lista-redes-miembro a:hover img {
-    opacity: 1;
-    filter: none;
-}
-
-.btn-contactar {
-    margin-top: auto;
-    width: auto;
-    min-width: 180px;
-    padding: 16px 40px;
-    border-radius: var(--radio-pill);
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    font-family: var(--fuente-principal);
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(80, 23, 38, 0.3);
-    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-}
-
-.btn-contactar:hover,
-.btn-contactar:focus-visible {
-    background-color: var(--color-primario-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(80, 23, 38, 0.38);
-}
-
-.btn-contactar:active {
-    transform: translateY(0);
-}
-
-/* Contenedor principal de la seccion de contacto en dos columnas (Flexbox) */
+/* ===== 3. SECCIÓN DE CONTACTO (DOS COLUMNAS) ===== */
 .seccion-contacto {
     position: relative;
     display: flex;
@@ -220,7 +153,6 @@
     padding: 0;
 }
 
-/* Línea de acento superior sobre la columna del formulario */
 .seccion-contacto::before {
     content: "";
     position: absolute;
@@ -231,7 +163,6 @@
     background: linear-gradient(90deg, var(--color-primario), var(--color-acento) 60%, var(--color-secundario-alt));
 }
 
-/* Columna Formulario */
 .columna-formulario {
     flex: 1;
     padding: 48px 48px 56px;
@@ -239,6 +170,32 @@
     border: none;
 }
 
+.columna-info-contacto {
+    position: relative;
+    flex: 1;
+    padding: 48px 48px 40px;
+    background: linear-gradient(160deg, var(--color-secundario) 0%, #f5d6dc 55%, #eab3bf 100%);
+    border: none;
+    border-left: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+}
+
+.columna-info-contacto::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(179, 57, 81, 0.18) 0 40%, rgba(255, 255, 255, 0.25) 41% 100%);
+    pointer-events: none;
+}
+
+/* ===== 4. FORMULARIO ===== */
 .cabecera-form {
     padding-bottom: 32px;
     margin-bottom: 40px;
@@ -258,8 +215,7 @@
     box-shadow: 0 4px 10px rgba(80, 23, 38, 0.25);
 }
 
-.cabecera-form h3,
-.columna-formulario h3 {
+.cabecera-form h3 {
     font-size: 2.1rem;
     font-weight: 800;
     line-height: 1.15;
@@ -279,7 +235,6 @@
     color: inherit;
 }
 
-/* Grids del formulario */
 .form-grid-2 {
     display: flex;
     gap: 32px;
@@ -289,7 +244,6 @@
     flex: 1 1 0;
 }
 
-/* Etiqueta y control en columna con Flexbox */
 .form-grupo {
     display: flex;
     flex-direction: column;
@@ -322,19 +276,10 @@
     transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.columna-formulario input:focus,
-.columna-formulario textarea:focus {
-    outline: none;
-    border-color: var(--color-acento);
-    background-color: var(--color-blanco);
-    box-shadow: 0 0 0 4px rgba(179, 57, 81, 0.12);
-}
-
 .columna-formulario textarea {
     min-height: 90px;
 }
 
-/* Estilo de radios: panel rosado del mockup */
 .form-grupo:has(.radio-grid) {
     padding: 24px 24px;
     margin: 8px 0 32px;
@@ -372,7 +317,6 @@
     accent-color: var(--color-primario);
 }
 
-/* Adjuntar archivo: caja punteada con el botón a la derecha */
 .archivo-grupo {
     display: flex;
     flex-direction: row;
@@ -398,28 +342,6 @@
     text-align: right;
 }
 
-/* Estilo para el boton de adjuntar archivo segun mockup */
-input[type="file"]::file-selector-button {
-    padding: 8px 16px;
-    border-radius: var(--radio-pill);
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    border: none;
-    font-family: var(--fuente-principal);
-    font-size: 0.78rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-right: 8px;
-    box-shadow: 0 2px 8px rgba(80, 23, 38, 0.2);
-    transition: background-color 0.25s ease, transform 0.2s ease;
-}
-
-input[type="file"]::file-selector-button:hover {
-    background-color: var(--color-primario-hover);
-    transform: translateY(-1px);
-}
-
-/* Contenedor de botones del formulario de contacto */
 .acciones-formulario {
     display: flex;
     align-items: center;
@@ -451,90 +373,7 @@ input[type="file"]::file-selector-button:hover {
     gap: 16px;
 }
 
-.btn-enviar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 240px;
-    padding: 16px 40px;
-    border-radius: var(--radio-pill);
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    font-family: var(--fuente-principal);
-    font-size: 0.95rem;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 0 3px var(--color-borde), 0 8px 22px rgba(80, 23, 38, 0.28);
-    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-}
-
-.btn-enviar:hover,
-.btn-enviar:focus-visible {
-    background-color: var(--color-primario-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 0 0 3px var(--color-borde), 0 12px 28px rgba(80, 23, 38, 0.38);
-}
-
-.btn-enviar:active {
-    transform: translateY(0);
-}
-
-.btn-limpiar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 32px;
-    border-radius: var(--radio-pill);
-    background-color: transparent;
-    color: var(--color-primario);
-    font-family: var(--fuente-principal);
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1.5px solid var(--color-borde);
-    cursor: pointer;
-    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
-}
-
-.btn-limpiar:hover,
-.btn-limpiar:focus-visible {
-    background-color: var(--color-secundario);
-    border-color: var(--color-acento);
-    color: var(--color-primario-hover);
-    transform: translateY(-2px);
-}
-
-.btn-limpiar:active {
-    transform: translateY(0);
-}
-
-/* Columna Información de Contacto */
-.columna-info-contacto {
-    position: relative;
-    flex: 1;
-    padding: 48px 48px 40px;
-    background: linear-gradient(160deg, var(--color-secundario) 0%, #f5d6dc 55%, #eab3bf 100%);
-    border: none;
-    border-left: 1px solid var(--color-borde);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    overflow: hidden;
-}
-
-/* Círculo decorativo de la esquina inferior derecha */
-.columna-info-contacto::after {
-    content: "";
-    position: absolute;
-    right: -30px;
-    bottom: -30px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(179, 57, 81, 0.18) 0 40%, rgba(255, 255, 255, 0.25) 41% 100%);
-    pointer-events: none;
-}
-
+/* ===== 5. INFORMACIÓN DE CONTACTO ===== */
 .columna-info-contacto .titulo-info {
     font-size: 2.1rem;
     font-weight: 800;
@@ -549,7 +388,6 @@ input[type="file"]::file-selector-button:hover {
     margin-bottom: 120px;
 }
 
-/* Tarjeta Tu Próximo Paso (del Mockup) */
 .tarjeta-pasos {
     position: relative;
     background: rgba(255, 255, 255, 0.6);
@@ -632,7 +470,6 @@ input[type="file"]::file-selector-button:hover {
     background-color: var(--color-borde);
 }
 
-/* Tarjetas de datos de contacto */
 .lista-datos-contacto {
     display: flex;
     flex-wrap: wrap;
@@ -655,17 +492,11 @@ input[type="file"]::file-selector-button:hover {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.lista-datos-contacto li:hover {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.85);
-}
-
 .lista-datos-contacto img {
     flex-shrink: 0;
     width: 20px;
 }
 
-/* Ocupa el ancho completo abajo */
 .lista-datos-contacto .ubicacion-completa {
     flex-basis: 100%;
     flex-direction: row;
@@ -674,7 +505,6 @@ input[type="file"]::file-selector-button:hover {
     color: var(--color-texto-muted);
 }
 
-/* Banner de Horario de acompañamiento (del Mockup) */
 .banner-horario {
     position: relative;
     background: var(--color-primario);
@@ -689,16 +519,10 @@ input[type="file"]::file-selector-button:hover {
     transition: transform 0.3s ease;
 }
 
-.banner-horario:hover {
-    transform: translateY(-2px);
-}
-
-/* El mockup no lleva reloj; el estado ocupa ese lugar */
 .icono-horario {
     display: none;
 }
 
-/* Columna de textos; deja espacio a la izquierda para la etiqueta de estado */
 .info-horario {
     display: flex;
     flex-direction: column;
@@ -706,7 +530,6 @@ input[type="file"]::file-selector-button:hover {
     padding-left: 152px;
 }
 
-/* Etiqueta ubicada respecto a .banner-horario (position: relative) */
 .estado-horario {
     position: absolute;
     top: 50%;
@@ -745,8 +568,6 @@ input[type="file"]::file-selector-button:hover {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Redes en aside de contacto */
-/* align-self evita que la fila de redes se estire en la columna flex */
 .lista-redes-pequena {
     display: flex;
     align-self: flex-start;
@@ -771,6 +592,104 @@ input[type="file"]::file-selector-button:hover {
     opacity: 0.45;
 }
 
+/* ===== 6. BOTONES ===== */
+.btn-contactar {
+    margin-top: auto;
+    width: auto;
+    min-width: 180px;
+    padding: 16px 40px;
+    border-radius: var(--radio-pill);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-family: var(--fuente-principal);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(80, 23, 38, 0.3);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-enviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    padding: 16px 40px;
+    border-radius: var(--radio-pill);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-family: var(--fuente-principal);
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px var(--color-borde), 0 8px 22px rgba(80, 23, 38, 0.28);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-limpiar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border-radius: var(--radio-pill);
+    background-color: transparent;
+    color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1.5px solid var(--color-borde);
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+input[type="file"]::file-selector-button {
+    padding: 8px 16px;
+    border-radius: var(--radio-pill);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    font-family: var(--fuente-principal);
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 8px;
+    box-shadow: 0 2px 8px rgba(80, 23, 38, 0.2);
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+/* ===== 7. ESTADOS E INTERACCIONES ===== */
+.targeta-miembro:hover .foto-miembro img {
+    transform: scale(1.06);
+}
+
+.lista-redes-miembro a:hover {
+    transform: translateY(-2px);
+}
+
+.lista-redes-miembro a:hover img {
+    opacity: 1;
+    filter: none;
+}
+
+.columna-formulario input:focus,
+.columna-formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 0 4px rgba(179, 57, 81, 0.12);
+}
+
+.lista-datos-contacto li:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.banner-horario:hover {
+    transform: translateY(-2px);
+}
+
 .lista-redes-pequena a:hover {
     background-color: var(--color-primario);
     transform: translateY(-3px) scale(1.1);
@@ -782,7 +701,41 @@ input[type="file"]::file-selector-button:hover {
     filter: brightness(0) invert(1);
 }
 
-#asunto_adoptar {
-    display: flex;
-    flex-grow: initial;
+.btn-contactar:hover,
+.btn-contactar:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(80, 23, 38, 0.38);
+}
+
+.btn-contactar:active {
+    transform: translateY(0);
+}
+
+.btn-enviar:hover,
+.btn-enviar:focus-visible {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px var(--color-borde), 0 12px 28px rgba(80, 23, 38, 0.38);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+.btn-limpiar:hover,
+.btn-limpiar:focus-visible {
+    background-color: var(--color-secundario);
+    border-color: var(--color-acento);
+    color: var(--color-primario-hover);
+    transform: translateY(-2px);
+}
+
+.btn-limpiar:active {
+    transform: translateY(0);
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-1px);
 }
