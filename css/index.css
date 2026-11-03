@@ -1,5 +1,5 @@
 /* ==========================================================================
-   stylesIndex.css — Estilos exclusivos de index.html
+   index.css — Estilos exclusivos de index.html
    AdopPet | Laboratorio No. 2 | Fundamentos Web
 
    Estructura:
@@ -34,6 +34,23 @@ section[id] {
     color: inherit;
 }
 
+/* Botones del mockup: esquinas redondeadas, no de píldora */
+main .boton-primario,
+main .boton-secundario {
+    padding: 12px 32px;
+    border-radius: 8px;
+}
+
+.Somos-boton .boton-secundario {
+    background-color: var(--color-rosa);
+    border-color: var(--color-rosa);
+}
+
+.Servi-boton .boton-secundario {
+    background-color: var(--color-blanco);
+    border-color: var(--color-blanco);
+}
+
 
 /* ===== 2. MAQUETACIÓN DE LA PÁGINA ===== */
 
@@ -43,7 +60,7 @@ section[id] {
 .Caracter>h2,
 .preguntas>h2,
 #costos>h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 .clientes>h2,
@@ -64,7 +81,7 @@ section[id] {
 
 .Somos-Cont {
     flex: 1;
-    max-width: 900px;
+    max-width: 640px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -72,13 +89,13 @@ section[id] {
 }
 
 .Somos-Cont h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
 }
 
 .Somos-Cont p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 .Somos-boton {
@@ -97,7 +114,7 @@ section[id] {
 
 .Somos-img img {
     width: 100%;
-    max-width: 560px;
+    max-width: 580px;
     height: 520px;
     object-fit: cover;
     border-top-left-radius: var(--radio-tarjeta);
@@ -111,7 +128,7 @@ section[id] {
     justify-content: space-between;
     gap: 64px;
     padding: 96px 5%;
-    background: var(--degradado-rosa);
+    background: linear-gradient(to bottom, var(--color-rosa), #e7a3b0);
 }
 
 .servicios-img {
@@ -122,21 +139,22 @@ section[id] {
 
 .servicios-img img {
     width: 100%;
-    max-width: 650px;
+    max-width: 600px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .servi-cont {
-    flex: 1.2;
+    flex: 1;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
 }
 
 .servi-cont h2 {
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .Servi-detalles {
@@ -194,9 +212,9 @@ section[id] {
     display: flex;
     flex-wrap: wrap;
     /* 2 columnas; pasa a 1 si no caben */
-    gap: 24px;
+    gap: 64px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1008px;
 }
 
 .caracter-boton {
@@ -217,22 +235,23 @@ section[id] {
 .lista-pe {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     width: 100%;
-    max-width: 900px;
+    max-width: 912px;
 }
 
 /* --- 2.6 Costos y cuidados --- */
 #costos {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding: 96px 5%;
+    gap: 24px;
+    padding: 64px 24px 96px;
     background: var(--degradado-rosa);
 }
 
 #costos>h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    text-align: center;
 }
 
 .num-pag {
@@ -251,42 +270,43 @@ section[id] {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 24px;
-    border-radius: var(--radio-tarjeta);
+    padding: 16px;
+    border-radius: 12px;
     background-color: var(--color-secundario);
 }
 
 .cont-1 img,
 .cont-2 img {
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
 .cont-1 p,
 .cont-2 p {
-    font-size: 1rem;
+    font-size: 0.85rem;
     line-height: 1.4;
 }
 
 /* --- Tarjeta de mascota --- */
 .tarjeta-mascota {
     flex: 1 1 200px;
-    max-width: 280px;
+    max-width: 308px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     /* recorta la imagen con las esquinas redondeadas */
-    border-radius: var(--radio-tarjeta);
-    background-color: var(--color-secundario-alt);
+    border-radius: 12px;
+    background-color: var(--color-rosa);
     box-shadow: var(--sombra-suave);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mascota-img img {
+    display: block;
     width: 100%;
-    height: 224px;
+    height: 216px;
     object-fit: cover;
 }
 
@@ -298,8 +318,13 @@ section[id] {
     padding: 16px;
 }
 
+/* "Mascota / Nombre" dentro de una cápsula blanca, como en el mockup */
 .mascota-info h3 {
-    font-size: 1.2rem;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: var(--color-secundario);
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 /* El nombre baja de línea sin usar <br> */
@@ -308,11 +333,18 @@ section[id] {
     display: block;
 }
 
+.mascota-info h3 strong {
+    font-size: 1.05rem;
+}
+
 .mascota-info ul {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    font-size: 0.95rem;
+    gap: 4px;
+    padding-left: 16px;
+    list-style: disc;
+    font-size: 0.82rem;
+    font-weight: 600;
 }
 
 .mascota-cuidador {
@@ -320,18 +352,20 @@ section[id] {
     align-items: center;
     gap: 16px;
     padding: 16px;
-    border-top: 1px solid var(--color-borde);
 }
 
 .mascota-cuidador img {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
     border-radius: 50%;
-    object-fit: cover;
+    background-color: var(--color-secundario);
+    object-fit: contain;
 }
 
 .mascota-cuidador p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 600;
     line-height: 1.3;
 }
 
@@ -376,35 +410,36 @@ section[id] {
 
 /* --- Bloques de características --- */
 .caracter-prinl>div {
-    flex: 1 1 calc(50% - 12px);
-    /* mitad del ancho menos media separación (gap 24 / 2) */
+    flex: 1 1 calc(50% - 32px);
+    /* mitad del ancho menos media separación (gap 64 / 2) */
     min-width: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    padding: 24px;
-    border-radius: var(--radio-tarjeta);
+    padding: 24px 32px;
+    border-radius: 12px;
     background-color: var(--color-secundario);
     box-shadow: var(--sombra-suave);
     text-align: center;
 }
 
 .caracter-prinl img {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
 }
 
 .caracter-prinl p {
-    font-size: 1.05rem;
+    font-size: 0.88rem;
+    font-weight: 600;
     line-height: 1.5;
 }
 
 /* --- despliegue de preguntas --- */
 .lista-pe details {
     overflow: hidden;
-    border-radius: var(--radio-suave);
+    border-radius: 4px;
     background-color: var(--color-rosa-fuerte);
     box-shadow: var(--sombra-suave);
 }
@@ -413,10 +448,10 @@ section[id] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
-    font-size: 1.15rem;
+    padding: 16px;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: var(--color-primario);
+    color: var(--color-texto);
     cursor: pointer;
     list-style: none;
 }
@@ -428,7 +463,7 @@ section[id] {
 
 .lista-pe summary::after {
     content: "+";
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     transition: transform 0.3s ease;
 }
@@ -438,7 +473,7 @@ section[id] {
     /* el texto no toca los bordes */
     border-top: 1px solid var(--color-borde);
     background-color: var(--color-fondo-suave);
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     line-height: 1.5;
 }
 
@@ -446,8 +481,8 @@ section[id] {
 .costycuidados-nav {
     display: flex;
     flex-direction: column;
-    padding: 8px 24px;
-    border-radius: var(--radio-tarjeta);
+    padding: 8px 16px;
+    border-radius: 16px;
     background-color: var(--color-secundario);
     box-shadow: var(--sombra-suave);
 }
@@ -511,6 +546,14 @@ section[id] {
 
 
 /* ===== 4. ESTADOS E INTERACCIONES ===== */
+.Somos-boton .boton-secundario:hover,
+.Somos-boton .boton-secundario:focus-visible,
+.Servi-boton .boton-secundario:hover,
+.Servi-boton .boton-secundario:focus-visible {
+    background-color: var(--color-secundario-alt);
+    border-color: var(--color-acento);
+}
+
 .tarjeta-mascota:hover {
     transform: translateY(-4px);
     box-shadow: var(--sombra-hover);

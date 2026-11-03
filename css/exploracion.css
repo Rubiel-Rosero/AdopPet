@@ -1,5 +1,5 @@
 /* ==========================================================================
-   stylesExploracion.css — Estilos exclusivos de exploracion.html
+   exploracion.css — Estilos exclusivos de exploracion.html
    AdopPet | Laboratorio No. 2 | Fundamentos Web
 
    Estructura:
@@ -35,6 +35,12 @@ section[id] {
     color: inherit;
 }
 
+/* Botones del mockup: esquinas redondeadas, no de píldora */
+main .boton-primario {
+    padding: 12px 32px;
+    border-radius: 8px;
+}
+
 /* ===== 2. MAQUETACIÓN DE LA PÁGINA ===== */
 
 /* --- 2.1 Adopción definitiva --- */
@@ -43,7 +49,7 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 48px;
+    gap: 80px;
     padding: 96px 5%;
     background: var(--degradado-rosa);
 }
@@ -80,35 +86,45 @@ section[id] {
 .adop-img img {
     width: 100%;
     max-width: 600px;
-    height: 560px;
-    border-radius: var(--radio-tarjeta);
+    height: 576px;
+    border-radius: 12px;
     object-fit: cover;
 }
 
 .adopcion-cont {
     flex: 1;
-    max-width: 900px;
+    max-width: 608px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 24px;
-    padding: 48px;
-    border-radius: var(--radio-tarjeta);
+    padding: 40px;
+    border: 1px solid var(--color-rosa-fuerte);
+    border-radius: 12px;
     background: linear-gradient(to top, var(--color-rosa), var(--color-secundario));
     box-shadow: 0 16px 24px -4px rgba(80, 23, 38, 0.4);
 }
 
 .adopcion-cont h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
+    line-height: 1.15;
 }
 
 .adopcion-cont h2 {
-    font-size: 1.5rem;
+    margin-top: -16px;
+    font-size: 1.8rem;
+}
+
+.adopcion-cont p {
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .adop-boton {
     align-self: flex-start;
     /* el botón conserva su ancho natural dentro de la columna */
+    margin-top: 8px;
 }
 
 /* --- 2.2 Hogares de paso --- */
@@ -117,28 +133,35 @@ section[id] {
     align-items: center;
     justify-content: space-between;
     gap: 48px;
-    padding: 96px 5%;
-    background-color: var(--color-secundario);
+    padding: 80px 5% 96px;
+    background: linear-gradient(to bottom, var(--color-fondo-suave), var(--color-secundario));
 }
 
 .cont-hogares {
     flex: 1;
-    max-width: 900px;
+    max-width: 880px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 24px;
 }
 
 .cont-hogares h2 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     line-height: 1.1;
 }
 
+.cont-hogares p:first-of-type {
+    margin-top: -8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--color-texto);
+}
+
 .cont-hogares p {
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 1.5;
+    font-size: 0.78rem;
+    font-weight: 600;
 }
 
 .hogar-boton {
@@ -153,11 +176,12 @@ section[id] {
 
 .img-hogar img {
     width: 100%;
-    max-width: 360px;
-    height: 480px;
-    border-radius: var(--radio-tarjeta);
+    max-width: 344px;
+    height: 472px;
+    border-radius: 12px;
+    background-color: #ececec;
     object-fit: cover;
-    box-shadow: var(--sombra-tarjeta);
+    box-shadow: var(--sombra-suave);
 }
 
 /* --- 2.3 Voluntariado --- */
@@ -166,8 +190,8 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 48px;
-    padding: 96px 5%;
+    gap: 80px;
+    padding: 80px 5% 96px;
     background-color: var(--color-secundario);
 }
 
@@ -180,33 +204,40 @@ section[id] {
 .volunt-img img {
     width: 100%;
     max-width: 600px;
-    height: 640px;
-    border-radius: var(--radio-tarjeta);
+    height: 776px;
+    border-radius: 12px;
     object-fit: cover;
     box-shadow: var(--sombra-tarjeta);
 }
 
 .volunt-cont {
     flex: 1;
-    max-width: 900px;
+    max-width: 608px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 16px;
 }
 
 .volunt-cont h2 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 1.1;
 }
 
+.volunt-cont p:first-of-type {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--color-texto);
+}
+
 .volunt-cont p {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 0.78rem;
     line-height: 1.4;
 }
 
 .volunt-cont h3 {
+    margin-top: 8px;
     font-size: 1.3rem;
 }
 
@@ -214,7 +245,7 @@ section[id] {
 .requisitos-cont {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 24px;
     width: 100%;
 }
 
@@ -222,8 +253,8 @@ section[id] {
     flex: 1 1 100%;
     /* ocupa una fila completa debajo de las tarjetas */
     display: flex;
-    justify-content: center;
-    margin-top: 16px;
+    justify-content: flex-start;
+    margin-top: 8px;
 }
 
 /* --- 2.4 Bienestar e higiene --- */
@@ -232,13 +263,13 @@ section[id] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 96px 5%;
+    padding: 80px 5% 96px;
     background: var(--degradado-rosa);
 }
 
 .bienestar-contenido {
     width: 100%;
-    max-width: 1000px;
+    max-width: 912px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,7 +277,7 @@ section[id] {
 }
 
 .bienestar-contenido>h2 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 
@@ -254,13 +285,12 @@ section[id] {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 
 .bienestar-boton {
     display: flex;
     justify-content: center;
-    margin-top: 24px;
 }
 
 /* --- 2.5 Eventos --- */
@@ -268,13 +298,13 @@ section[id] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
-    padding: 96px 5%;
-    background-color: var(--color-secundario);
+    gap: 64px;
+    padding: 80px 5% 96px;
+    background: linear-gradient(to bottom, var(--color-fondo-suave), var(--color-secundario));
 }
 
 .event-titulo h2 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 
@@ -283,8 +313,8 @@ section[id] {
     flex-wrap: wrap;
     /* las dos tarjetas se apilan si no caben */
     align-items: center;
-    justify-content: center;
-    gap: 48px;
+    justify-content: space-around;
+    gap: 64px;
     width: 100%;
     max-width: 1200px;
 }
@@ -294,32 +324,33 @@ section[id] {
 .req-card {
     position: relative;
     /* el .etiqueta-flotante se ubica respecto a esta tarjeta */
-    flex: 1 1 calc(50% - 8px);
-    /* mitad del ancho menos media separación (gap 16 / 2) */
+    flex: 1 1 calc(50% - 12px);
+    /* mitad del ancho menos media separación (gap 24 / 2) */
     min-width: 200px;
     display: flex;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
     padding: 16px;
     overflow: hidden;
     /* recorta etiqueta e imagen con la esquina redondeada */
-    border-radius: var(--radio-tarjeta);
+    border-radius: 12px;
     background-color: var(--color-rosa);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .req-card img {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .req-card p {
-    font-size: 0.9rem;
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--color-texto);
 }
 
 /* Posición de la etiqueta dentro de la tarjeta */
@@ -328,28 +359,22 @@ section[id] {
     right: 8px;
 }
 
-/* Deja espacio a la etiqueta para que no tape el texto */
-.req-card:has(.etiqueta-flotante) {
-    padding-right: 96px;
-}
-
 /* --- despliegue de bienestar --- */
 .info-lista details {
     overflow: hidden;
-    padding: 24px;
-    border-radius: var(--radio-tarjeta);
-    background-color: var(--color-secundario-alt);
+    border-radius: 4px;
+    background-color: var(--color-blanco);
     box-shadow: var(--sombra-suave);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .info-lista summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--color-primario);
+    padding: 16px;
+    font-size: 0.92rem;
+    color: var(--color-texto);
     cursor: pointer;
     list-style: none;
 }
@@ -361,7 +386,7 @@ section[id] {
 
 .info-lista summary::after {
     content: "+";
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     transition: transform 0.3s ease;
 }
@@ -370,25 +395,23 @@ section[id] {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 32px;
-    margin-top: 24px;
-    padding: 24px;
-    border-radius: var(--radio-suave);
+    gap: 40px;
+    padding: 32px;
+    border-top: 1px solid var(--color-borde-suave);
     background-color: var(--color-blanco);
-    box-shadow: var(--sombra-suave);
 }
 
 .img-cont {
     flex-shrink: 0;
     overflow: hidden;
     /* junto con el radio, recorta la imagen */
-    border-radius: var(--radio-suave);
+    border-radius: 12px;
     box-shadow: var(--sombra-suave);
 }
 
 .img-cont img {
     width: 264px;
-    height: 200px;
+    height: 376px;
     object-fit: cover;
 }
 
@@ -400,56 +423,68 @@ section[id] {
 }
 
 .contexto h3 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
 .contexto ul {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .contexto li {
     margin-left: 24px;
     list-style: disc;
+    font-size: 0.88rem;
+    font-weight: 600;
     line-height: 1.5;
 }
 
 /* --- Evento --- */
 .video-evento {
     flex: 1 1 400px;
-    max-width: 560px;
-    padding: 24px;
-    border-radius: var(--radio-suave);
+    max-width: 600px;
+    padding: 32px;
+    border-radius: 8px;
     background-color: var(--color-blanco);
     box-shadow: var(--sombra-tarjeta);
 }
 
 .video-evento video {
+    display: block;
     width: 100%;
-    border-radius: var(--radio-suave);
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background-color: var(--color-secundario);
+    object-fit: cover;
 }
 
 .info-evento {
-    flex: 1.2 1 320px;
-    max-width: 650px;
+    flex: 0 1 464px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 16px;
-    padding: 48px;
-    border-radius: var(--radio-tarjeta);
+    padding: 32px;
+    border-radius: 8px;
     background-color: var(--color-blanco);
     box-shadow: var(--sombra-tarjeta);
 }
 
 .info-evento h3 {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.info-evento p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.55;
 }
 
 .info-evento a {
     font-weight: 600;
-    color: var(--color-primario);
+    color: var(--color-acento);
     text-decoration: underline;
 }
 
@@ -460,6 +495,8 @@ section[id] {
 }
 
 .icon-evento img {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -470,6 +507,11 @@ section[id] {
     width: 100%;
 }
 
+.evento-boton .boton-primario {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+}
+
 /* ===== 4. ESTADOS E INTERACCIONES ===== */
 .req-card:hover {
     transform: translateY(-4px);
@@ -477,8 +519,7 @@ section[id] {
 }
 
 .info-lista details[open] {
-    background-color: var(--color-secundario);
-    border: 2px solid var(--color-primario-hover);
+    box-shadow: var(--sombra-tarjeta);
 }
 
 .info-lista details[open] summary::after {
