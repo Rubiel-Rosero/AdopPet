@@ -3,13 +3,11 @@
    Laboratorio No. 2 - Galería Flexbox, Carrusel Snap y Filas de Eventos
    ========================================================================== */
 
-/* Hero Multimedia de Pantalla Completa */
+/* Hero Multimedia con degradado rosado del mockup */
 .seccion-hero {
-    min-height: 35vh;
-    /* Reducido para parecerse al mockup */
-    padding: 40px 24px 60px;
-    background: var(--color-secundario);
-    /* Cambiado a color sólido */
+    min-height: 420px;
+    padding: 80px 24px;
+    background: linear-gradient(160deg, var(--color-fondo-suave) 0%, var(--color-secundario) 40%, #ebbcc6 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,80 +17,77 @@
 }
 
 .seccion-hero .titulo-principal {
-    font-size: 2.6rem;
+    font-size: 3.4rem;
     font-weight: 800;
-    color: var(--color-primario);
-    letter-spacing: -0.5px;
-    margin-bottom: 12px;
+    color: #3a0c16;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
 }
 
 .seccion-hero .descripcion-hero {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
+    font-weight: 300;
     color: var(--color-texto-muted);
     max-width: 600px;
 }
 
 /* Galería con Carrusel Interactivo Scroll-Snap */
 .seccion-galeria {
-    padding: 72px 32px;
-    max-width: 1300px;
+    padding: 40px 32px 80px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
 .seccion-galeria .titulo-secundario {
     text-align: center;
     font-size: 2rem;
-    color: var(--color-primario);
+    font-weight: 700;
+    color: var(--color-texto);
     margin-bottom: 32px;
-    position: relative;
-    padding-bottom: 12px;
 }
 
-.seccion-galeria .titulo-secundario::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 64px;
-    height: 3px;
-    background-color: var(--color-primario);
-    border-radius: 2px;
+.seccion-galeria .titulo-secundario::before {
+    content: "MOMENTOS QUE DEJAN HUELLA";
+    display: block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-primario);
+    margin-bottom: 10px;
 }
 
+/* Sin caja: las flechas flotan sobre los bordes del carrusel */
 .contenedor-carrusel {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 18px;
-    background: var(--color-fondo-suave);
-    padding: 24px 16px;
-    border-radius: 28px;
-    border: 1px solid var(--color-borde);
-    box-shadow: var(--sombra-suave);
 }
 
 .pista-carrusel {
     display: flex;
-    gap: 24px;
+    gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 12px 6px;
     width: 100%;
-    border-radius: 20px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-borde) transparent;
+    padding-bottom: 8px;
+    scrollbar-width: none;
 }
 
+.pista-carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+/* La primera imagen ocupa casi todo el ancho y la siguiente se asoma */
 .item-galeria {
-    scroll-snap-align: center;
-    flex: 0 0 calc(50% - 12px);
+    scroll-snap-align: start;
+    flex: 0 0 80%;
     min-width: 320px;
+    margin: 0;
     position: relative;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: var(--sombra-tarjeta);
-    aspect-ratio: 16 / 10;
+    box-shadow: var(--sombra-suave);
+    aspect-ratio: 16 / 9;
     background-color: var(--color-secundario);
 }
 
@@ -104,7 +99,7 @@
 }
 
 .item-galeria:hover img {
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 
 .etiqueta-destacado {
@@ -115,7 +110,7 @@
     color: var(--color-blanco);
     border-radius: var(--radio-pill);
     padding: 6px 16px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     z-index: 2;
@@ -136,139 +131,241 @@
 }
 
 .control-carrusel {
-    width: 46px;
-    height: 46px;
+    position: absolute;
+    top: 50%;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 16px rgba(80, 23, 38, 0.35);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(42, 27, 31, 0.2);
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     z-index: 5;
 }
 
+.control-carrusel-izquierda {
+    left: -18px;
+}
+
+.control-carrusel-derecha {
+    right: -18px;
+}
+
 .control-carrusel:hover {
-    background-color: var(--color-acento);
-    transform: scale(1.15);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Sección Familia (50% de sesión de Video) */
 .seccion-familia {
     padding: 72px 32px;
-    max-width: 1300px;
+    max-width: 1240px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    min-height: 85vh;
+    gap: 80px;
+}
+
+.contenedor-video {
+    position: relative;
+    flex: 1 1 50%;
+    padding: 40px 0 40px 40px;
+}
+
+/* Mancha decorativa detrás del video, como en el mockup */
+.contenedor-video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 60%;
+    border-radius: 60% 40% 55% 45% / 50% 50% 50% 50%;
+    background-color: #e7e1e3;
+    z-index: 0;
+}
+
+.contenedor-video::after {
+    content: "";
+    position: absolute;
+    right: 8%;
+    bottom: 0;
+    width: 45%;
+    height: 65%;
+    border-radius: 45% 55% 40% 60% / 40% 45% 55% 60%;
+    background-color: #5f5759;
+    z-index: 0;
 }
 
 .columna-video {
-    flex: 1 1 50%;
-    max-width: 50%;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
 }
 
 .recurso-video {
     width: 100%;
-    height: 100%;
-    min-height: 420px;
-    border-radius: 24px;
+    margin: 0;
+    border-radius: 16px;
     overflow: hidden;
     position: relative;
-    box-shadow: var(--sombra-tarjeta);
-    border: 2px solid var(--color-borde);
-    background: linear-gradient(135deg, #f0e6e8 0%, #e8d7db 100%);
+    box-shadow: 0 18px 40px rgba(42, 27, 31, 0.18);
+    border: 6px solid rgba(255, 255, 255, 0.7);
+    background: var(--color-blanco);
 }
 
 .recurso-video iframe {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 9 / 12;
     border: none;
-    border-radius: inherit;
 }
 
+.recurso-video figcaption {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    color: var(--color-texto-muted);
+    text-align: center;
+}
+
+/* Columna de texto sin caja; los recursos van en tarjetas rosadas */
 .columna-contenido-complementario {
     flex: 1 1 45%;
-    background-color: var(--color-secundario);
-    border-radius: 28px;
-    padding: 40px;
-    border: 1px solid var(--color-borde);
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    box-shadow: var(--sombra-suave);
+    gap: 18px;
 }
 
 .columna-contenido-complementario .titulo-secundario {
-    color: var(--color-primario);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-texto);
+    margin: 0;
+}
+
+.columna-contenido-complementario .texto-descriptivo {
+    font-size: 0.9rem;
+    color: var(--color-texto-muted);
+    line-height: 1.6;
     margin-bottom: 8px;
+}
+
+.recurso-ubicacion,
+.recurso-instalaciones,
+.recurso-audio {
+    margin: 0;
+    padding: 16px;
+    background: linear-gradient(160deg, var(--color-fondo-suave) 0%, var(--color-secundario) 100%);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 18px;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.recurso-ubicacion figcaption,
+.recurso-instalaciones figcaption,
+.recurso-audio figcaption {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.recurso-ubicacion iframe,
+.recurso-instalaciones video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 4px solid var(--color-blanco);
+    border-radius: 12px;
+    background-color: var(--color-secundario-alt);
+    box-shadow: var(--sombra-suave);
+}
+
+.recurso-audio audio {
+    display: block;
+    width: 100%;
+    height: 40px;
 }
 
 /* Sección Celebraciones en Fila */
 .seccion-celebraciones {
     padding: 72px 32px 96px;
-    max-width: 1300px;
+    max-width: 1240px;
     margin: 0 auto;
-    min-height: 85vh;
 }
 
 .cabecera-seccion {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 36px;
+    text-align: left;
+    margin: 0 0 40px;
 }
 
 .cabecera-seccion .titulo-secundario {
-    font-size: 2rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-texto);
+    margin-bottom: 6px;
+}
+
+.cabecera-seccion .titulo-secundario::before {
+    content: "FECHAS PARA RECORDAR";
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
     color: var(--color-primario);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .cabecera-seccion .descripcion-seccion {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: var(--color-texto-muted);
 }
 
 .lista-eventos {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 
 .targeta-contenido {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 28px;
-    background: var(--color-blanco);
-    border-radius: 24px;
-    padding: 24px 32px;
-    border: 1px solid var(--color-borde);
-    box-shadow: var(--sombra-suave);
+    gap: 36px;
+    background: var(--color-fondo-suave);
+    border-radius: 12px;
+    padding: 18px 48px 18px 18px;
+    border: 1px solid var(--color-borde-suave);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .targeta-contenido:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sombra-hover);
-    border-color: var(--color-acento);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-tarjeta);
+    border-color: var(--color-borde);
 }
 
 .imagen-evento {
     flex: 0 0 240px;
-    height: 140px;
-    border-radius: 18px;
+    height: 190px;
+    margin: 0;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: var(--sombra-suave);
 }
 
 .imagen-evento img {
@@ -279,7 +376,7 @@
 }
 
 .targeta-contenido:hover .imagen-evento img {
-    transform: scale(1.08);
+    transform: scale(1.06);
 }
 
 .info-evento {
@@ -287,32 +384,41 @@
 }
 
 .numero-evento {
-    display: inline-block;
-    font-size: 1.6rem;
+    display: block;
+    font-size: 2rem;
     font-weight: 800;
-    color: var(--color-acento);
-    margin-bottom: 4px;
+    line-height: 1.1;
+    color: var(--color-primario);
+    margin-bottom: 6px;
 }
 
 .titulo-evento {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--color-texto);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .texto-evento {
-    font-size: 0.95rem;
+    max-width: 560px;
+    font-size: 0.85rem;
     color: var(--color-texto-muted);
     line-height: 1.6;
+}
+
+/* Anula la letra capital global de estilos.css en las descripciones */
+.targeta-contenido .texto-evento::first-letter {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
 }
 
 .btn-ver-mas {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 24px;
-    font-size: 0.88rem;
+    gap: 10px;
+    padding: 10px 22px;
+    font-size: 0.8rem;
     font-weight: 700;
     font-family: var(--fuente-principal);
     white-space: nowrap;
