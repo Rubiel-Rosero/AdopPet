@@ -1,9 +1,8 @@
 /* ==========================================================================
-   ADOPPET - ESTILOS ESPECÍFICOS DE MULTIMEDIA (multimedia.css)
-   Laboratorio No. 2 - Galería Flexbox, Carrusel Snap y Filas de Eventos
+   ADOPPET - ESTILOS DE LA PÁGINA MULTIMEDIA (multimedia.css)
    ========================================================================== */
 
-/* Hero Multimedia con degradado rosado del mockup */
+/* ===== 1. HERO ===== */
 .seccion-hero {
     min-height: 420px;
     padding: 80px 24px;
@@ -31,7 +30,7 @@
     max-width: 600px;
 }
 
-/* Galería con Carrusel Interactivo Scroll-Snap */
+/* ===== 2. GALERÍA (EXPERIENCIAS UNIDAS) ===== */
 .seccion-galeria {
     padding: 40px 32px 80px;
     max-width: 1240px;
@@ -56,16 +55,12 @@
     margin-bottom: 8px;
 }
 
-/* Sin caja alrededor de la galería */
 .contenedor-carrusel {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* Galería con flex-wrap y gap en columna: cada imagen ocupa todo el alto,
-   así que la siguiente pasa a una nueva columna a la derecha y overflow-x
-   permite desplazarse entre ellas como un carrusel */
 .pista-carrusel {
     display: flex;
     flex-direction: column;
@@ -79,7 +74,6 @@
     scrollbar-width: none;
 }
 
-/* Flechas de desplazamiento ubicadas sobre los bordes del carrusel */
 .control-carrusel {
     position: absolute;
     top: 50%;
@@ -106,13 +100,6 @@
     right: -16px;
 }
 
-.control-carrusel:hover,
-.control-carrusel:focus-visible {
-    background-color: var(--color-secundario);
-    transform: translateY(-50%) scale(1.1);
-}
-
-/* Espacio reservado para el icono de la flecha */
 .icono-control {
     display: block;
     width: 16px;
@@ -124,11 +111,9 @@
     display: block;
     width: 100%;
     height: 100%;
-    /* Las flechas no son cuadradas: se ajustan sin deformarse */
     object-fit: contain;
 }
 
-/* La primera imagen ocupa casi todo el ancho y la siguiente se asoma */
 .item-galeria {
     flex: 0 0 100%;
     width: 80%;
@@ -148,10 +133,6 @@
     transition: transform 0.5s ease;
 }
 
-.item-galeria:hover img {
-    transform: scale(1.05);
-}
-
 .etiqueta-destacado {
     position: absolute;
     top: 16px;
@@ -168,19 +149,23 @@
     animation: pulseBadge 3s infinite;
 }
 
-@keyframes pulseBadge {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
+.item-galeria .leyenda-galeria {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(42, 27, 31, 0.9));
+    color: var(--color-blanco);
+    padding: 32px 24px 16px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2;
 }
 
-/* Sección Familia (50% de sesión de Video) */
+/* ===== 3. JUNTOS COMO FAMILIA ===== */
 .seccion-familia {
     padding: 72px 32px;
     max-width: 1240px;
@@ -197,7 +182,6 @@
     padding: 40px 0 40px 40px;
 }
 
-/* Mancha decorativa detrás del video, como en el mockup */
 .contenedor-video::before {
     content: "";
     position: absolute;
@@ -255,7 +239,6 @@
     text-align: center;
 }
 
-/* Columna de texto sin caja; los recursos van en tarjetas rosadas */
 .columna-contenido-complementario {
     flex: 1 1 45%;
     display: flex;
@@ -316,7 +299,7 @@
     height: 40px;
 }
 
-/* Sección Celebraciones en Fila */
+/* ===== 4. CELEBRACIONES ===== */
 .seccion-celebraciones {
     padding: 72px 32px 96px;
     max-width: 1240px;
@@ -369,12 +352,6 @@
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.targeta-contenido:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--sombra-tarjeta);
-    border-color: var(--color-borde);
-}
-
 .imagen-evento {
     flex: 0 0 240px;
     height: 190px;
@@ -389,10 +366,6 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
-}
-
-.targeta-contenido:hover .imagen-evento img {
-    transform: scale(1.06);
 }
 
 .info-evento {
@@ -422,13 +395,13 @@
     line-height: 1.6;
 }
 
-/* Anula la letra capital global de estilos.css en las descripciones */
 .targeta-contenido .texto-evento::first-letter {
     font-size: inherit;
     font-weight: inherit;
     color: inherit;
 }
 
+/* ===== 5. BOTONES ===== */
 .btn-ver-mas {
     display: inline-flex;
     align-items: center;
@@ -448,16 +421,42 @@
     transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
+.btn-ver-mas .flecha-btn {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+/* ===== 6. ESTADOS E INTERACCIONES ===== */
+.control-carrusel:hover,
+.control-carrusel:focus-visible {
+    background-color: var(--color-secundario);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.item-galeria:hover img {
+    transform: scale(1.05);
+}
+
+.item-galeria:hover .leyenda-galeria {
+    visibility: visible;
+    opacity: 1;
+}
+
+.targeta-contenido:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-tarjeta);
+    border-color: var(--color-borde);
+}
+
+.targeta-contenido:hover .imagen-evento img {
+    transform: scale(1.06);
+}
+
 .btn-ver-mas:hover,
 .btn-ver-mas:focus-visible {
     background-color: var(--color-primario-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(80, 23, 38, 0.35);
-}
-
-.btn-ver-mas .flecha-btn {
-    display: inline-block;
-    transition: transform 0.25s ease;
 }
 
 .btn-ver-mas:hover .flecha-btn {
@@ -468,32 +467,15 @@
     transform: translateY(0);
 }
 
+/* ===== 7. ANIMACIONES ===== */
+@keyframes pulseBadge {
 
-/* Revelacion interactiva de leyenda en galeria con visibility y opacity (Requisito 5.5) */
-.item-galeria .leyenda-galeria {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(42, 27, 31, 0.9));
-    color: var(--color-blanco);
-    padding: 32px 24px 16px;
-    font-size: 0.92rem;
-    font-weight: 500;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 2;
-}
+    0%,
+    100% {
+        transform: scale(1);
+    }
 
-.item-galeria:hover .leyenda-galeria {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Scroll snap y transicion de diapositiva */
-.diapositiva-scroll {
-    scroll-snap-align: center;
-    flex: 0 0 calc(50% - 12px);
-    min-width: 320px;
+    50% {
+        transform: scale(1.05);
+    }
 }
