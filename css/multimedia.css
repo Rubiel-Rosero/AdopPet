@@ -63,27 +63,79 @@
     align-items: center;
 }
 
-/* Galería con flex-wrap y gap: las imágenes se reacomodan cuando falta espacio */
+/* Galería con flex-wrap y gap en columna: cada imagen ocupa todo el alto,
+   así que la siguiente pasa a una nueva columna a la derecha y overflow-x
+   permite desplazarse entre ellas como un carrusel */
 .pista-carrusel {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 24px;
     width: 100%;
+    height: 528px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
-/* Con todas las imágenes visibles, las flechas del carrusel no hacen falta */
+/* Flechas de desplazamiento ubicadas sobre los bordes del carrusel */
 .control-carrusel {
-    display: none;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(42, 27, 31, 0.2);
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 5;
 }
 
+.control-carrusel-izquierda {
+    left: -16px;
+}
+
+.control-carrusel-derecha {
+    right: -16px;
+}
+
+.control-carrusel:hover,
+.control-carrusel:focus-visible {
+    background-color: var(--color-secundario);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Espacio reservado para el icono de la flecha */
+.icono-control {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.icono-control img,
+.icono-control svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* La primera imagen ocupa casi todo el ancho y la siguiente se asoma */
 .item-galeria {
-    flex: 1 1 400px;
+    flex: 0 0 100%;
+    width: 80%;
     margin: 0;
+    scroll-snap-align: start;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--sombra-suave);
-    aspect-ratio: 16 / 9;
     background-color: var(--color-secundario);
 }
 
