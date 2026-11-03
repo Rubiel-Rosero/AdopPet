@@ -284,7 +284,7 @@ header {
 /* Navegacin Secundaria Generalizada (Exploracin, Contenido, Recursos, Multimedia) */
 .navegacion-secundaria {
     position: sticky;
-    top: 72px;
+    top: 65px;
     z-index: 90;
     background: var(--color-secundario);
     /* Cambiado a color sólido */
