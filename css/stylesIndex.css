@@ -1,0 +1,581 @@
+/* ==========================================================================
+   stylesIndex.css — Estilos exclusivos de index.html
+   AdopPet | Laboratorio No. 2 | Fundamentos Web
+
+   Estructura:
+     1. Variables y ajustes sobre estilos.css
+     2. Menú secundario (.segundoNav)
+     3. Maquetación de la página (Flexbox)
+     4. Componentes de la página
+     5. Estados e interacciones
+     6. Animaciones
+   ========================================================================== */
+
+/* ===== 1. VARIABLES Y AJUSTES SOBRE ESTILOS.CSS ===== */
+
+/* Tonos del mockup que no existen en estilos */
+:root {
+    --color-rosa: #eebcc4;
+    --color-rosa-fuerte: #e48699;
+    --degradado-rosa: linear-gradient(to bottom, var(--color-rosa), var(--color-rosa-fuerte));
+}
+
+/* el espacio lo controla gap */
+main p {
+    margin: 0;
+}
+
+section[id] {
+    scroll-margin-top: 140px;
+}
+
+/* Corrige el pie: el <p> heredaba el color oscuro de estilos*/
+.derechos-autor p {
+    margin: 0;
+    color: inherit;
+}
+
+
+/* ===== 2. MENÚ SECUNDARIO (segundoNav) ===== */
+.segundoNav {
+    position: sticky;
+    top: 72px;
+    /* alto del header */
+    z-index: 90;
+    /* un nivel por debajo del header (100) */
+    padding: 10px 48px;
+    background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
+    border-bottom: 1.5px solid var(--color-borde);
+    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.04);
+}
+
+.segundoNav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    overflow-x: auto;
+    /* si no caben los enlaces, solo el menú hace scroll */
+}
+
+.segundoNav a {
+    display: inline-block;
+    padding: 7px 20px;
+    border: 1.5px solid transparent;
+    border-radius: var(--radio-pill);
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    white-space: nowrap;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.segundoNav a:hover,
+.segundoNav a:focus-visible {
+    background-color: var(--color-blanco);
+    border-color: var(--color-borde);
+}
+
+/* ===== 3. MAQUETACIÓN DE LA PÁGINA ===== */
+
+/* Títulos de sección: mismo tamaño */
+.servi-cont h2,
+.clientes>h2,
+.Caracter>h2,
+.preguntas>h2,
+#costos>h2 {
+    font-size: 2.5rem;
+}
+
+.clientes>h2,
+.Caracter>h2,
+.preguntas>h2 {
+    text-align: center;
+}
+
+/* --- 3.1 ¿Quiénes somos? --- */
+.Somos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 96px 0 96px 5%;
+    background-color: var(--color-secundario);
+}
+
+.Somos-Cont {
+    flex: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+}
+
+.Somos-Cont h1 {
+    font-size: 3.5rem;
+}
+
+.Somos-Cont p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.Somos-boton {
+    align-self: flex-start;
+    /* los botones no se estiran al ancho de la columna */
+    display: flex;
+    gap: 24px;
+}
+
+.Somos-img {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 96px;
+}
+
+.Somos-img img {
+    width: 100%;
+    max-width: 950px;
+    object-fit: cover;
+    border-top-left-radius: var(--radio-tarjeta);
+    border-bottom-left-radius: var(--radio-tarjeta);
+}
+
+/* --- 3.2 Servicios --- */
+.Servi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+    padding: 96px 5%;
+    background: var(--degradado-rosa);
+}
+
+.servicios-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.servicios-img img {
+    width: 100%;
+    max-width: 650px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.servi-cont {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.servi-cont h2 {
+    line-height: 1.3;
+}
+
+.Servi-detalles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.Servi-boton {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* --- 3.3 Nuestros clientes --- */
+.clientes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 96px 5%;
+    background-color: var(--color-secundario);
+}
+
+.clientes-cont {
+    display: flex;
+    flex-wrap: wrap;
+    /* si falta espacio, las tarjetas bajan de fila */
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+}
+
+.clientes-boton {
+    display: flex;
+    justify-content: center;
+}
+
+/* --- 3.4 Características --- */
+.Caracter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 64px 5%;
+    background: var(--degradado-rosa);
+}
+
+.Caracter>h2 {
+    max-width: 800px;
+}
+
+.caracter-prinl {
+    display: flex;
+    flex-wrap: wrap;
+    /* 2 columnas; pasa a 1 si no caben */
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.caracter-boton {
+    display: flex;
+    justify-content: center;
+}
+
+/* --- 3.5 Preguntas frecuentes --- */
+.preguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 96px 5%;
+    background-color: var(--color-secundario);
+}
+
+.lista-pe {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* --- 3.6 Costos y cuidados --- */
+#costos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 96px 5%;
+    background: var(--degradado-rosa);
+}
+
+#costos>h3 {
+    font-size: 2rem;
+}
+
+.num-pag {
+    justify-content: center;
+    /* la base viene de .paginacion-tabla */
+    margin-top: 24px;
+}
+
+
+/* ===== 4. COMPONENTES DE LA PÁGINA ===== */
+
+/* --- Tarjetas de servicio --- */
+.cont-1,
+.cont-2 {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-secundario);
+}
+
+.cont-1 img,
+.cont-2 img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.cont-1 p,
+.cont-2 p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+/* --- Tarjeta de mascota --- */
+.tarjeta-mascota {
+    flex: 1 1 200px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    /* recorta la imagen con las esquinas redondeadas */
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-secundario-alt);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mascota-img img {
+    width: 100%;
+    height: 224px;
+    object-fit: cover;
+}
+
+.mascota-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.mascota-info h3 {
+    font-size: 1.2rem;
+}
+
+.mascota-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.mascota-cuidador {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.mascota-cuidador img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mascota-cuidador p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.tarjeta-mascota .mascota-cuidador p::first-letter {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+/* --- "¿Sabías qué?" --- */
+.datos-curiosos {
+    flex: 1.3 1 240px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 24px;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.datos-curiosos h3 {
+    font-size: 1.2rem;
+    color: var(--color-blanco);
+}
+
+.datos-curiosos p,
+.datos-curiosos li {
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.datos-curiosos ol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 24px;
+    list-style: decimal;
+}
+
+/* --- Bloques de características --- */
+.caracter-prinl>div {
+    flex: 1 1 calc(50% - 12px);
+    /* mitad del ancho menos media separación (gap 24 / 2) */
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-secundario);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+}
+
+.caracter-prinl img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.caracter-prinl p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* --- despliegue de preguntas --- */
+.lista-pe details {
+    overflow: hidden;
+    border-radius: var(--radio-suave);
+    background-color: var(--color-rosa-fuerte);
+    box-shadow: var(--sombra-suave);
+}
+
+.lista-pe summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    cursor: pointer;
+    list-style: none;
+}
+
+/* reemplaza el "+" decorativo) */
+.lista-pe summary::-webkit-details-marker {
+    display: none;
+}
+
+.lista-pe summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.lista-pe details p {
+    padding: 16px 24px;
+    /* el texto no toca los bordes */
+    border-top: 1px solid var(--color-borde);
+    background-color: var(--color-fondo-suave);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* --- Costos --- */
+.costycuidados-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 24px;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-secundario);
+    box-shadow: var(--sombra-suave);
+}
+
+.costycuidados-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+}
+
+.costycuidados-nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: var(--radio-pill);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primario);
+    transition: background-color 0.25s ease;
+}
+
+.costycuidados-nav span {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: var(--radio-pill);
+    background-color: var(--color-rosa-fuerte);
+    color: var(--color-primario);
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.tbla-mascot {
+    min-width: 640px;
+    /* por debajo, .contenedor-tabla hace scroll horizontal */
+}
+
+.tbla-mascot thead {
+    background-color: var(--color-primario);
+    /* encabezado oscuro del mockup */
+}
+
+.tbla-mascot th {
+    color: var(--color-blanco);
+    border-bottom: none;
+}
+
+.tbla-mascot td {
+    vertical-align: middle;
+}
+
+.tbla-mascot td img {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+
+/* ===== 5. ESTADOS E INTERACCIONES ===== */
+.tarjeta-mascota:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.lista-pe details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.costycuidados-nav a:hover,
+.costycuidados-nav a.nav-act {
+    background-color: var(--color-blanco);
+}
+
+.costycuidados-nav a:hover span,
+.costycuidados-nav a.nav-act span {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+
+/* ===== 6. ANIMACIONES ===== */
+.Somos-Cont {
+    animation-name: slideInLeft;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+.Somos-img {
+    animation-name: slideInRight;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}

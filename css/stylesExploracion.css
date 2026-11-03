@@ -1,0 +1,478 @@
+/* ==========================================================================
+   stylesExploracion.css — Estilos exclusivos de exploracion.html
+   AdopPet | Laboratorio No. 2 | Fundamentos Web
+
+   Estructura:
+     1. Variables y ajustes sobre estilos.css
+     2. Menú secundario (.segundoNav)
+     3. Maquetación de la página (Flexbox)
+     4. Componentes de la página
+     5. Estados e interacciones
+     6. Animaciones
+   ========================================================================== */
+
+/* ===== 1. VARIABLES Y AJUSTES SOBRE ESTILOS.CSS ===== */
+
+/* Tonos del mockup que no están en estilos.css */
+:root {
+    --color-rosa: #eebcc4;
+    --color-rosa-fuerte: #e48699;
+    --degradado-rosa: linear-gradient(to bottom, var(--color-rosa), var(--color-rosa-fuerte));
+}
+
+/* el espacio lo controla gap */
+main p {
+    margin: 0;
+}
+
+/* Hay dos menús sticky: las anclas necesitan más margen que el de estilos */
+section[id] {
+    scroll-margin-top: 140px;
+}
+
+/* Corrige el pie, el color*/
+.derechos-autor p {
+    margin: 0;
+    color: inherit;
+}
+
+
+
+
+/* ===== 3. MAQUETACIÓN DE LA PÁGINA ===== */
+
+/* --- 3.1 Adopción definitiva --- */
+.adop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 96px 5%;
+    background: var(--degradado-rosa);
+}
+
+.adop-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.adop-img img {
+    width: 100%;
+    max-width: 700px;
+    height: 700px;
+    border-radius: var(--radio-tarjeta);
+    object-fit: cover;
+}
+
+.adopcion-cont {
+    flex: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 48px;
+    border-radius: var(--radio-tarjeta);
+    background: linear-gradient(to top, var(--color-rosa), var(--color-secundario));
+    box-shadow: 0 16px 24px -4px rgba(80, 23, 38, 0.4);
+}
+
+.adopcion-cont h1 {
+    font-size: 2.5rem;
+}
+
+.adopcion-cont h2 {
+    font-size: 1.5rem;
+}
+
+.adop-boton {
+    align-self: flex-start;
+    /* el botón conserva su ancho natural dentro de la columna */
+}
+
+/* --- 3.2 Hogares de paso --- */
+.hogares {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 96px 5%;
+    background-color: var(--color-secundario);
+}
+
+.cont-hogares {
+    flex: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.cont-hogares h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+.cont-hogares p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.hogar-boton {
+    margin-top: 24px;
+}
+
+.img-hogar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-hogar img {
+    width: 100%;
+    max-width: 450px;
+    height: 600px;
+    border-radius: var(--radio-tarjeta);
+    object-fit: cover;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+/* --- 3.3 Voluntariado --- */
+.volunt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 96px 5%;
+    background-color: var(--color-secundario);
+}
+
+.volunt-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.volunt-img img {
+    width: 100%;
+    max-width: 650px;
+    height: 580px;
+    border-radius: var(--radio-tarjeta);
+    object-fit: cover;
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.volunt-cont {
+    flex: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.volunt-cont h2 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+}
+
+.volunt-cont p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.volunt-cont h3 {
+    font-size: 1.3rem;
+}
+
+/* Tarjetas de requisitos: 2 por fila y se reacomodan con flex-wrap (sin Grid) */
+.requisitos-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+}
+
+.re-boton {
+    flex: 1 1 100%;
+    /* ocupa una fila completa debajo de las tarjetas */
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+/* --- 3.4 Bienestar e higiene --- */
+.bienestar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 5%;
+    background: var(--degradado-rosa);
+}
+
+.bienestar-contenido {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.bienestar-contenido>h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.info-lista {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bienestar-boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+/* --- 3.5 Eventos --- */
+.eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 96px 5%;
+    background-color: var(--color-secundario);
+}
+
+.event-titulo h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.eventos-cont {
+    display: flex;
+    flex-wrap: wrap;
+    /* las dos tarjetas se apilan si no caben */
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+/* ===== 4. COMPONENTES DE LA PÁGINA ===== */
+
+.req-card {
+    position: relative;
+    /* el .etiqueta-flotante se ubica respecto a esta tarjeta */
+    flex: 1 1 calc(50% - 8px);
+    /* mitad del ancho menos media separación (gap 16 / 2) */
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    overflow: hidden;
+    /* recorta etiqueta e imagen con la esquina redondeada */
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-rosa);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.req-card img {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.req-card p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Posición de la etiqueta dentro de la tarjeta */
+.req-card .etiqueta-flotante {
+    top: 8px;
+    right: 8px;
+}
+
+/* --- despliegue de bienestar --- */
+.info-lista details {
+    overflow: hidden;
+    padding: 24px;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-secundario-alt);
+    box-shadow: var(--sombra-suave);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-lista summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Safari: oculta el triángulo nativo (lo reemplaza el "+" decorativo) */
+.info-lista summary::-webkit-details-marker {
+    display: none;
+}
+
+.info-lista summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.bienestar-despliegue {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 24px;
+    padding: 24px;
+    border-radius: var(--radio-suave);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-suave);
+}
+
+.img-cont {
+    flex-shrink: 0;
+    overflow: hidden;
+    /* junto con el radio, recorta la imagen */
+    border-radius: var(--radio-suave);
+    box-shadow: var(--sombra-suave);
+}
+
+.img-cont img {
+    width: 264px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contexto {
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contexto h3 {
+    font-size: 1.4rem;
+}
+
+.contexto ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contexto li {
+    margin-left: 24px;
+    list-style: disc;
+    line-height: 1.5;
+}
+
+/* --- Evento --- */
+.video-evento {
+    flex: 1 1 320px;
+    max-width: 500px;
+    padding: 24px;
+    border-radius: var(--radio-suave);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.video-evento video {
+    width: 100%;
+    border-radius: var(--radio-suave);
+}
+
+.info-evento {
+    flex: 1.2 1 320px;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 48px;
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.info-evento h3 {
+    font-size: 2rem;
+}
+
+.info-evento a {
+    font-weight: 600;
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+
+.icon-evento {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon-evento img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.evento-boton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* ===== 5. ESTADOS E INTERACCIONES ===== */
+.req-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.info-lista details[open] {
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-primario-hover);
+}
+
+.info-lista details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+
+/* ===== 6. ANIMACIONES ===== */
+/* Entrada de la presentación: una sola vez */
+.adop-img {
+    animation-name: slideInLeft;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+.adopcion-cont {
+    animation-name: slideInRight;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
