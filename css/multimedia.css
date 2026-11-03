@@ -53,35 +53,31 @@
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--color-primario);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-/* Sin caja: las flechas flotan sobre los bordes del carrusel */
+/* Sin caja alrededor de la galería */
 .contenedor-carrusel {
     position: relative;
     display: flex;
     align-items: center;
 }
 
+/* Galería con flex-wrap y gap: las imágenes se reacomodan cuando falta espacio */
 .pista-carrusel {
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    flex-wrap: wrap;
+    gap: 24px;
     width: 100%;
-    padding-bottom: 8px;
-    scrollbar-width: none;
 }
 
-.pista-carrusel::-webkit-scrollbar {
+/* Con todas las imágenes visibles, las flechas del carrusel no hacen falta */
+.control-carrusel {
     display: none;
 }
 
-/* La primera imagen ocupa casi todo el ancho y la siguiente se asoma */
 .item-galeria {
-    scroll-snap-align: start;
-    flex: 0 0 80%;
-    min-width: 320px;
+    flex: 1 1 400px;
     margin: 0;
     position: relative;
     border-radius: 12px;
@@ -109,7 +105,7 @@
     background-color: var(--color-primario);
     color: var(--color-blanco);
     border-radius: var(--radio-pill);
-    padding: 6px 16px;
+    padding: 8px 16px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -128,40 +124,6 @@
     50% {
         transform: scale(1.05);
     }
-}
-
-.control-carrusel {
-    position: absolute;
-    top: 50%;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--color-blanco);
-    color: var(--color-texto);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 4px 14px rgba(42, 27, 31, 0.2);
-    transform: translateY(-50%);
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    z-index: 5;
-}
-
-.control-carrusel-izquierda {
-    left: -18px;
-}
-
-.control-carrusel-derecha {
-    right: -18px;
-}
-
-.control-carrusel:hover {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    transform: translateY(-50%) scale(1.1);
 }
 
 /* Sección Familia (50% de sesión de Video) */
@@ -233,7 +195,7 @@
 }
 
 .recurso-video figcaption {
-    padding: 12px 16px;
+    padding: 16px 16px;
     font-size: 0.8rem;
     color: var(--color-texto-muted);
     text-align: center;
@@ -244,7 +206,7 @@
     flex: 1 1 45%;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
 }
 
 .columna-contenido-complementario .titulo-secundario {
@@ -279,7 +241,7 @@
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--color-primario);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .recurso-ubicacion iframe,
@@ -317,7 +279,7 @@
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-texto);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .cabecera-seccion .titulo-secundario::before {
@@ -327,7 +289,7 @@
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--color-primario);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .cabecera-seccion .descripcion-seccion {
@@ -345,10 +307,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 36px;
+    gap: 40px;
     background: var(--color-fondo-suave);
     border-radius: 12px;
-    padding: 18px 48px 18px 18px;
+    padding: 16px 48px 16px 16px;
     border: 1px solid var(--color-borde-suave);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
@@ -389,14 +351,14 @@
     font-weight: 800;
     line-height: 1.1;
     color: var(--color-primario);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .titulo-evento {
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--color-texto);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .texto-evento {
@@ -416,8 +378,8 @@
 .btn-ver-mas {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 22px;
+    gap: 8px;
+    padding: 8px 24px;
     font-size: 0.8rem;
     font-weight: 700;
     font-family: var(--fuente-principal);
@@ -461,7 +423,7 @@
     right: 0;
     background: linear-gradient(transparent, rgba(42, 27, 31, 0.9));
     color: var(--color-blanco);
-    padding: 28px 20px 14px;
+    padding: 32px 24px 16px;
     font-size: 0.92rem;
     font-weight: 500;
     visibility: hidden;
