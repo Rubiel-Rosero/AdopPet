@@ -4,11 +4,10 @@
 
    Estructura:
      1. Variables y ajustes sobre estilos.css
-     2. Menú secundario (.segundoNav)
-     3. Maquetación de la página (Flexbox)
-     4. Componentes de la página
-     5. Estados e interacciones
-     6. Animaciones
+     2. Maquetación de la página (Flexbox)
+     3. Componentes de la página
+     4. Estados e interacciones
+     5. Animaciones
    ========================================================================== */
 
 /* ===== 1. VARIABLES Y AJUSTES SOBRE ESTILOS.CSS ===== */
@@ -36,46 +35,7 @@ section[id] {
 }
 
 
-/* ===== 2. MENÚ SECUNDARIO (segundoNav) ===== */
-.segundoNav {
-    position: sticky;
-    top: 72px;
-    /* alto del header */
-    z-index: 90;
-    /* un nivel por debajo del header (100) */
-    padding: 10px 48px;
-    background: linear-gradient(180deg, var(--color-secundario) 0%, var(--color-fondo-suave) 100%);
-    border-bottom: 1.5px solid var(--color-borde);
-    box-shadow: 0 4px 12px rgba(80, 23, 38, 0.04);
-}
-
-.segundoNav ul {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    overflow-x: auto;
-    /* si no caben los enlaces, solo el menú hace scroll */
-}
-
-.segundoNav a {
-    display: inline-block;
-    padding: 7px 20px;
-    border: 1.5px solid transparent;
-    border-radius: var(--radio-pill);
-    font-size: 0.84rem;
-    font-weight: 700;
-    color: var(--color-primario);
-    white-space: nowrap;
-    transition: background-color 0.25s ease, border-color 0.25s ease;
-}
-
-.segundoNav a:hover,
-.segundoNav a:focus-visible {
-    background-color: var(--color-blanco);
-    border-color: var(--color-borde);
-}
-
-/* ===== 3. MAQUETACIÓN DE LA PÁGINA ===== */
+/* ===== 2. MAQUETACIÓN DE LA PÁGINA ===== */
 
 /* Títulos de sección: mismo tamaño */
 .servi-cont h2,
@@ -92,7 +52,7 @@ section[id] {
     text-align: center;
 }
 
-/* --- 3.1 ¿Quiénes somos? --- */
+/* --- 2.1 ¿Quiénes somos? --- */
 .Somos {
     display: flex;
     align-items: center;
@@ -129,7 +89,7 @@ section[id] {
 }
 
 .Somos-img {
-    flex: 1.5;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     padding-left: 96px;
@@ -137,13 +97,14 @@ section[id] {
 
 .Somos-img img {
     width: 100%;
-    max-width: 950px;
+    max-width: 560px;
+    height: 520px;
     object-fit: cover;
     border-top-left-radius: var(--radio-tarjeta);
     border-bottom-left-radius: var(--radio-tarjeta);
 }
 
-/* --- 3.2 Servicios --- */
+/* --- 2.2 Servicios --- */
 .Servi {
     display: flex;
     align-items: center;
@@ -190,7 +151,7 @@ section[id] {
     gap: 24px;
 }
 
-/* --- 3.3 Nuestros clientes --- */
+/* --- 2.3 Nuestros clientes --- */
 .clientes {
     display: flex;
     flex-direction: column;
@@ -215,7 +176,7 @@ section[id] {
     justify-content: center;
 }
 
-/* --- 3.4 Características --- */
+/* --- 2.4 Características --- */
 .Caracter {
     display: flex;
     flex-direction: column;
@@ -243,7 +204,7 @@ section[id] {
     justify-content: center;
 }
 
-/* --- 3.5 Preguntas frecuentes --- */
+/* --- 2.5 Preguntas frecuentes --- */
 .preguntas {
     display: flex;
     flex-direction: column;
@@ -261,7 +222,7 @@ section[id] {
     max-width: 900px;
 }
 
-/* --- 3.6 Costos y cuidados --- */
+/* --- 2.6 Costos y cuidados --- */
 #costos {
     display: flex;
     flex-direction: column;
@@ -281,7 +242,7 @@ section[id] {
 }
 
 
-/* ===== 4. COMPONENTES DE LA PÁGINA ===== */
+/* ===== 3. COMPONENTES DE LA PÁGINA ===== */
 
 /* --- Tarjetas de servicio --- */
 .cont-1,
@@ -297,14 +258,14 @@ section[id] {
 
 .cont-1 img,
 .cont-2 img {
-    width: 80px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
 }
 
 .cont-1 p,
 .cont-2 p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.4;
 }
 
@@ -339,6 +300,12 @@ section[id] {
 
 .mascota-info h3 {
     font-size: 1.2rem;
+}
+
+/* El nombre baja de línea sin usar <br> */
+.mascota-info h3 strong,
+.mascota-cuidador strong {
+    display: block;
 }
 
 .mascota-info ul {
@@ -543,7 +510,7 @@ section[id] {
 }
 
 
-/* ===== 5. ESTADOS E INTERACCIONES ===== */
+/* ===== 4. ESTADOS E INTERACCIONES ===== */
 .tarjeta-mascota:hover {
     transform: translateY(-4px);
     box-shadow: var(--sombra-hover);
@@ -565,7 +532,7 @@ section[id] {
 }
 
 
-/* ===== 6. ANIMACIONES ===== */
+/* ===== 5. ANIMACIONES ===== */
 .Somos-Cont {
     animation-name: slideInLeft;
     animation-duration: 0.8s;

@@ -4,11 +4,10 @@
 
    Estructura:
      1. Variables y ajustes sobre estilos.css
-     2. Menú secundario (.segundoNav)
-     3. Maquetación de la página (Flexbox)
-     4. Componentes de la página
-     5. Estados e interacciones
-     6. Animaciones
+     2. Maquetación de la página (Flexbox)
+     3. Componentes de la página
+     4. Estados e interacciones
+     5. Animaciones
    ========================================================================== */
 
 /* ===== 1. VARIABLES Y AJUSTES SOBRE ESTILOS.CSS ===== */
@@ -36,19 +35,40 @@ section[id] {
     color: inherit;
 }
 
+/* ===== 2. MAQUETACIÓN DE LA PÁGINA ===== */
 
-
-
-/* ===== 3. MAQUETACIÓN DE LA PÁGINA ===== */
-
-/* --- 3.1 Adopción definitiva --- */
+/* --- 2.1 Adopción definitiva --- */
 .adop {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 48px;
     padding: 96px 5%;
     background: var(--degradado-rosa);
+}
+
+/* Círculo con flecha entre secciones, como en el mockup */
+.adop::after,
+.volunt::after,
+.bienestar::after {
+    content: "↓";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--color-blanco);
+    border-radius: 50%;
+    background-color: var(--color-rosa-fuerte);
+    color: var(--color-blanco);
+    font-weight: 700;
+    transform: translateX(-50%);
+    box-shadow: var(--sombra-suave);
 }
 
 .adop-img {
@@ -59,8 +79,8 @@ section[id] {
 
 .adop-img img {
     width: 100%;
-    max-width: 700px;
-    height: 700px;
+    max-width: 600px;
+    height: 560px;
     border-radius: var(--radio-tarjeta);
     object-fit: cover;
 }
@@ -91,7 +111,7 @@ section[id] {
     /* el botón conserva su ancho natural dentro de la columna */
 }
 
-/* --- 3.2 Hogares de paso --- */
+/* --- 2.2 Hogares de paso --- */
 .hogares {
     display: flex;
     align-items: center;
@@ -133,15 +153,16 @@ section[id] {
 
 .img-hogar img {
     width: 100%;
-    max-width: 450px;
-    height: 600px;
+    max-width: 360px;
+    height: 480px;
     border-radius: var(--radio-tarjeta);
     object-fit: cover;
     box-shadow: var(--sombra-tarjeta);
 }
 
-/* --- 3.3 Voluntariado --- */
+/* --- 2.3 Voluntariado --- */
 .volunt {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -158,8 +179,8 @@ section[id] {
 
 .volunt-img img {
     width: 100%;
-    max-width: 650px;
-    height: 580px;
+    max-width: 600px;
+    height: 640px;
     border-radius: var(--radio-tarjeta);
     object-fit: cover;
     box-shadow: var(--sombra-tarjeta);
@@ -205,8 +226,9 @@ section[id] {
     margin-top: 16px;
 }
 
-/* --- 3.4 Bienestar e higiene --- */
+/* --- 2.4 Bienestar e higiene --- */
 .bienestar {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,7 +263,7 @@ section[id] {
     margin-top: 24px;
 }
 
-/* --- 3.5 Eventos --- */
+/* --- 2.5 Eventos --- */
 .eventos {
     display: flex;
     flex-direction: column;
@@ -267,8 +289,7 @@ section[id] {
     max-width: 1200px;
 }
 
-
-/* ===== 4. COMPONENTES DE LA PÁGINA ===== */
+/* ===== 3. COMPONENTES DE LA PÁGINA ===== */
 
 .req-card {
     position: relative;
@@ -305,6 +326,11 @@ section[id] {
 .req-card .etiqueta-flotante {
     top: 8px;
     right: 8px;
+}
+
+/* Deja espacio a la etiqueta para que no tape el texto */
+.req-card:has(.etiqueta-flotante) {
+    padding-right: 96px;
 }
 
 /* --- despliegue de bienestar --- */
@@ -391,8 +417,8 @@ section[id] {
 
 /* --- Evento --- */
 .video-evento {
-    flex: 1 1 320px;
-    max-width: 500px;
+    flex: 1 1 400px;
+    max-width: 560px;
     padding: 24px;
     border-radius: var(--radio-suave);
     background-color: var(--color-blanco);
@@ -444,8 +470,7 @@ section[id] {
     width: 100%;
 }
 
-
-/* ===== 5. ESTADOS E INTERACCIONES ===== */
+/* ===== 4. ESTADOS E INTERACCIONES ===== */
 .req-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--sombra-hover);
@@ -460,8 +485,7 @@ section[id] {
     transform: rotate(45deg);
 }
 
-
-/* ===== 6. ANIMACIONES ===== */
+/* ===== 5. ANIMACIONES ===== */
 /* Entrada de la presentación: una sola vez */
 .adop-img {
     animation-name: slideInLeft;
