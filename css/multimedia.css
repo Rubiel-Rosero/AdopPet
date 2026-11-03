@@ -4,8 +4,8 @@
 
 /* ===== 1. HERO ===== */
 .seccion-hero {
-    min-height: 420px;
-    padding: 80px 24px;
+    min-height: 320px;
+    padding: 64px 24px;
     background: linear-gradient(160deg, var(--color-fondo-suave) 0%, var(--color-secundario) 40%, #ebbcc6 100%);
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@
     flex-wrap: wrap;
     gap: 24px;
     width: 100%;
-    height: 528px;
+    height: 480px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -207,7 +207,7 @@
 
 /* ===== 3. JUNTOS COMO FAMILIA ===== */
 .seccion-familia {
-    padding: 72px 32px;
+    padding: 48px 32px;
     max-width: 1240px;
     margin: 0 auto;
     display: flex;
@@ -218,7 +218,7 @@
 
 .contenedor-video {
     position: relative;
-    flex: 1 1 50%;
+    flex: 1 1 45%;
     padding: 40px 0 40px 40px;
 }
 
@@ -268,7 +268,7 @@
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 9 / 12;
+    aspect-ratio: 4 / 5;
     border: none;
 }
 
@@ -305,7 +305,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 32px 32px 40px;
+    padding: 24px 32px 32px;
     background: linear-gradient(160deg, var(--color-blanco) 0%, var(--color-secundario) 55%, #f6d3da 100%);
     border: 1px solid var(--color-borde-suave);
     border-radius: 24px;
@@ -355,7 +355,7 @@
     align-items: center;
     gap: 8px;
     padding: 0 0 8px 4px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     border-bottom: 1px solid var(--color-borde);
     font-size: 0.95rem;
     font-weight: 700;
@@ -379,7 +379,7 @@
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
     border: none;
     border-radius: 10px;
     background-color: var(--color-secundario-alt);
@@ -459,7 +459,7 @@
 
 /* ===== 4. CELEBRACIONES ===== */
 .seccion-celebraciones {
-    padding: 72px 32px 96px;
+    padding: 64px 32px 80px;
     max-width: 1240px;
     margin: 0 auto;
 }
@@ -511,8 +511,8 @@
 }
 
 .imagen-evento {
-    flex: 0 0 240px;
-    height: 190px;
+    flex: 0 0 216px;
+    height: 160px;
     margin: 0;
     border-radius: 10px;
     overflow: hidden;
