@@ -119,6 +119,7 @@
     width: 80%;
     margin: 0;
     scroll-snap-align: start;
+    scroll-margin-top: 160px;
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -131,6 +132,45 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+}
+
+/* Botones nativos del carrusel: solo desplazan la galería, no la página.
+   Si el navegador no los soporta, quedan los enlaces .control-carrusel */
+@supports selector(::scroll-button(*)) {
+    .control-carrusel {
+        display: none;
+    }
+
+    .pista-carrusel::scroll-button(left),
+    .pista-carrusel::scroll-button(right) {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--color-blanco);
+        background-position: center;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        box-shadow: 0 4px 16px rgba(42, 27, 31, 0.2);
+        cursor: pointer;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .pista-carrusel::scroll-button(left) {
+        content: "" / "Imagen anterior";
+        left: -16px;
+        background-image: url("../image/Flecha izquierda.png");
+    }
+
+    .pista-carrusel::scroll-button(right) {
+        content: "" / "Siguiente imagen";
+        right: -16px;
+        background-image: url("../image/Flecha Derecha.png");
+    }
 }
 
 .etiqueta-destacado {
@@ -345,6 +385,48 @@
     background-color: var(--color-secundario-alt);
 }
 
+.marco-video {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(80, 23, 38, 0.18);
+}
+
+.marco-video video {
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.marco-video::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 6px 24px rgba(80, 23, 38, 0.25);
+    transform: translate(-50%, -50%);
+    animation: pulsePlay 2.5s infinite;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.marco-video::after {
+    content: "\25B6";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    transform: translate(-42%, -50%);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
 .recurso-audio {
     position: relative;
     z-index: 1;
@@ -503,10 +585,28 @@
 }
 
 /* ===== 6. ESTADOS E INTERACCIONES ===== */
+.marco-video:hover::before,
+.marco-video:hover::after {
+    opacity: 0;
+}
+
 .control-carrusel:hover,
 .control-carrusel:focus-visible {
     background-color: var(--color-secundario);
     transform: translateY(-50%) scale(1.1);
+}
+
+@supports selector(::scroll-button(*)) {
+    .pista-carrusel::scroll-button(*):hover,
+    .pista-carrusel::scroll-button(*):focus-visible {
+        background-color: var(--color-secundario);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .pista-carrusel::scroll-button(*):disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
 }
 
 .item-galeria:hover img {
@@ -544,6 +644,21 @@
 }
 
 /* ===== 7. ANIMACIONES ===== */
+.seccion-hero .titulo-principal {
+    animation-name: fadeInDown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+.seccion-hero .descripcion-hero {
+    animation-name: fadeSlideUp;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
 @keyframes pulseBadge {
 
     0%,
