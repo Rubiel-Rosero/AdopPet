@@ -21,7 +21,9 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(80, 23, 38, 0.2);
 }
-
+#navegacion-secundaria-contacto{
+    background: var(--color-blanco);
+}
 /* Cabecera de Contacto */
 .cabecera-contacto {
     text-align: center;
